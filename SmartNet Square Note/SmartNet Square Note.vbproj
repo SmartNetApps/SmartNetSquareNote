@@ -164,6 +164,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="COPYING.txt" />
+    <Content Include="README.txt" />
     <Content Include="SmartNet Square Note.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

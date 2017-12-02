@@ -3,7 +3,7 @@ Créez des notes sur votre bureau et personnalisez-les !
 Accédez aux paramètres via le menu sur une note.
 
 Vous trouverez de l'aide pour SmartNet Square Note sur le site internet SmartNet Apps, à l'adresse
-https://quentinpugeat.wixsite.com/apps/support-squarenote
+https://quentinpugeat.wixsite.com/apps/squarenote-support
 
 Copyright 2015-2017, Quentin Pugeat
 SmartNet Apps
