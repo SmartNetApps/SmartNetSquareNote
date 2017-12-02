@@ -17,54 +17,50 @@ Public Class SettingsForm
 
     Private Sub SettingsForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         VersionLabel.Text = "Version installée : " + My.Application.Info.Version.ToString
-        If My.Settings.NoteColor = 1 Then
-            YellowNoteColorRadioButton1.Checked = True
-            RedNoteColorRadioButton2.Checked = False
-            GreenNoteColorRadioButton3.Checked = False
-            GreyNoteColorRadioButton4.Checked = False
-            BlueNoteColorRadioButton5.Checked = False
-            OrangeNoteColorRadioButton6.Checked = False
-        End If
-        If My.Settings.NoteColor = 2 Then
-            YellowNoteColorRadioButton1.Checked = False
-            RedNoteColorRadioButton2.Checked = True
-            GreenNoteColorRadioButton3.Checked = False
-            GreyNoteColorRadioButton4.Checked = False
-            BlueNoteColorRadioButton5.Checked = False
-            OrangeNoteColorRadioButton6.Checked = False
-        End If
-        If My.Settings.NoteColor = 3 Then
-            YellowNoteColorRadioButton1.Checked = False
-            RedNoteColorRadioButton2.Checked = False
-            GreenNoteColorRadioButton3.Checked = True
-            GreyNoteColorRadioButton4.Checked = False
-            BlueNoteColorRadioButton5.Checked = False
-            OrangeNoteColorRadioButton6.Checked = False
-        End If
-        If My.Settings.NoteColor = 4 Then
-            YellowNoteColorRadioButton1.Checked = False
-            RedNoteColorRadioButton2.Checked = False
-            GreenNoteColorRadioButton3.Checked = False
-            GreyNoteColorRadioButton4.Checked = True
-            BlueNoteColorRadioButton5.Checked = False
-            OrangeNoteColorRadioButton6.Checked = False
-        End If
-        If My.Settings.NoteColor = 5 Then
-            YellowNoteColorRadioButton1.Checked = False
-            RedNoteColorRadioButton2.Checked = False
-            GreenNoteColorRadioButton3.Checked = False
-            GreyNoteColorRadioButton4.Checked = False
-            BlueNoteColorRadioButton5.Checked = True
-            OrangeNoteColorRadioButton6.Checked = False
-        End If
-        If My.Settings.NoteColor = 6 Then
-            YellowNoteColorRadioButton1.Checked = False
-            RedNoteColorRadioButton2.Checked = False
-            GreenNoteColorRadioButton3.Checked = False
-            GreyNoteColorRadioButton4.Checked = False
-            BlueNoteColorRadioButton5.Checked = False
-            OrangeNoteColorRadioButton6.Checked = True
-        End If
+        Select Case My.Settings.NoteColor
+            Case 1
+                YellowNoteColorRadioButton1.Checked = True
+                RedNoteColorRadioButton2.Checked = False
+                GreenNoteColorRadioButton3.Checked = False
+                GreyNoteColorRadioButton4.Checked = False
+                BlueNoteColorRadioButton5.Checked = False
+                OrangeNoteColorRadioButton6.Checked = False
+            Case 2
+                YellowNoteColorRadioButton1.Checked = False
+                RedNoteColorRadioButton2.Checked = True
+                GreenNoteColorRadioButton3.Checked = False
+                GreyNoteColorRadioButton4.Checked = False
+                BlueNoteColorRadioButton5.Checked = False
+                OrangeNoteColorRadioButton6.Checked = False
+            Case 3
+                YellowNoteColorRadioButton1.Checked = False
+                RedNoteColorRadioButton2.Checked = False
+                GreenNoteColorRadioButton3.Checked = True
+                GreyNoteColorRadioButton4.Checked = False
+                BlueNoteColorRadioButton5.Checked = False
+                OrangeNoteColorRadioButton6.Checked = False
+            Case 4
+                YellowNoteColorRadioButton1.Checked = False
+                RedNoteColorRadioButton2.Checked = False
+                GreenNoteColorRadioButton3.Checked = False
+                GreyNoteColorRadioButton4.Checked = True
+                BlueNoteColorRadioButton5.Checked = False
+                OrangeNoteColorRadioButton6.Checked = False
+            Case 5
+                YellowNoteColorRadioButton1.Checked = False
+                RedNoteColorRadioButton2.Checked = False
+                GreenNoteColorRadioButton3.Checked = False
+                GreyNoteColorRadioButton4.Checked = False
+                BlueNoteColorRadioButton5.Checked = True
+                OrangeNoteColorRadioButton6.Checked = False
+            Case 6
+                YellowNoteColorRadioButton1.Checked = False
+                RedNoteColorRadioButton2.Checked = False
+                GreenNoteColorRadioButton3.Checked = False
+                GreyNoteColorRadioButton4.Checked = False
+                BlueNoteColorRadioButton5.Checked = False
+                OrangeNoteColorRadioButton6.Checked = True
+        End Select
         If My.Settings.TextInWhite = True Then
             TextInWhiteCheckBox.Checked = True
         Else

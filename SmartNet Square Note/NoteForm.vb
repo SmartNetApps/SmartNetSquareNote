@@ -58,42 +58,38 @@ Public Class NoteForm
         Else
             NoteRichTextBox.ForeColor = Color.Black
         End If
-        If My.Settings.NoteColor = 1 Then
-            Me.BackColor = Color.Gold
-            NoteRichTextBox.BackColor = Color.Gold
-            FormDragger.BackColor = Color.Gold
-            MenuStrip1.BackColor = Color.Gold
-        End If
-        If My.Settings.NoteColor = 2 Then
-            Me.BackColor = Color.IndianRed
-            NoteRichTextBox.BackColor = Color.IndianRed
-            FormDragger.BackColor = Color.IndianRed
-            MenuStrip1.BackColor = Color.IndianRed
-        End If
-        If My.Settings.NoteColor = 3 Then
-            Me.BackColor = Color.LightGreen
-            NoteRichTextBox.BackColor = Color.LightGreen
-            FormDragger.BackColor = Color.LightGreen
-            MenuStrip1.BackColor = Color.LightGreen
-        End If
-        If My.Settings.NoteColor = 4 Then
-            Me.BackColor = Color.LightGray
-            NoteRichTextBox.BackColor = Color.LightGray
-            FormDragger.BackColor = Color.LightGray
-            MenuStrip1.BackColor = Color.LightGray
-        End If
-        If My.Settings.NoteColor = 5 Then
-            Me.BackColor = Color.LightBlue
-            NoteRichTextBox.BackColor = Color.LightBlue
-            FormDragger.BackColor = Color.LightBlue
-            MenuStrip1.BackColor = Color.LightBlue
-        End If
-        If My.Settings.NoteColor = 6 Then
-            Me.BackColor = Color.Orange
-            NoteRichTextBox.BackColor = Color.Orange
-            FormDragger.BackColor = Color.Orange
-            MenuStrip1.BackColor = Color.Orange
-        End If
+        Select Case My.Settings.NoteColor
+            Case 1
+                Me.BackColor = Color.Gold
+                NoteRichTextBox.BackColor = Color.Gold
+                FormDragger.BackColor = Color.Gold
+                MenuStrip1.BackColor = Color.Gold
+            Case 2
+                Me.BackColor = Color.IndianRed
+                NoteRichTextBox.BackColor = Color.IndianRed
+                FormDragger.BackColor = Color.IndianRed
+                MenuStrip1.BackColor = Color.IndianRed
+            Case 3
+                Me.BackColor = Color.LightGreen
+                NoteRichTextBox.BackColor = Color.LightGreen
+                FormDragger.BackColor = Color.LightGreen
+                MenuStrip1.BackColor = Color.LightGreen
+            Case 4
+                Me.BackColor = Color.LightGray
+                NoteRichTextBox.BackColor = Color.LightGray
+                FormDragger.BackColor = Color.LightGray
+                MenuStrip1.BackColor = Color.LightGray
+            Case 5
+                Me.BackColor = Color.LightBlue
+                NoteRichTextBox.BackColor = Color.LightBlue
+                FormDragger.BackColor = Color.LightBlue
+                MenuStrip1.BackColor = Color.LightBlue
+            Case 6
+                Me.BackColor = Color.Orange
+                NoteRichTextBox.BackColor = Color.Orange
+                FormDragger.BackColor = Color.Orange
+                MenuStrip1.BackColor = Color.Orange
+        End Select
     End Sub
 
     Private Sub ParamètresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ParamètresToolStripMenuItem.Click
