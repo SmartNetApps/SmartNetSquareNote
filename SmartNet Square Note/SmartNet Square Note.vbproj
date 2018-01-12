@@ -131,11 +131,23 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdater.en.resx">
+      <DependentUpon>FormUpdater.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdater.fr.resx">
+      <DependentUpon>FormUpdater.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUpdater.resx">
       <DependentUpon>FormUpdater.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseForm.resx">
       <DependentUpon>LicenseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteForm.en.resx">
+      <DependentUpon>NoteForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteForm.fr.resx">
+      <DependentUpon>NoteForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NoteForm.resx">
       <DependentUpon>NoteForm.vb</DependentUpon>
@@ -145,6 +157,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.en.resx">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.fr.resx">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.vb</DependentUpon>

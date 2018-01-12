@@ -117,34 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AcceptUpdateButton.Text" xml:space="preserve">
+    <value>Update now</value>
+  </data>
+  <data name="DeclineUpdateButton.Text" xml:space="preserve">
+    <value>Later</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="AcceptUpdateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 266</value>
+  <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 9</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TitleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 19</value>
   </data>
-  <data name="DownloadProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="DeclineUpdateButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;DownloadProgressBar.Name" xml:space="preserve">
-    <value>DownloadProgressBar</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;NewsRichTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AcceptUpdateButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AcceptUpdateButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="TitleLabel.Text" xml:space="preserve">
+    <value>An update is available for SmartNet Square Note</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -170,130 +157,7 @@
         AADAAwAA8A8AAA==
 </value>
   </data>
-  <data name="&gt;&gt;TitleLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="DeclineUpdateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 23</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>391, 301</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormUpdater</value>
-  </data>
-  <data name="&gt;&gt;NewsRichTextBox.Name" xml:space="preserve">
-    <value>NewsRichTextBox</value>
-  </data>
-  <data name="AcceptUpdateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 23</value>
-  </data>
-  <data name="&gt;&gt;DownloadProgressBar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="DeclineUpdateButton.Text" xml:space="preserve">
-    <value>Plus tard</value>
-  </data>
-  <data name="NewsRichTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;DownloadProgressBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;AcceptUpdateButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TitleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="DeclineUpdateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 266</value>
-  </data>
-  <data name="&gt;&gt;TitleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DownloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 23</value>
-  </data>
-  <data name="TitleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="AcceptUpdateButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DeclineUpdateButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;DeclineUpdateButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AcceptUpdateButton.Text" xml:space="preserve">
-    <value>Installer la mise à jour maintenant</value>
-  </data>
-  <data name="&gt;&gt;NewsRichTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 19</value>
-  </data>
-  <data name="NewsRichTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;DownloadProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="NewsRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 224</value>
-  </data>
-  <data name="&gt;&gt;AcceptUpdateButton.Name" xml:space="preserve">
-    <value>AcceptUpdateButton</value>
-  </data>
-  <data name="TitleLabel.Text" xml:space="preserve">
-    <value>Une mise à jour est disponible pour SmartNet Square Note</value>
-  </data>
-  <data name="&gt;&gt;DeclineUpdateButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TitleLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="NewsRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 36</value>
-  </data>
-  <data name="&gt;&gt;TitleLabel.Name" xml:space="preserve">
-    <value>TitleLabel</value>
-  </data>
-  <data name="DownloadProgressBar.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="DownloadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 237</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Nouvelle mise à jour disponible</value>
+    <value>New update available</value>
   </data>
-  <data name="&gt;&gt;DeclineUpdateButton.Name" xml:space="preserve">
-    <value>DeclineUpdateButton</value>
-  </data>
-  <data name="TitleLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
-  </data>
-  <data name="&gt;&gt;NewsRichTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
 </root>

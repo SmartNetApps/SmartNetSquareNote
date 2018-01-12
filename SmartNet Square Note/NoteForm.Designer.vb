@@ -36,6 +36,7 @@ Partial Class NoteForm
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AideEnLigneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContacterLeSupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnvoyeznousVosCommentairesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
@@ -46,7 +47,6 @@ Partial Class NoteForm
         Me.NewNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormResizer = New System.Windows.Forms.PictureBox()
-        Me.EnvoyeznousVosCommentairesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.FormDragger, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -55,190 +55,143 @@ Partial Class NoteForm
         '
         'NoteRichTextBox
         '
-        Me.NoteRichTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.NoteRichTextBox, "NoteRichTextBox")
         Me.NoteRichTextBox.BackColor = System.Drawing.Color.Gold
         Me.NoteRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.NoteRichTextBox.Font = New System.Drawing.Font("Comic Sans MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NoteRichTextBox.ForeColor = System.Drawing.SystemColors.MenuText
-        Me.NoteRichTextBox.Location = New System.Drawing.Point(4, 27)
         Me.NoteRichTextBox.Name = "NoteRichTextBox"
-        Me.NoteRichTextBox.Size = New System.Drawing.Size(192, 169)
-        Me.NoteRichTextBox.TabIndex = 0
-        Me.NoteRichTextBox.Text = "Nouvelle Square Note"
         '
         'MenuStrip1
         '
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.BackColor = System.Drawing.Color.Gold
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseNoteButton, Me.ToolStripMenu})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(200, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'CloseNoteButton
         '
-        Me.CloseNoteButton.Image = CType(resources.GetObject("CloseNoteButton.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.CloseNoteButton, "CloseNoteButton")
         Me.CloseNoteButton.Name = "CloseNoteButton"
-        Me.CloseNoteButton.Size = New System.Drawing.Size(28, 20)
         '
         'ToolStripMenu
         '
+        resources.ApplyResources(Me.ToolStripMenu, "ToolStripMenu")
         Me.ToolStripMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NouvelleNoteToolStripMenuItem, Me.ToolStripSeparator1, Me.ParamètresToolStripMenuItem, Me.NouvelleVersionDisponibleToolStripMenuItem, Me.SupportToolStripMenuItem, Me.ToolStripSeparator3, Me.FermerToutesLesNotesToolStripMenuItem})
-        Me.ToolStripMenu.Image = CType(resources.GetObject("ToolStripMenu.Image"), System.Drawing.Image)
         Me.ToolStripMenu.Name = "ToolStripMenu"
-        Me.ToolStripMenu.Size = New System.Drawing.Size(28, 20)
         '
         'NouvelleNoteToolStripMenuItem
         '
-        Me.NouvelleNoteToolStripMenuItem.Image = CType(resources.GetObject("NouvelleNoteToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
         Me.NouvelleNoteToolStripMenuItem.Name = "NouvelleNoteToolStripMenuItem"
-        Me.NouvelleNoteToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.NouvelleNoteToolStripMenuItem.Text = "Nouvelle Note"
         '
         'ToolStripSeparator1
         '
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(217, 6)
         '
         'ParamètresToolStripMenuItem
         '
-        Me.ParamètresToolStripMenuItem.Image = CType(resources.GetObject("ParamètresToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.ParamètresToolStripMenuItem, "ParamètresToolStripMenuItem")
         Me.ParamètresToolStripMenuItem.Name = "ParamètresToolStripMenuItem"
-        Me.ParamètresToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.ParamètresToolStripMenuItem.Text = "Paramètres"
         '
         'NouvelleVersionDisponibleToolStripMenuItem
         '
+        resources.ApplyResources(Me.NouvelleVersionDisponibleToolStripMenuItem, "NouvelleVersionDisponibleToolStripMenuItem")
         Me.NouvelleVersionDisponibleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TéléchargerLaMiseÀJourToolStripMenuItem})
-        Me.NouvelleVersionDisponibleToolStripMenuItem.Image = CType(resources.GetObject("NouvelleVersionDisponibleToolStripMenuItem.Image"), System.Drawing.Image)
         Me.NouvelleVersionDisponibleToolStripMenuItem.Name = "NouvelleVersionDisponibleToolStripMenuItem"
-        Me.NouvelleVersionDisponibleToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.NouvelleVersionDisponibleToolStripMenuItem.Text = "Nouvelle version disponible"
         '
         'TéléchargerLaMiseÀJourToolStripMenuItem
         '
-        Me.TéléchargerLaMiseÀJourToolStripMenuItem.Image = CType(resources.GetObject("TéléchargerLaMiseÀJourToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.TéléchargerLaMiseÀJourToolStripMenuItem, "TéléchargerLaMiseÀJourToolStripMenuItem")
         Me.TéléchargerLaMiseÀJourToolStripMenuItem.Name = "TéléchargerLaMiseÀJourToolStripMenuItem"
-        Me.TéléchargerLaMiseÀJourToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.TéléchargerLaMiseÀJourToolStripMenuItem.Text = "Télécharger la mise à jour..."
         '
         'SupportToolStripMenuItem
         '
+        resources.ApplyResources(Me.SupportToolStripMenuItem, "SupportToolStripMenuItem")
         Me.SupportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AideEnLigneToolStripMenuItem, Me.ContacterLeSupportToolStripMenuItem, Me.EnvoyeznousVosCommentairesToolStripMenuItem, Me.ToolStripSeparator2, Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem})
-        Me.SupportToolStripMenuItem.Image = CType(resources.GetObject("SupportToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.SupportToolStripMenuItem.Text = "Support"
         '
         'AideEnLigneToolStripMenuItem
         '
+        resources.ApplyResources(Me.AideEnLigneToolStripMenuItem, "AideEnLigneToolStripMenuItem")
         Me.AideEnLigneToolStripMenuItem.Name = "AideEnLigneToolStripMenuItem"
-        Me.AideEnLigneToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.AideEnLigneToolStripMenuItem.Text = "Aide en ligne..."
         '
         'ContacterLeSupportToolStripMenuItem
         '
+        resources.ApplyResources(Me.ContacterLeSupportToolStripMenuItem, "ContacterLeSupportToolStripMenuItem")
         Me.ContacterLeSupportToolStripMenuItem.Name = "ContacterLeSupportToolStripMenuItem"
-        Me.ContacterLeSupportToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.ContacterLeSupportToolStripMenuItem.Text = "Contacter le support..."
+        '
+        'EnvoyeznousVosCommentairesToolStripMenuItem
+        '
+        resources.ApplyResources(Me.EnvoyeznousVosCommentairesToolStripMenuItem, "EnvoyeznousVosCommentairesToolStripMenuItem")
+        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Name = "EnvoyeznousVosCommentairesToolStripMenuItem"
         '
         'ToolStripSeparator2
         '
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(265, 6)
         '
         'ÀProposDeSmartNetSquareNoteToolStripMenuItem
         '
+        resources.ApplyResources(Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem, "ÀProposDeSmartNetSquareNoteToolStripMenuItem")
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Name = "ÀProposDeSmartNetSquareNoteToolStripMenuItem"
-        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Text = "À propos de SmartNet Square Note..."
         '
         'ToolStripSeparator3
         '
+        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(217, 6)
         '
         'FermerToutesLesNotesToolStripMenuItem
         '
-        Me.FermerToutesLesNotesToolStripMenuItem.Image = CType(resources.GetObject("FermerToutesLesNotesToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.FermerToutesLesNotesToolStripMenuItem, "FermerToutesLesNotesToolStripMenuItem")
         Me.FermerToutesLesNotesToolStripMenuItem.Name = "FermerToutesLesNotesToolStripMenuItem"
-        Me.FermerToutesLesNotesToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.FermerToutesLesNotesToolStripMenuItem.Text = "Fermer toutes les notes"
         '
         'FormDragger
         '
-        Me.FormDragger.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.FormDragger, "FormDragger")
         Me.FormDragger.BackColor = System.Drawing.Color.Gold
-        Me.FormDragger.ErrorImage = Nothing
-        Me.FormDragger.InitialImage = Nothing
-        Me.FormDragger.Location = New System.Drawing.Point(64, 0)
         Me.FormDragger.Name = "FormDragger"
-        Me.FormDragger.Size = New System.Drawing.Size(136, 24)
-        Me.FormDragger.TabIndex = 2
         Me.FormDragger.TabStop = False
         '
         'NotifyIcon
         '
+        resources.ApplyResources(Me.NotifyIcon, "NotifyIcon")
         Me.NotifyIcon.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.NotifyIcon.Icon = CType(resources.GetObject("NotifyIcon.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon.Text = "SmartNet Square Note"
         '
         'ContextMenuStrip1
         '
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewNoteToolStripMenuItem, Me.CloseAllNotesToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(197, 48)
         '
         'NewNoteToolStripMenuItem
         '
-        Me.NewNoteToolStripMenuItem.Image = CType(resources.GetObject("NewNoteToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.NewNoteToolStripMenuItem, "NewNoteToolStripMenuItem")
         Me.NewNoteToolStripMenuItem.Name = "NewNoteToolStripMenuItem"
-        Me.NewNoteToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.NewNoteToolStripMenuItem.Text = "Nouvelle Note"
         '
         'CloseAllNotesToolStripMenuItem
         '
-        Me.CloseAllNotesToolStripMenuItem.Image = CType(resources.GetObject("CloseAllNotesToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.CloseAllNotesToolStripMenuItem, "CloseAllNotesToolStripMenuItem")
         Me.CloseAllNotesToolStripMenuItem.Name = "CloseAllNotesToolStripMenuItem"
-        Me.CloseAllNotesToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.CloseAllNotesToolStripMenuItem.Text = "Fermer toutes les notes"
         '
         'FormResizer
         '
-        Me.FormResizer.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.FormResizer, "FormResizer")
         Me.FormResizer.Cursor = System.Windows.Forms.Cursors.SizeNWSE
-        Me.FormResizer.ErrorImage = Nothing
-        Me.FormResizer.InitialImage = Nothing
-        Me.FormResizer.Location = New System.Drawing.Point(190, 190)
         Me.FormResizer.Name = "FormResizer"
-        Me.FormResizer.Size = New System.Drawing.Size(10, 10)
-        Me.FormResizer.TabIndex = 3
         Me.FormResizer.TabStop = False
-        '
-        'EnvoyeznousVosCommentairesToolStripMenuItem
-        '
-        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Name = "EnvoyeznousVosCommentairesToolStripMenuItem"
-        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Text = "Envoyez-nous vos commentaires !"
         '
         'NoteForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gold
-        Me.ClientSize = New System.Drawing.Size(200, 200)
         Me.Controls.Add(Me.FormResizer)
         Me.Controls.Add(Me.FormDragger)
         Me.Controls.Add(Me.NoteRichTextBox)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -246,7 +199,6 @@ Partial Class NoteForm
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
-        Me.Text = "Square Note"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.FormDragger, System.ComponentModel.ISupportInitialize).EndInit()

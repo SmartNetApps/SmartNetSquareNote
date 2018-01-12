@@ -27,7 +27,12 @@ Partial Class SettingsForm
         Me.SettingsTabControl = New System.Windows.Forms.TabControl()
         Me.GeneralTabPage = New System.Windows.Forms.TabPage()
         Me.TextFontAndColorGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ChangeTextFontButton = New System.Windows.Forms.Button()
+        Me.RestoreTextStyleLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.ChangeTextColorButton = New System.Windows.Forms.Button()
         Me.NoteColorGroupBox = New System.Windows.Forms.GroupBox()
+        Me.RestoreDefaultNoteColorLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.ChangeNoteColorButton = New System.Windows.Forms.Button()
         Me.UpdatesTabPage = New System.Windows.Forms.TabPage()
         Me.VersionNumberGroupBox = New System.Windows.Forms.GroupBox()
         Me.UpdatesSearchButton = New System.Windows.Forms.Button()
@@ -39,13 +44,8 @@ Partial Class SettingsForm
         Me.RestorePreviousSettingsButton = New System.Windows.Forms.Button()
         Me.RestartWarningLabel = New System.Windows.Forms.Label()
         Me.NoteColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.ChangeNoteColorButton = New System.Windows.Forms.Button()
-        Me.RestoreDefaultNoteColorLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.TextColorDialog = New System.Windows.Forms.ColorDialog()
         Me.TextFontDialog = New System.Windows.Forms.FontDialog()
-        Me.ChangeTextColorButton = New System.Windows.Forms.Button()
-        Me.RestoreTextStyleLinkLabel = New System.Windows.Forms.LinkLabel()
-        Me.ChangeTextFontButton = New System.Windows.Forms.Button()
         Me.SettingsTabControl.SuspendLayout()
         Me.GeneralTabPage.SuspendLayout()
         Me.TextFontAndColorGroupBox.SuspendLayout()
@@ -59,230 +59,157 @@ Partial Class SettingsForm
         '
         'OKButton
         '
-        Me.OKButton.Location = New System.Drawing.Point(419, 296)
+        resources.ApplyResources(Me.OKButton, "OKButton")
         Me.OKButton.Name = "OKButton"
-        Me.OKButton.Size = New System.Drawing.Size(75, 23)
-        Me.OKButton.TabIndex = 0
-        Me.OKButton.Text = "OK"
         Me.OKButton.UseVisualStyleBackColor = True
         '
         'SettingsTabControl
         '
+        resources.ApplyResources(Me.SettingsTabControl, "SettingsTabControl")
         Me.SettingsTabControl.Controls.Add(Me.GeneralTabPage)
         Me.SettingsTabControl.Controls.Add(Me.UpdatesTabPage)
         Me.SettingsTabControl.Controls.Add(Me.AdvancedTabPage)
-        Me.SettingsTabControl.Location = New System.Drawing.Point(6, 6)
         Me.SettingsTabControl.Name = "SettingsTabControl"
         Me.SettingsTabControl.SelectedIndex = 0
-        Me.SettingsTabControl.Size = New System.Drawing.Size(492, 284)
-        Me.SettingsTabControl.TabIndex = 1
         '
         'GeneralTabPage
         '
+        resources.ApplyResources(Me.GeneralTabPage, "GeneralTabPage")
         Me.GeneralTabPage.Controls.Add(Me.TextFontAndColorGroupBox)
         Me.GeneralTabPage.Controls.Add(Me.NoteColorGroupBox)
-        Me.GeneralTabPage.Location = New System.Drawing.Point(4, 24)
         Me.GeneralTabPage.Name = "GeneralTabPage"
-        Me.GeneralTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.GeneralTabPage.Size = New System.Drawing.Size(484, 256)
-        Me.GeneralTabPage.TabIndex = 0
-        Me.GeneralTabPage.Text = "Général"
         Me.GeneralTabPage.UseVisualStyleBackColor = True
         '
         'TextFontAndColorGroupBox
         '
+        resources.ApplyResources(Me.TextFontAndColorGroupBox, "TextFontAndColorGroupBox")
         Me.TextFontAndColorGroupBox.Controls.Add(Me.ChangeTextFontButton)
         Me.TextFontAndColorGroupBox.Controls.Add(Me.RestoreTextStyleLinkLabel)
         Me.TextFontAndColorGroupBox.Controls.Add(Me.ChangeTextColorButton)
-        Me.TextFontAndColorGroupBox.Location = New System.Drawing.Point(7, 86)
         Me.TextFontAndColorGroupBox.Name = "TextFontAndColorGroupBox"
-        Me.TextFontAndColorGroupBox.Size = New System.Drawing.Size(471, 106)
-        Me.TextFontAndColorGroupBox.TabIndex = 1
         Me.TextFontAndColorGroupBox.TabStop = False
-        Me.TextFontAndColorGroupBox.Text = "Police et couleur du texte"
+        '
+        'ChangeTextFontButton
+        '
+        resources.ApplyResources(Me.ChangeTextFontButton, "ChangeTextFontButton")
+        Me.ChangeTextFontButton.Name = "ChangeTextFontButton"
+        Me.ChangeTextFontButton.UseVisualStyleBackColor = True
+        '
+        'RestoreTextStyleLinkLabel
+        '
+        resources.ApplyResources(Me.RestoreTextStyleLinkLabel, "RestoreTextStyleLinkLabel")
+        Me.RestoreTextStyleLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreTextStyleLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreTextStyleLinkLabel.Name = "RestoreTextStyleLinkLabel"
+        Me.RestoreTextStyleLinkLabel.TabStop = True
+        Me.RestoreTextStyleLinkLabel.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
+        '
+        'ChangeTextColorButton
+        '
+        resources.ApplyResources(Me.ChangeTextColorButton, "ChangeTextColorButton")
+        Me.ChangeTextColorButton.Name = "ChangeTextColorButton"
+        Me.ChangeTextColorButton.UseVisualStyleBackColor = True
         '
         'NoteColorGroupBox
         '
+        resources.ApplyResources(Me.NoteColorGroupBox, "NoteColorGroupBox")
         Me.NoteColorGroupBox.Controls.Add(Me.RestoreDefaultNoteColorLinkLabel)
         Me.NoteColorGroupBox.Controls.Add(Me.ChangeNoteColorButton)
-        Me.NoteColorGroupBox.Location = New System.Drawing.Point(7, 7)
         Me.NoteColorGroupBox.Name = "NoteColorGroupBox"
-        Me.NoteColorGroupBox.Size = New System.Drawing.Size(471, 73)
-        Me.NoteColorGroupBox.TabIndex = 0
         Me.NoteColorGroupBox.TabStop = False
-        Me.NoteColorGroupBox.Text = "Couleur des notes"
+        '
+        'RestoreDefaultNoteColorLinkLabel
+        '
+        resources.ApplyResources(Me.RestoreDefaultNoteColorLinkLabel, "RestoreDefaultNoteColorLinkLabel")
+        Me.RestoreDefaultNoteColorLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreDefaultNoteColorLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreDefaultNoteColorLinkLabel.Name = "RestoreDefaultNoteColorLinkLabel"
+        Me.RestoreDefaultNoteColorLinkLabel.TabStop = True
+        Me.RestoreDefaultNoteColorLinkLabel.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
+        '
+        'ChangeNoteColorButton
+        '
+        resources.ApplyResources(Me.ChangeNoteColorButton, "ChangeNoteColorButton")
+        Me.ChangeNoteColorButton.Name = "ChangeNoteColorButton"
+        Me.ChangeNoteColorButton.UseVisualStyleBackColor = True
         '
         'UpdatesTabPage
         '
+        resources.ApplyResources(Me.UpdatesTabPage, "UpdatesTabPage")
         Me.UpdatesTabPage.Controls.Add(Me.VersionNumberGroupBox)
         Me.UpdatesTabPage.Controls.Add(Me.AutoUpdateGroupBox)
-        Me.UpdatesTabPage.Location = New System.Drawing.Point(4, 24)
         Me.UpdatesTabPage.Name = "UpdatesTabPage"
-        Me.UpdatesTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.UpdatesTabPage.Size = New System.Drawing.Size(484, 256)
-        Me.UpdatesTabPage.TabIndex = 1
-        Me.UpdatesTabPage.Text = "Mises à jour"
         Me.UpdatesTabPage.UseVisualStyleBackColor = True
         '
         'VersionNumberGroupBox
         '
+        resources.ApplyResources(Me.VersionNumberGroupBox, "VersionNumberGroupBox")
         Me.VersionNumberGroupBox.Controls.Add(Me.UpdatesSearchButton)
         Me.VersionNumberGroupBox.Controls.Add(Me.VersionLabel)
-        Me.VersionNumberGroupBox.Location = New System.Drawing.Point(7, 66)
         Me.VersionNumberGroupBox.Name = "VersionNumberGroupBox"
-        Me.VersionNumberGroupBox.Size = New System.Drawing.Size(471, 70)
-        Me.VersionNumberGroupBox.TabIndex = 1
         Me.VersionNumberGroupBox.TabStop = False
-        Me.VersionNumberGroupBox.Text = "Gérer les mises à jour"
         '
         'UpdatesSearchButton
         '
-        Me.UpdatesSearchButton.Location = New System.Drawing.Point(7, 39)
+        resources.ApplyResources(Me.UpdatesSearchButton, "UpdatesSearchButton")
         Me.UpdatesSearchButton.Name = "UpdatesSearchButton"
-        Me.UpdatesSearchButton.Size = New System.Drawing.Size(240, 23)
-        Me.UpdatesSearchButton.TabIndex = 1
-        Me.UpdatesSearchButton.Text = "Rechercher les mises à jour maintenant"
         Me.UpdatesSearchButton.UseVisualStyleBackColor = True
         '
         'VersionLabel
         '
-        Me.VersionLabel.AutoSize = True
-        Me.VersionLabel.Location = New System.Drawing.Point(4, 21)
+        resources.ApplyResources(Me.VersionLabel, "VersionLabel")
         Me.VersionLabel.Name = "VersionLabel"
-        Me.VersionLabel.Size = New System.Drawing.Size(133, 15)
-        Me.VersionLabel.TabIndex = 0
-        Me.VersionLabel.Text = "Version installée : 0.0.0.0"
         '
         'AutoUpdateGroupBox
         '
+        resources.ApplyResources(Me.AutoUpdateGroupBox, "AutoUpdateGroupBox")
         Me.AutoUpdateGroupBox.Controls.Add(Me.AutoUpdateCheckBox)
-        Me.AutoUpdateGroupBox.Location = New System.Drawing.Point(7, 7)
         Me.AutoUpdateGroupBox.Name = "AutoUpdateGroupBox"
-        Me.AutoUpdateGroupBox.Size = New System.Drawing.Size(471, 52)
-        Me.AutoUpdateGroupBox.TabIndex = 0
         Me.AutoUpdateGroupBox.TabStop = False
-        Me.AutoUpdateGroupBox.Text = "Recherche automatique"
         '
         'AutoUpdateCheckBox
         '
-        Me.AutoUpdateCheckBox.AutoSize = True
-        Me.AutoUpdateCheckBox.Location = New System.Drawing.Point(7, 23)
+        resources.ApplyResources(Me.AutoUpdateCheckBox, "AutoUpdateCheckBox")
         Me.AutoUpdateCheckBox.Name = "AutoUpdateCheckBox"
-        Me.AutoUpdateCheckBox.Size = New System.Drawing.Size(349, 19)
-        Me.AutoUpdateCheckBox.TabIndex = 0
-        Me.AutoUpdateCheckBox.Text = "Rechercher les mises à jour automatiquement (recommandé)"
         Me.AutoUpdateCheckBox.UseVisualStyleBackColor = True
         '
         'AdvancedTabPage
         '
+        resources.ApplyResources(Me.AdvancedTabPage, "AdvancedTabPage")
         Me.AdvancedTabPage.Controls.Add(Me.SettingsRestoreGroupBox)
-        Me.AdvancedTabPage.Location = New System.Drawing.Point(4, 24)
         Me.AdvancedTabPage.Name = "AdvancedTabPage"
-        Me.AdvancedTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.AdvancedTabPage.Size = New System.Drawing.Size(484, 256)
-        Me.AdvancedTabPage.TabIndex = 2
-        Me.AdvancedTabPage.Text = "Paramètres avancés"
         Me.AdvancedTabPage.UseVisualStyleBackColor = True
         '
         'SettingsRestoreGroupBox
         '
+        resources.ApplyResources(Me.SettingsRestoreGroupBox, "SettingsRestoreGroupBox")
         Me.SettingsRestoreGroupBox.Controls.Add(Me.RestorePreviousSettingsButton)
-        Me.SettingsRestoreGroupBox.Location = New System.Drawing.Point(7, 7)
         Me.SettingsRestoreGroupBox.Name = "SettingsRestoreGroupBox"
-        Me.SettingsRestoreGroupBox.Size = New System.Drawing.Size(471, 57)
-        Me.SettingsRestoreGroupBox.TabIndex = 0
         Me.SettingsRestoreGroupBox.TabStop = False
-        Me.SettingsRestoreGroupBox.Text = "Restaurer les paramètres établis avant mise à jour"
         '
         'RestorePreviousSettingsButton
         '
-        Me.RestorePreviousSettingsButton.Location = New System.Drawing.Point(7, 23)
+        resources.ApplyResources(Me.RestorePreviousSettingsButton, "RestorePreviousSettingsButton")
         Me.RestorePreviousSettingsButton.Name = "RestorePreviousSettingsButton"
-        Me.RestorePreviousSettingsButton.Size = New System.Drawing.Size(298, 23)
-        Me.RestorePreviousSettingsButton.TabIndex = 0
-        Me.RestorePreviousSettingsButton.Text = "Restaurer les paramètres de la version précédente"
         Me.RestorePreviousSettingsButton.UseVisualStyleBackColor = True
         '
         'RestartWarningLabel
         '
-        Me.RestartWarningLabel.AutoSize = True
-        Me.RestartWarningLabel.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RestartWarningLabel.Location = New System.Drawing.Point(100, 302)
+        resources.ApplyResources(Me.RestartWarningLabel, "RestartWarningLabel")
         Me.RestartWarningLabel.Name = "RestartWarningLabel"
-        Me.RestartWarningLabel.Size = New System.Drawing.Size(313, 12)
-        Me.RestartWarningLabel.TabIndex = 2
-        Me.RestartWarningLabel.Text = "*Certains paramètres seront appliqués à l'ouverture de nouvelles notes."
-        Me.RestartWarningLabel.Visible = False
-        '
-        'ChangeNoteColorButton
-        '
-        Me.ChangeNoteColorButton.Location = New System.Drawing.Point(7, 22)
-        Me.ChangeNoteColorButton.Name = "ChangeNoteColorButton"
-        Me.ChangeNoteColorButton.Size = New System.Drawing.Size(193, 23)
-        Me.ChangeNoteColorButton.TabIndex = 0
-        Me.ChangeNoteColorButton.Text = "Changer la couleur des notes..."
-        Me.ChangeNoteColorButton.UseVisualStyleBackColor = True
-        '
-        'RestoreDefaultNoteColorLinkLabel
-        '
-        Me.RestoreDefaultNoteColorLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
-        Me.RestoreDefaultNoteColorLinkLabel.AutoSize = True
-        Me.RestoreDefaultNoteColorLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
-        Me.RestoreDefaultNoteColorLinkLabel.Location = New System.Drawing.Point(6, 48)
-        Me.RestoreDefaultNoteColorLinkLabel.Name = "RestoreDefaultNoteColorLinkLabel"
-        Me.RestoreDefaultNoteColorLinkLabel.Size = New System.Drawing.Size(168, 15)
-        Me.RestoreDefaultNoteColorLinkLabel.TabIndex = 1
-        Me.RestoreDefaultNoteColorLinkLabel.TabStop = True
-        Me.RestoreDefaultNoteColorLinkLabel.Text = "Restaurer la couleur par défaut"
-        Me.RestoreDefaultNoteColorLinkLabel.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
-        '
-        'ChangeTextColorButton
-        '
-        Me.ChangeTextColorButton.Location = New System.Drawing.Point(7, 22)
-        Me.ChangeTextColorButton.Name = "ChangeTextColorButton"
-        Me.ChangeTextColorButton.Size = New System.Drawing.Size(193, 23)
-        Me.ChangeTextColorButton.TabIndex = 0
-        Me.ChangeTextColorButton.Text = "Changer la couleur du texte..."
-        Me.ChangeTextColorButton.UseVisualStyleBackColor = True
-        '
-        'RestoreTextStyleLinkLabel
-        '
-        Me.RestoreTextStyleLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
-        Me.RestoreTextStyleLinkLabel.AutoSize = True
-        Me.RestoreTextStyleLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
-        Me.RestoreTextStyleLinkLabel.Location = New System.Drawing.Point(6, 77)
-        Me.RestoreTextStyleLinkLabel.Name = "RestoreTextStyleLinkLabel"
-        Me.RestoreTextStyleLinkLabel.Size = New System.Drawing.Size(197, 15)
-        Me.RestoreTextStyleLinkLabel.TabIndex = 1
-        Me.RestoreTextStyleLinkLabel.TabStop = True
-        Me.RestoreTextStyleLinkLabel.Text = "Restaurer le style du texte par défaut"
-        Me.RestoreTextStyleLinkLabel.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
-        '
-        'ChangeTextFontButton
-        '
-        Me.ChangeTextFontButton.Location = New System.Drawing.Point(7, 51)
-        Me.ChangeTextFontButton.Name = "ChangeTextFontButton"
-        Me.ChangeTextFontButton.Size = New System.Drawing.Size(193, 23)
-        Me.ChangeTextFontButton.TabIndex = 2
-        Me.ChangeTextFontButton.Text = "Personnaliser la police du texte..."
-        Me.ChangeTextFontButton.UseVisualStyleBackColor = True
         '
         'SettingsForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(505, 331)
         Me.Controls.Add(Me.RestartWarningLabel)
         Me.Controls.Add(Me.SettingsTabControl)
         Me.Controls.Add(Me.OKButton)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SettingsForm"
         Me.ShowInTaskbar = False
-        Me.Text = "Paramètres"
         Me.SettingsTabControl.ResumeLayout(False)
         Me.GeneralTabPage.ResumeLayout(False)
         Me.TextFontAndColorGroupBox.ResumeLayout(False)
