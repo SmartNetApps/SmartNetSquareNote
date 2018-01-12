@@ -53,43 +53,12 @@ Public Class NoteForm
 
     Private Sub NoteForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Text = NoteRichTextBox.Text
-        If My.Settings.TextInWhite = True Then
-            NoteRichTextBox.ForeColor = Color.White
-        Else
-            NoteRichTextBox.ForeColor = Color.Black
-        End If
-        Select Case My.Settings.NoteColor
-            Case 1
-                Me.BackColor = Color.Gold
-                NoteRichTextBox.BackColor = Color.Gold
-                FormDragger.BackColor = Color.Gold
-                MenuStrip1.BackColor = Color.Gold
-            Case 2
-                Me.BackColor = Color.IndianRed
-                NoteRichTextBox.BackColor = Color.IndianRed
-                FormDragger.BackColor = Color.IndianRed
-                MenuStrip1.BackColor = Color.IndianRed
-            Case 3
-                Me.BackColor = Color.LightGreen
-                NoteRichTextBox.BackColor = Color.LightGreen
-                FormDragger.BackColor = Color.LightGreen
-                MenuStrip1.BackColor = Color.LightGreen
-            Case 4
-                Me.BackColor = Color.LightGray
-                NoteRichTextBox.BackColor = Color.LightGray
-                FormDragger.BackColor = Color.LightGray
-                MenuStrip1.BackColor = Color.LightGray
-            Case 5
-                Me.BackColor = Color.LightBlue
-                NoteRichTextBox.BackColor = Color.LightBlue
-                FormDragger.BackColor = Color.LightBlue
-                MenuStrip1.BackColor = Color.LightBlue
-            Case 6
-                Me.BackColor = Color.Orange
-                NoteRichTextBox.BackColor = Color.Orange
-                FormDragger.BackColor = Color.Orange
-                MenuStrip1.BackColor = Color.Orange
-        End Select
+        NoteRichTextBox.ForeColor = My.Settings.TextColor
+        NoteRichTextBox.Font = My.Settings.TextFont
+        Me.BackColor = My.Settings.NoteColor
+        NoteRichTextBox.BackColor = My.Settings.NoteColor
+        FormDragger.BackColor = My.Settings.NoteColor
+        MenuStrip1.BackColor = My.Settings.NoteColor
     End Sub
 
     Private Sub ParamètresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ParamètresToolStripMenuItem.Click

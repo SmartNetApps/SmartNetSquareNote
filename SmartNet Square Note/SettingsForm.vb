@@ -17,126 +17,16 @@ Public Class SettingsForm
 
     Private Sub SettingsForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         VersionLabel.Text = "Version installée : " + My.Application.Info.Version.ToString
-        Select Case My.Settings.NoteColor
-            Case 1
-                YellowNoteColorRadioButton1.Checked = True
-                RedNoteColorRadioButton2.Checked = False
-                GreenNoteColorRadioButton3.Checked = False
-                GreyNoteColorRadioButton4.Checked = False
-                BlueNoteColorRadioButton5.Checked = False
-                OrangeNoteColorRadioButton6.Checked = False
-            Case 2
-                YellowNoteColorRadioButton1.Checked = False
-                RedNoteColorRadioButton2.Checked = True
-                GreenNoteColorRadioButton3.Checked = False
-                GreyNoteColorRadioButton4.Checked = False
-                BlueNoteColorRadioButton5.Checked = False
-                OrangeNoteColorRadioButton6.Checked = False
-            Case 3
-                YellowNoteColorRadioButton1.Checked = False
-                RedNoteColorRadioButton2.Checked = False
-                GreenNoteColorRadioButton3.Checked = True
-                GreyNoteColorRadioButton4.Checked = False
-                BlueNoteColorRadioButton5.Checked = False
-                OrangeNoteColorRadioButton6.Checked = False
-            Case 4
-                YellowNoteColorRadioButton1.Checked = False
-                RedNoteColorRadioButton2.Checked = False
-                GreenNoteColorRadioButton3.Checked = False
-                GreyNoteColorRadioButton4.Checked = True
-                BlueNoteColorRadioButton5.Checked = False
-                OrangeNoteColorRadioButton6.Checked = False
-            Case 5
-                YellowNoteColorRadioButton1.Checked = False
-                RedNoteColorRadioButton2.Checked = False
-                GreenNoteColorRadioButton3.Checked = False
-                GreyNoteColorRadioButton4.Checked = False
-                BlueNoteColorRadioButton5.Checked = True
-                OrangeNoteColorRadioButton6.Checked = False
-            Case 6
-                YellowNoteColorRadioButton1.Checked = False
-                RedNoteColorRadioButton2.Checked = False
-                GreenNoteColorRadioButton3.Checked = False
-                GreyNoteColorRadioButton4.Checked = False
-                BlueNoteColorRadioButton5.Checked = False
-                OrangeNoteColorRadioButton6.Checked = True
-        End Select
-        If My.Settings.TextInWhite = True Then
-            TextInWhiteCheckBox.Checked = True
-        Else
-            TextInWhiteCheckBox.Checked = False
-        End If
+        NoteForm.BackColor = My.Settings.NoteColor
+        NoteForm.NoteRichTextBox.BackColor = My.Settings.NoteColor
+        NoteForm.FormDragger.BackColor = My.Settings.NoteColor
+        NoteForm.MenuStrip1.BackColor = My.Settings.NoteColor
         If My.Settings.AutoUpdates = True Then
             AutoUpdateCheckBox.Checked = True
         Else
             AutoUpdateCheckBox.Checked = False
         End If
         RestartWarningLabel.Visible = False
-    End Sub
-
-    Private Sub YellowNoteColorRadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles YellowNoteColorRadioButton1.CheckedChanged
-        My.Settings.NoteColor = 1
-        NoteForm.BackColor = Color.Gold
-        NoteForm.NoteRichTextBox.BackColor = Color.Gold
-        NoteForm.FormDragger.BackColor = Color.Gold
-        NoteForm.MenuStrip1.BackColor = Color.Gold
-        RestartWarningLabel.Visible = True
-    End Sub
-
-    Private Sub RedNoteColorRadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RedNoteColorRadioButton2.CheckedChanged
-        My.Settings.NoteColor = 2
-        NoteForm.BackColor = Color.IndianRed
-        NoteForm.NoteRichTextBox.BackColor = Color.IndianRed
-        NoteForm.FormDragger.BackColor = Color.IndianRed
-        NoteForm.MenuStrip1.BackColor = Color.IndianRed
-        RestartWarningLabel.Visible = True
-    End Sub
-
-    Private Sub GreenNoteColorRadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles GreenNoteColorRadioButton3.CheckedChanged
-        My.Settings.NoteColor = 3
-        NoteForm.BackColor = Color.LightGreen
-        NoteForm.NoteRichTextBox.BackColor = Color.LightGreen
-        NoteForm.FormDragger.BackColor = Color.LightGreen
-        NoteForm.MenuStrip1.BackColor = Color.LightGreen
-        RestartWarningLabel.Visible = True
-    End Sub
-
-    Private Sub GreyNoteColorRadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles GreyNoteColorRadioButton4.CheckedChanged
-        My.Settings.NoteColor = 4
-        NoteForm.BackColor = Color.LightGray
-        NoteForm.NoteRichTextBox.BackColor = Color.LightGray
-        NoteForm.FormDragger.BackColor = Color.LightGray
-        NoteForm.MenuStrip1.BackColor = Color.LightGray
-        RestartWarningLabel.Visible = True
-    End Sub
-
-    Private Sub BlueNoteColorRadioButton5_CheckedChanged(sender As Object, e As EventArgs) Handles BlueNoteColorRadioButton5.CheckedChanged
-        My.Settings.NoteColor = 5
-        NoteForm.BackColor = Color.LightBlue
-        NoteForm.NoteRichTextBox.BackColor = Color.LightBlue
-        NoteForm.FormDragger.BackColor = Color.LightBlue
-        NoteForm.MenuStrip1.BackColor = Color.LightBlue
-        RestartWarningLabel.Visible = True
-    End Sub
-
-    Private Sub OrangeNoteColorRadioButton6_CheckedChanged(sender As Object, e As EventArgs) Handles OrangeNoteColorRadioButton6.CheckedChanged
-        My.Settings.NoteColor = 6
-        NoteForm.BackColor = Color.Orange
-        NoteForm.NoteRichTextBox.BackColor = Color.Orange
-        NoteForm.FormDragger.BackColor = Color.Orange
-        NoteForm.MenuStrip1.BackColor = Color.Orange
-        RestartWarningLabel.Visible = True
-    End Sub
-
-    Private Sub TextInWhiteCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles TextInWhiteCheckBox.CheckedChanged
-        If TextInWhiteCheckBox.Checked = True Then
-            My.Settings.TextInWhite = True
-            NoteForm.NoteRichTextBox.ForeColor = Color.White
-        Else
-            My.Settings.TextInWhite = False
-            NoteForm.NoteRichTextBox.ForeColor = Color.Black
-        End If
-        RestartWarningLabel.Visible = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles RestorePreviousSettingsButton.Click
@@ -159,12 +49,12 @@ Public Class SettingsForm
                 MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique, réservée aux développeurs du logiciel. Cette utilisation n'est pas autorisée, veuillez retélécharger le logiciel sur SmartNet Apps. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Utilisation non autorisée")
             End If
             If NTActualVersion < MiniNTVersion Then
-                    MsgBox("Votre système d'exploitation n'est plus pris en charge par SmartNet Apps. Visitez le site SmartNet Apps pour en savoir plus à ce sujet. La recherche automatique de mises à jour à été désactivée.", MsgBoxStyle.Exclamation, "Avertissement")
-                    My.Settings.AutoUpdates = False
-                    My.Settings.Save()
-                    My.Settings.UpdateAvailable = False
-                    NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
+                MsgBox("Votre système d'exploitation n'est plus pris en charge par SmartNet Apps. Visitez le site SmartNet Apps pour en savoir plus à ce sujet. La recherche automatique de mises à jour à été désactivée.", MsgBoxStyle.Exclamation, "Avertissement")
+                My.Settings.AutoUpdates = False
+                My.Settings.Save()
+                My.Settings.UpdateAvailable = False
+                NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
+                NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
                 GoTo StopVersionChecking
             End If
             If SupportStatus = "on" Then
@@ -191,5 +81,49 @@ StopVersionChecking:
         Catch ex As Exception
             MsgBox("La connexion à SmartNet Apps Updater a échoué : " + ex.Message, MsgBoxStyle.Critical, "SmartNet Apps Updater")
         End Try
+    End Sub
+
+    Private Sub ChangeNoteColorButton_Click(sender As Object, e As EventArgs) Handles ChangeNoteColorButton.Click
+        If NoteColorDialog.ShowDialog() = DialogResult.OK Then
+            My.Settings.NoteColor = NoteColorDialog.Color
+            NoteForm.BackColor = My.Settings.NoteColor
+            NoteForm.NoteRichTextBox.BackColor = My.Settings.NoteColor
+            NoteForm.FormDragger.BackColor = My.Settings.NoteColor
+            NoteForm.MenuStrip1.BackColor = My.Settings.NoteColor
+            RestartWarningLabel.Visible = True
+        End If
+    End Sub
+
+    Private Sub ChangeTextColorButton_Click(sender As Object, e As EventArgs) Handles ChangeTextColorButton.Click
+        If TextColorDialog.ShowDialog() = DialogResult.OK Then
+            My.Settings.TextColor = TextColorDialog.Color
+            NoteForm.NoteRichTextBox.ForeColor = My.Settings.TextColor
+            RestartWarningLabel.Visible = True
+        End If
+    End Sub
+
+    Private Sub ChangeTextFontButton_Click(sender As Object, e As EventArgs) Handles ChangeTextFontButton.Click
+        If TextFontDialog.ShowDialog() = DialogResult.OK Then
+            My.Settings.TextFont = TextFontDialog.Font
+            NoteForm.NoteRichTextBox.Font = My.Settings.TextFont
+            RestartWarningLabel.Visible = True
+        End If
+    End Sub
+
+    Private Sub RestoreDefaultNoteColorLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles RestoreDefaultNoteColorLinkLabel.LinkClicked
+        My.Settings.NoteColor = Color.FromArgb(255, 255, 192)
+        NoteForm.BackColor = My.Settings.NoteColor
+        NoteForm.NoteRichTextBox.BackColor = My.Settings.NoteColor
+        NoteForm.FormDragger.BackColor = My.Settings.NoteColor
+        NoteForm.MenuStrip1.BackColor = My.Settings.NoteColor
+        RestartWarningLabel.Visible = True
+    End Sub
+
+    Private Sub RestoreTextStyleLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles RestoreTextStyleLinkLabel.LinkClicked
+        My.Settings.TextColor = Color.Black
+        NoteForm.NoteRichTextBox.ForeColor = My.Settings.TextColor
+        My.Settings.TextFont = New Font("Comic Sans MS", 11.25)
+        NoteForm.NoteRichTextBox.Font = My.Settings.TextFont
+        RestartWarningLabel.Visible = True
     End Sub
 End Class

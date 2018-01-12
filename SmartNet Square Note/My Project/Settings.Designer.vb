@@ -56,10 +56,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property NoteColor() As Integer
+         Global.System.Configuration.DefaultSettingValueAttribute("255, 255, 192")>  _
+        Public Property NoteColor() As Global.System.Drawing.Color
             Get
-                Return CType(Me("NoteColor"),Integer)
+                Return CType(Me("NoteColor"),Global.System.Drawing.Color)
             End Get
             Set
                 Me("NoteColor") = value
@@ -68,13 +68,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property TextInWhite() As Boolean
+         Global.System.Configuration.DefaultSettingValueAttribute("Black")>  _
+        Public Property TextColor() As Global.System.Drawing.Color
             Get
-                Return CType(Me("TextInWhite"),Boolean)
+                Return CType(Me("TextColor"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("TextInWhite") = value
+                Me("TextColor") = value
             End Set
         End Property
         
@@ -99,6 +99,18 @@ Namespace My
             End Get
             Set
                 Me("UpdateAvailable") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Comic Sans MS, 11.25pt")>  _
+        Public Property TextFont() As Global.System.Drawing.Font
+            Get
+                Return CType(Me("TextFont"),Global.System.Drawing.Font)
+            End Get
+            Set
+                Me("TextFont") = value
             End Set
         End Property
     End Class

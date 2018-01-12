@@ -26,15 +26,8 @@ Partial Class SettingsForm
         Me.OKButton = New System.Windows.Forms.Button()
         Me.SettingsTabControl = New System.Windows.Forms.TabControl()
         Me.GeneralTabPage = New System.Windows.Forms.TabPage()
-        Me.TextColorGroupBox = New System.Windows.Forms.GroupBox()
-        Me.TextInWhiteCheckBox = New System.Windows.Forms.CheckBox()
+        Me.TextFontAndColorGroupBox = New System.Windows.Forms.GroupBox()
         Me.NoteColorGroupBox = New System.Windows.Forms.GroupBox()
-        Me.BlueNoteColorRadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.OrangeNoteColorRadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.GreyNoteColorRadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.GreenNoteColorRadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RedNoteColorRadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.YellowNoteColorRadioButton1 = New System.Windows.Forms.RadioButton()
         Me.UpdatesTabPage = New System.Windows.Forms.TabPage()
         Me.VersionNumberGroupBox = New System.Windows.Forms.GroupBox()
         Me.UpdatesSearchButton = New System.Windows.Forms.Button()
@@ -45,9 +38,17 @@ Partial Class SettingsForm
         Me.SettingsRestoreGroupBox = New System.Windows.Forms.GroupBox()
         Me.RestorePreviousSettingsButton = New System.Windows.Forms.Button()
         Me.RestartWarningLabel = New System.Windows.Forms.Label()
+        Me.NoteColorDialog = New System.Windows.Forms.ColorDialog()
+        Me.ChangeNoteColorButton = New System.Windows.Forms.Button()
+        Me.RestoreDefaultNoteColorLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.TextColorDialog = New System.Windows.Forms.ColorDialog()
+        Me.TextFontDialog = New System.Windows.Forms.FontDialog()
+        Me.ChangeTextColorButton = New System.Windows.Forms.Button()
+        Me.RestoreTextStyleLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.ChangeTextFontButton = New System.Windows.Forms.Button()
         Me.SettingsTabControl.SuspendLayout()
         Me.GeneralTabPage.SuspendLayout()
-        Me.TextColorGroupBox.SuspendLayout()
+        Me.TextFontAndColorGroupBox.SuspendLayout()
         Me.NoteColorGroupBox.SuspendLayout()
         Me.UpdatesTabPage.SuspendLayout()
         Me.VersionNumberGroupBox.SuspendLayout()
@@ -78,7 +79,7 @@ Partial Class SettingsForm
         '
         'GeneralTabPage
         '
-        Me.GeneralTabPage.Controls.Add(Me.TextColorGroupBox)
+        Me.GeneralTabPage.Controls.Add(Me.TextFontAndColorGroupBox)
         Me.GeneralTabPage.Controls.Add(Me.NoteColorGroupBox)
         Me.GeneralTabPage.Location = New System.Drawing.Point(4, 24)
         Me.GeneralTabPage.Name = "GeneralTabPage"
@@ -88,106 +89,28 @@ Partial Class SettingsForm
         Me.GeneralTabPage.Text = "Général"
         Me.GeneralTabPage.UseVisualStyleBackColor = True
         '
-        'TextColorGroupBox
+        'TextFontAndColorGroupBox
         '
-        Me.TextColorGroupBox.Controls.Add(Me.TextInWhiteCheckBox)
-        Me.TextColorGroupBox.Location = New System.Drawing.Point(7, 109)
-        Me.TextColorGroupBox.Name = "TextColorGroupBox"
-        Me.TextColorGroupBox.Size = New System.Drawing.Size(471, 53)
-        Me.TextColorGroupBox.TabIndex = 1
-        Me.TextColorGroupBox.TabStop = False
-        Me.TextColorGroupBox.Text = "Couleur du texte"
-        '
-        'TextInWhiteCheckBox
-        '
-        Me.TextInWhiteCheckBox.AutoSize = True
-        Me.TextInWhiteCheckBox.Location = New System.Drawing.Point(7, 23)
-        Me.TextInWhiteCheckBox.Name = "TextInWhiteCheckBox"
-        Me.TextInWhiteCheckBox.Size = New System.Drawing.Size(222, 19)
-        Me.TextInWhiteCheckBox.TabIndex = 0
-        Me.TextInWhiteCheckBox.Text = "Écrire le texte en blanc au lieu du noir"
-        Me.TextInWhiteCheckBox.UseVisualStyleBackColor = True
+        Me.TextFontAndColorGroupBox.Controls.Add(Me.ChangeTextFontButton)
+        Me.TextFontAndColorGroupBox.Controls.Add(Me.RestoreTextStyleLinkLabel)
+        Me.TextFontAndColorGroupBox.Controls.Add(Me.ChangeTextColorButton)
+        Me.TextFontAndColorGroupBox.Location = New System.Drawing.Point(7, 86)
+        Me.TextFontAndColorGroupBox.Name = "TextFontAndColorGroupBox"
+        Me.TextFontAndColorGroupBox.Size = New System.Drawing.Size(471, 106)
+        Me.TextFontAndColorGroupBox.TabIndex = 1
+        Me.TextFontAndColorGroupBox.TabStop = False
+        Me.TextFontAndColorGroupBox.Text = "Police et couleur du texte"
         '
         'NoteColorGroupBox
         '
-        Me.NoteColorGroupBox.Controls.Add(Me.BlueNoteColorRadioButton5)
-        Me.NoteColorGroupBox.Controls.Add(Me.OrangeNoteColorRadioButton6)
-        Me.NoteColorGroupBox.Controls.Add(Me.GreyNoteColorRadioButton4)
-        Me.NoteColorGroupBox.Controls.Add(Me.GreenNoteColorRadioButton3)
-        Me.NoteColorGroupBox.Controls.Add(Me.RedNoteColorRadioButton2)
-        Me.NoteColorGroupBox.Controls.Add(Me.YellowNoteColorRadioButton1)
+        Me.NoteColorGroupBox.Controls.Add(Me.RestoreDefaultNoteColorLinkLabel)
+        Me.NoteColorGroupBox.Controls.Add(Me.ChangeNoteColorButton)
         Me.NoteColorGroupBox.Location = New System.Drawing.Point(7, 7)
         Me.NoteColorGroupBox.Name = "NoteColorGroupBox"
-        Me.NoteColorGroupBox.Size = New System.Drawing.Size(471, 95)
+        Me.NoteColorGroupBox.Size = New System.Drawing.Size(471, 73)
         Me.NoteColorGroupBox.TabIndex = 0
         Me.NoteColorGroupBox.TabStop = False
         Me.NoteColorGroupBox.Text = "Couleur des notes"
-        '
-        'BlueNoteColorRadioButton5
-        '
-        Me.BlueNoteColorRadioButton5.AutoSize = True
-        Me.BlueNoteColorRadioButton5.Location = New System.Drawing.Point(143, 43)
-        Me.BlueNoteColorRadioButton5.Name = "BlueNoteColorRadioButton5"
-        Me.BlueNoteColorRadioButton5.Size = New System.Drawing.Size(48, 19)
-        Me.BlueNoteColorRadioButton5.TabIndex = 5
-        Me.BlueNoteColorRadioButton5.TabStop = True
-        Me.BlueNoteColorRadioButton5.Text = "Bleu"
-        Me.BlueNoteColorRadioButton5.UseVisualStyleBackColor = True
-        '
-        'OrangeNoteColorRadioButton6
-        '
-        Me.OrangeNoteColorRadioButton6.AutoSize = True
-        Me.OrangeNoteColorRadioButton6.Location = New System.Drawing.Point(143, 64)
-        Me.OrangeNoteColorRadioButton6.Name = "OrangeNoteColorRadioButton6"
-        Me.OrangeNoteColorRadioButton6.Size = New System.Drawing.Size(64, 19)
-        Me.OrangeNoteColorRadioButton6.TabIndex = 4
-        Me.OrangeNoteColorRadioButton6.TabStop = True
-        Me.OrangeNoteColorRadioButton6.Text = "Orange"
-        Me.OrangeNoteColorRadioButton6.UseVisualStyleBackColor = True
-        '
-        'GreyNoteColorRadioButton4
-        '
-        Me.GreyNoteColorRadioButton4.AutoSize = True
-        Me.GreyNoteColorRadioButton4.Location = New System.Drawing.Point(143, 22)
-        Me.GreyNoteColorRadioButton4.Name = "GreyNoteColorRadioButton4"
-        Me.GreyNoteColorRadioButton4.Size = New System.Drawing.Size(45, 19)
-        Me.GreyNoteColorRadioButton4.TabIndex = 3
-        Me.GreyNoteColorRadioButton4.TabStop = True
-        Me.GreyNoteColorRadioButton4.Text = "Gris"
-        Me.GreyNoteColorRadioButton4.UseVisualStyleBackColor = True
-        '
-        'GreenNoteColorRadioButton3
-        '
-        Me.GreenNoteColorRadioButton3.AutoSize = True
-        Me.GreenNoteColorRadioButton3.Location = New System.Drawing.Point(6, 64)
-        Me.GreenNoteColorRadioButton3.Name = "GreenNoteColorRadioButton3"
-        Me.GreenNoteColorRadioButton3.Size = New System.Drawing.Size(45, 19)
-        Me.GreenNoteColorRadioButton3.TabIndex = 2
-        Me.GreenNoteColorRadioButton3.TabStop = True
-        Me.GreenNoteColorRadioButton3.Text = "Vert"
-        Me.GreenNoteColorRadioButton3.UseVisualStyleBackColor = True
-        '
-        'RedNoteColorRadioButton2
-        '
-        Me.RedNoteColorRadioButton2.AutoSize = True
-        Me.RedNoteColorRadioButton2.Location = New System.Drawing.Point(6, 43)
-        Me.RedNoteColorRadioButton2.Name = "RedNoteColorRadioButton2"
-        Me.RedNoteColorRadioButton2.Size = New System.Drawing.Size(59, 19)
-        Me.RedNoteColorRadioButton2.TabIndex = 1
-        Me.RedNoteColorRadioButton2.TabStop = True
-        Me.RedNoteColorRadioButton2.Text = "Rouge"
-        Me.RedNoteColorRadioButton2.UseVisualStyleBackColor = True
-        '
-        'YellowNoteColorRadioButton1
-        '
-        Me.YellowNoteColorRadioButton1.AutoSize = True
-        Me.YellowNoteColorRadioButton1.Location = New System.Drawing.Point(6, 22)
-        Me.YellowNoteColorRadioButton1.Name = "YellowNoteColorRadioButton1"
-        Me.YellowNoteColorRadioButton1.Size = New System.Drawing.Size(120, 19)
-        Me.YellowNoteColorRadioButton1.TabIndex = 0
-        Me.YellowNoteColorRadioButton1.TabStop = True
-        Me.YellowNoteColorRadioButton1.Text = "Jaune (par défaut)"
-        Me.YellowNoteColorRadioButton1.UseVisualStyleBackColor = True
         '
         'UpdatesTabPage
         '
@@ -291,6 +214,59 @@ Partial Class SettingsForm
         Me.RestartWarningLabel.Text = "*Certains paramètres seront appliqués à l'ouverture de nouvelles notes."
         Me.RestartWarningLabel.Visible = False
         '
+        'ChangeNoteColorButton
+        '
+        Me.ChangeNoteColorButton.Location = New System.Drawing.Point(7, 22)
+        Me.ChangeNoteColorButton.Name = "ChangeNoteColorButton"
+        Me.ChangeNoteColorButton.Size = New System.Drawing.Size(193, 23)
+        Me.ChangeNoteColorButton.TabIndex = 0
+        Me.ChangeNoteColorButton.Text = "Changer la couleur des notes..."
+        Me.ChangeNoteColorButton.UseVisualStyleBackColor = True
+        '
+        'RestoreDefaultNoteColorLinkLabel
+        '
+        Me.RestoreDefaultNoteColorLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreDefaultNoteColorLinkLabel.AutoSize = True
+        Me.RestoreDefaultNoteColorLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreDefaultNoteColorLinkLabel.Location = New System.Drawing.Point(6, 48)
+        Me.RestoreDefaultNoteColorLinkLabel.Name = "RestoreDefaultNoteColorLinkLabel"
+        Me.RestoreDefaultNoteColorLinkLabel.Size = New System.Drawing.Size(168, 15)
+        Me.RestoreDefaultNoteColorLinkLabel.TabIndex = 1
+        Me.RestoreDefaultNoteColorLinkLabel.TabStop = True
+        Me.RestoreDefaultNoteColorLinkLabel.Text = "Restaurer la couleur par défaut"
+        Me.RestoreDefaultNoteColorLinkLabel.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
+        '
+        'ChangeTextColorButton
+        '
+        Me.ChangeTextColorButton.Location = New System.Drawing.Point(7, 22)
+        Me.ChangeTextColorButton.Name = "ChangeTextColorButton"
+        Me.ChangeTextColorButton.Size = New System.Drawing.Size(193, 23)
+        Me.ChangeTextColorButton.TabIndex = 0
+        Me.ChangeTextColorButton.Text = "Changer la couleur du texte..."
+        Me.ChangeTextColorButton.UseVisualStyleBackColor = True
+        '
+        'RestoreTextStyleLinkLabel
+        '
+        Me.RestoreTextStyleLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreTextStyleLinkLabel.AutoSize = True
+        Me.RestoreTextStyleLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
+        Me.RestoreTextStyleLinkLabel.Location = New System.Drawing.Point(6, 77)
+        Me.RestoreTextStyleLinkLabel.Name = "RestoreTextStyleLinkLabel"
+        Me.RestoreTextStyleLinkLabel.Size = New System.Drawing.Size(197, 15)
+        Me.RestoreTextStyleLinkLabel.TabIndex = 1
+        Me.RestoreTextStyleLinkLabel.TabStop = True
+        Me.RestoreTextStyleLinkLabel.Text = "Restaurer le style du texte par défaut"
+        Me.RestoreTextStyleLinkLabel.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
+        '
+        'ChangeTextFontButton
+        '
+        Me.ChangeTextFontButton.Location = New System.Drawing.Point(7, 51)
+        Me.ChangeTextFontButton.Name = "ChangeTextFontButton"
+        Me.ChangeTextFontButton.Size = New System.Drawing.Size(193, 23)
+        Me.ChangeTextFontButton.TabIndex = 2
+        Me.ChangeTextFontButton.Text = "Personnaliser la police du texte..."
+        Me.ChangeTextFontButton.UseVisualStyleBackColor = True
+        '
         'SettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -309,8 +285,8 @@ Partial Class SettingsForm
         Me.Text = "Paramètres"
         Me.SettingsTabControl.ResumeLayout(False)
         Me.GeneralTabPage.ResumeLayout(False)
-        Me.TextColorGroupBox.ResumeLayout(False)
-        Me.TextColorGroupBox.PerformLayout()
+        Me.TextFontAndColorGroupBox.ResumeLayout(False)
+        Me.TextFontAndColorGroupBox.PerformLayout()
         Me.NoteColorGroupBox.ResumeLayout(False)
         Me.NoteColorGroupBox.PerformLayout()
         Me.UpdatesTabPage.ResumeLayout(False)
@@ -335,16 +311,17 @@ Partial Class SettingsForm
     Friend WithEvents VersionNumberGroupBox As GroupBox
     Friend WithEvents UpdatesSearchButton As Button
     Friend WithEvents VersionLabel As Label
-    Friend WithEvents TextColorGroupBox As GroupBox
-    Friend WithEvents TextInWhiteCheckBox As CheckBox
+    Friend WithEvents TextFontAndColorGroupBox As GroupBox
     Friend WithEvents NoteColorGroupBox As GroupBox
-    Friend WithEvents BlueNoteColorRadioButton5 As RadioButton
-    Friend WithEvents OrangeNoteColorRadioButton6 As RadioButton
-    Friend WithEvents GreyNoteColorRadioButton4 As RadioButton
-    Friend WithEvents GreenNoteColorRadioButton3 As RadioButton
-    Friend WithEvents RedNoteColorRadioButton2 As RadioButton
-    Friend WithEvents YellowNoteColorRadioButton1 As RadioButton
     Friend WithEvents RestartWarningLabel As Label
     Friend WithEvents SettingsRestoreGroupBox As GroupBox
     Friend WithEvents RestorePreviousSettingsButton As Button
+    Friend WithEvents RestoreDefaultNoteColorLinkLabel As LinkLabel
+    Friend WithEvents ChangeNoteColorButton As Button
+    Friend WithEvents NoteColorDialog As ColorDialog
+    Friend WithEvents TextColorDialog As ColorDialog
+    Friend WithEvents TextFontDialog As FontDialog
+    Friend WithEvents ChangeTextFontButton As Button
+    Friend WithEvents RestoreTextStyleLinkLabel As LinkLabel
+    Friend WithEvents ChangeTextColorButton As Button
 End Class
