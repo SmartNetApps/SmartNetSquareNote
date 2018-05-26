@@ -26,7 +26,7 @@ Namespace My
                 Dim DerniereVersion As Version = New Version(MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/version.txt"))
                 Dim SupportStatus As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/support-status.txt")
                 If VersionActuelle > DerniereVersion Then
-                    MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique, réservée aux développeurs du logiciel. Cette utilisation n'est pas autorisée, veuillez retélécharger le logiciel sur SmartNet Apps. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Utilisation non autorisée")
+                    MsgBox("Vous utilisez une version de SmartNet Square Note qui n'a pas encore été publiée. Merci de ne pas signaler d'erreurs ou de beugs tant que cette version n'aura pas été publiée.", MsgBoxStyle.Exclamation, "Version non publiée")
                 End If
                 If My.Settings.AutoUpdates = True Then
                     If NTActualVersion < MiniNTVersion Then
