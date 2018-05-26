@@ -13,7 +13,7 @@ Public Class FormUpdater
             Dim MAJ2 As New WebClient
             AddHandler MAJ2.DownloadProgressChanged, AddressOf MAJ2_ProgressChanged
             AddHandler MAJ2.DownloadFileCompleted, AddressOf MAJ2_DownloadCompleted
-            Dim DownloadLink As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/downloads/smartnet-squarenote/squarenote-download.txt")
+            Dim DownloadLink As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/download.txt")
             MAJ2.DownloadFileAsync(New Uri(DownloadLink), My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData + "\smartnetsquarenote-update-" + My.Application.Info.Version.ToString + ".exe")
         Catch ex As Exception
             MsgBox("Téléchargement impossible : " + ex.Message, MessageBoxIcon.Error, "Téléchargement de la mise à jour")
@@ -35,7 +35,7 @@ Public Class FormUpdater
 
     Private Sub FormUpdater_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim MAJ As New WebClient
-        Dim Nouveautes As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/downloads/smartnet-squarenote/squarenote-nouveautes.txt")
+        Dim Nouveautes As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/releasenotes.txt")
         NewsRichTextBox.Text = Nouveautes
     End Sub
 End Class

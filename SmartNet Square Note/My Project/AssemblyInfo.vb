@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Besoin d'un pense bête ? Collez-le sur votre bureau avec SmartNet Square Note !")>
 <Assembly: AssemblyCompany("Quentin Pugeat")>
 <Assembly: AssemblyProduct("SmartNet Square Note")>
-<Assembly: AssemblyCopyright("© Quentin Pugeat 2016-2017")>
+<Assembly: AssemblyCopyright("© Quentin Pugeat 2016-2018")>
 <Assembly: AssemblyTrademark("SmartNet Apps")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' en utilisant '*', comme indiqué ci-dessous :
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.3.0.0")>
-<Assembly: AssemblyFileVersion("1.3.0.0")>
+<Assembly: AssemblyVersion("1.3.1.0")>
+<Assembly: AssemblyFileVersion("1.3.1.0")>

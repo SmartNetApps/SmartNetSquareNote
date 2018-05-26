@@ -20,11 +20,11 @@ Namespace My
             Try
                 Dim MiniNTVersionChecker As New WebClient
                 Dim NTActualVersion As Version = Environment.OSVersion.Version
-                Dim MiniNTVersion As Version = New Version(MiniNTVersionChecker.DownloadString("http://quentinpugeat.pagesperso-orange.fr/downloads/smartnet-squarenote/MinimumNTVersion.txt"))
+                Dim MiniNTVersion As Version = New Version(MiniNTVersionChecker.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/MinimumNTVersion.txt"))
                 Dim MAJ As New WebClient
                 Dim VersionActuelle As Version = My.Application.Info.Version
-                Dim DerniereVersion As Version = New Version(MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/downloads/smartnet-squarenote/squarenote-version.txt"))
-                Dim SupportStatus As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/downloads/smartnet-squarenote/support-status.txt")
+                Dim DerniereVersion As Version = New Version(MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/version.txt"))
+                Dim SupportStatus As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/support-status.txt")
                 If VersionActuelle > DerniereVersion Then
                     MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique, réservée aux développeurs du logiciel. Cette utilisation n'est pas autorisée, veuillez retélécharger le logiciel sur SmartNet Apps. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Utilisation non autorisée")
                 End If

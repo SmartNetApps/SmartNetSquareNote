@@ -127,18 +127,18 @@
   <data name="VersionNumberGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 70</value>
   </data>
-  <data name="RestoreDefaultNoteColorLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 48</value>
+  <data name="&gt;&gt;RestorePreviousSettingsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RestartWarningLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>313, 12</value>
   </data>
+  <data name="ChangeTextFontButton.Text" xml:space="preserve">
+    <value>Personnaliser la police du texte...</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RestoreTextStyleLinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
   </data>
   <data name="&gt;&gt;VersionLabel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -148,6 +148,9 @@
   </data>
   <data name="VersionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="UpdatesTabPage.Text" xml:space="preserve">
+    <value>Mises à jour</value>
   </data>
   <data name="UpdatesSearchButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 39</value>
@@ -180,9 +183,6 @@
   <data name="&gt;&gt;AutoUpdateCheckBox.Name" xml:space="preserve">
     <value>AutoUpdateCheckBox</value>
   </data>
-  <data name="&gt;&gt;GeneralTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="RestoreTextStyleLinkLabel.Text" xml:space="preserve">
     <value>Restaurer le style du texte par défaut</value>
   </data>
@@ -210,23 +210,20 @@
   <data name="AutoUpdateGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="GeneralTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 256</value>
-  </data>
   <data name="AutoUpdateGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 7</value>
   </data>
   <data name="&gt;&gt;UpdatesTabPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="RestorePreviousSettingsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 23</value>
-  </data>
   <data name="&gt;&gt;AutoUpdateCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RestoreTextStyleLinkLabel.Parent" xml:space="preserve">
-    <value>TextFontAndColorGroupBox</value>
+  <data name="&gt;&gt;AdvancedTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4461,8 +4458,8 @@
   <data name="AutoUpdateGroupBox.Text" xml:space="preserve">
     <value>Recherche automatique</value>
   </data>
-  <data name="NoteColorGroupBox.Text" xml:space="preserve">
-    <value>Couleur des notes</value>
+  <data name="RestoreDefaultNoteColorLinkLabel.Text" xml:space="preserve">
+    <value>Restaurer la couleur par défaut</value>
   </data>
   <data name="&gt;&gt;RestartWarningLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4494,17 +4491,14 @@
   <data name="&gt;&gt;VersionNumberGroupBox.Name" xml:space="preserve">
     <value>VersionNumberGroupBox</value>
   </data>
-  <data name="&gt;&gt;GeneralTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="RestoreTextStyleLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 15</value>
   </data>
   <data name="RestorePreviousSettingsButton.Text" xml:space="preserve">
     <value>Restaurer les paramètres de la version précédente</value>
   </data>
   <data name="&gt;&gt;AutoUpdateCheckBox.Parent" xml:space="preserve">
     <value>AutoUpdateGroupBox</value>
-  </data>
-  <data name="TextFontAndColorGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 86</value>
   </data>
   <data name="&gt;&gt;NoteColorDialog.Name" xml:space="preserve">
     <value>NoteColorDialog</value>
@@ -4517,6 +4511,9 @@
   </data>
   <data name="UpdatesTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>484, 256</value>
+  </data>
+  <data name="GeneralTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="UpdatesTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4563,6 +4560,9 @@
   <data name="SettingsTabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
+  <data name="&gt;&gt;TextColorDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="NoteColorGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 7</value>
   </data>
@@ -4574,6 +4574,9 @@
   </data>
   <data name="&gt;&gt;ChangeNoteColorButton.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="RestoreDefaultNoteColorLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
   </data>
   <data name="&gt;&gt;RestartWarningLabel.Name" xml:space="preserve">
     <value>RestartWarningLabel</value>
@@ -4650,8 +4653,8 @@
   <data name="&gt;&gt;UpdatesTabPage.Parent" xml:space="preserve">
     <value>SettingsTabControl</value>
   </data>
-  <data name="&gt;&gt;VersionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GeneralTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RestoreDefaultNoteColorLinkLabel.Name" xml:space="preserve">
     <value>RestoreDefaultNoteColorLinkLabel</value>
@@ -4665,8 +4668,8 @@
   <data name="&gt;&gt;RestorePreviousSettingsButton.Name" xml:space="preserve">
     <value>RestorePreviousSettingsButton</value>
   </data>
-  <data name="RestoreTextStyleLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 15</value>
+  <data name="&gt;&gt;GeneralTabPage.Name" xml:space="preserve">
+    <value>GeneralTabPage</value>
   </data>
   <data name="RestoreDefaultNoteColorLinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4701,6 +4704,9 @@
   <data name="ChangeTextFontButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 51</value>
   </data>
+  <data name="&gt;&gt;RestoreTextStyleLinkLabel.Parent" xml:space="preserve">
+    <value>TextFontAndColorGroupBox</value>
+  </data>
   <data name="SettingsRestoreGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 57</value>
   </data>
@@ -4715,9 +4721,6 @@
   </data>
   <data name="RestartWarningLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="AdvancedTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 256</value>
   </data>
   <data name="&gt;&gt;ChangeNoteColorButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4758,9 +4761,6 @@
   <data name="VersionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 21</value>
   </data>
-  <data name="&gt;&gt;RestorePreviousSettingsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;UpdatesSearchButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -4773,20 +4773,20 @@
   <data name="RestoreDefaultNoteColorLinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GeneralTabPage.Name" xml:space="preserve">
-    <value>GeneralTabPage</value>
+  <data name="&gt;&gt;VersionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;RestartWarningLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RestoreDefaultNoteColorLinkLabel.Text" xml:space="preserve">
-    <value>Restaurer la couleur par défaut</value>
+  <data name="TextFontAndColorGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 86</value>
   </data>
   <data name="&gt;&gt;RestoreDefaultNoteColorLinkLabel.Parent" xml:space="preserve">
     <value>NoteColorGroupBox</value>
   </data>
-  <data name="&gt;&gt;AdvancedTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="GeneralTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 256</value>
   </data>
   <data name="&gt;&gt;VersionNumberGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -4821,8 +4821,8 @@
   <data name="&gt;&gt;NoteColorDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="UpdatesTabPage.Text" xml:space="preserve">
-    <value>Mises à jour</value>
+  <data name="&gt;&gt;GeneralTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GeneralTabPage.Text" xml:space="preserve">
     <value>Général</value>
@@ -4851,8 +4851,8 @@
   <data name="&gt;&gt;TextColorDialog.Name" xml:space="preserve">
     <value>TextColorDialog</value>
   </data>
-  <data name="&gt;&gt;TextColorDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RestorePreviousSettingsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 23</value>
   </data>
   <data name="&gt;&gt;ChangeNoteColorButton.Name" xml:space="preserve">
     <value>ChangeNoteColorButton</value>
@@ -4866,14 +4866,14 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SettingsForm</value>
   </data>
-  <data name="ChangeTextFontButton.Text" xml:space="preserve">
-    <value>Personnaliser la police du texte...</value>
+  <data name="NoteColorGroupBox.Text" xml:space="preserve">
+    <value>Couleur des notes</value>
   </data>
   <data name="ChangeNoteColorButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="GeneralTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="AdvancedTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 256</value>
   </data>
   <data name="&gt;&gt;VersionLabel.Parent" xml:space="preserve">
     <value>VersionNumberGroupBox</value>
@@ -4890,9 +4890,6 @@
   <data name="&gt;&gt;NoteColorGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
   <metadata name="TextFontDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>291, 19</value>
   </metadata>
