@@ -24,16 +24,19 @@ Partial Class AboutForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutForm))
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.DesignationPictureBox = New System.Windows.Forms.PictureBox()
         Me.VersionLabel = New System.Windows.Forms.Label()
         Me.CopyrightLabel = New System.Windows.Forms.Label()
         Me.DescriptionRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.HomepageLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.LicenseLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.LicensePictureBox = New System.Windows.Forms.PictureBox()
+        Me.PanelColor = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LinkLabelSource = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabelReleaseNotes = New System.Windows.Forms.LinkLabel()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DesignationPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LicensePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LogoPictureBox
@@ -41,41 +44,32 @@ Partial Class AboutForm
         Me.LogoPictureBox.ErrorImage = CType(resources.GetObject("LogoPictureBox.ErrorImage"), System.Drawing.Image)
         Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
         Me.LogoPictureBox.InitialImage = CType(resources.GetObject("LogoPictureBox.InitialImage"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(12, 12)
+        Me.LogoPictureBox.Location = New System.Drawing.Point(7, 94)
         Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(173, 172)
+        Me.LogoPictureBox.Size = New System.Drawing.Size(137, 137)
         Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.LogoPictureBox.TabIndex = 0
         Me.LogoPictureBox.TabStop = False
         '
-        'DesignationPictureBox
-        '
-        Me.DesignationPictureBox.Image = CType(resources.GetObject("DesignationPictureBox.Image"), System.Drawing.Image)
-        Me.DesignationPictureBox.Location = New System.Drawing.Point(191, 12)
-        Me.DesignationPictureBox.Name = "DesignationPictureBox"
-        Me.DesignationPictureBox.Size = New System.Drawing.Size(360, 32)
-        Me.DesignationPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.DesignationPictureBox.TabIndex = 1
-        Me.DesignationPictureBox.TabStop = False
-        '
         'VersionLabel
         '
         Me.VersionLabel.AutoSize = True
-        Me.VersionLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VersionLabel.Location = New System.Drawing.Point(188, 43)
+        Me.VersionLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VersionLabel.Location = New System.Drawing.Point(150, 94)
         Me.VersionLabel.Name = "VersionLabel"
-        Me.VersionLabel.Size = New System.Drawing.Size(99, 19)
+        Me.VersionLabel.Size = New System.Drawing.Size(116, 21)
         Me.VersionLabel.TabIndex = 2
         Me.VersionLabel.Text = "Version 0.0.0.0"
         '
         'CopyrightLabel
         '
         Me.CopyrightLabel.AutoSize = True
-        Me.CopyrightLabel.Location = New System.Drawing.Point(189, 62)
+        Me.CopyrightLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CopyrightLabel.Location = New System.Drawing.Point(150, 115)
         Me.CopyrightLabel.Name = "CopyrightLabel"
-        Me.CopyrightLabel.Size = New System.Drawing.Size(168, 15)
+        Me.CopyrightLabel.Size = New System.Drawing.Size(199, 19)
         Me.CopyrightLabel.TabIndex = 3
-        Me.CopyrightLabel.Text = "(C) 2016-2017, Quentin Pugeat"
+        Me.CopyrightLabel.Text = "© 2016-2018, Quentin Pugeat"
         '
         'DescriptionRichTextBox
         '
@@ -83,10 +77,10 @@ Partial Class AboutForm
         Me.DescriptionRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DescriptionRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.DescriptionRichTextBox.Enabled = False
-        Me.DescriptionRichTextBox.Location = New System.Drawing.Point(191, 86)
+        Me.DescriptionRichTextBox.Location = New System.Drawing.Point(154, 137)
         Me.DescriptionRichTextBox.Name = "DescriptionRichTextBox"
         Me.DescriptionRichTextBox.ReadOnly = True
-        Me.DescriptionRichTextBox.Size = New System.Drawing.Size(497, 53)
+        Me.DescriptionRichTextBox.Size = New System.Drawing.Size(532, 94)
         Me.DescriptionRichTextBox.TabIndex = 4
         Me.DescriptionRichTextBox.Text = "Rédigez et collez des petits penses-bêtes sur votre Bureau Windows !"
         '
@@ -95,7 +89,7 @@ Partial Class AboutForm
         Me.HomepageLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
         Me.HomepageLinkLabel.AutoSize = True
         Me.HomepageLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
-        Me.HomepageLinkLabel.Location = New System.Drawing.Point(212, 195)
+        Me.HomepageLinkLabel.Location = New System.Drawing.Point(60, 21)
         Me.HomepageLinkLabel.Name = "HomepageLinkLabel"
         Me.HomepageLinkLabel.Size = New System.Drawing.Size(167, 15)
         Me.HomepageLinkLabel.TabIndex = 5
@@ -108,7 +102,7 @@ Partial Class AboutForm
         Me.LicenseLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
         Me.LicenseLinkLabel.AutoSize = True
         Me.LicenseLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
-        Me.LicenseLinkLabel.Location = New System.Drawing.Point(400, 195)
+        Me.LicenseLinkLabel.Location = New System.Drawing.Point(361, 21)
         Me.LicenseLinkLabel.Name = "LicenseLinkLabel"
         Me.LicenseLinkLabel.Size = New System.Drawing.Size(47, 15)
         Me.LicenseLinkLabel.TabIndex = 7
@@ -122,26 +116,77 @@ Partial Class AboutForm
         Me.LicensePictureBox.ErrorImage = CType(resources.GetObject("LicensePictureBox.ErrorImage"), System.Drawing.Image)
         Me.LicensePictureBox.Image = CType(resources.GetObject("LicensePictureBox.Image"), System.Drawing.Image)
         Me.LicensePictureBox.InitialImage = CType(resources.GetObject("LicensePictureBox.InitialImage"), System.Drawing.Image)
-        Me.LicensePictureBox.Location = New System.Drawing.Point(443, 195)
+        Me.LicensePictureBox.Location = New System.Drawing.Point(404, 21)
         Me.LicensePictureBox.Name = "LicensePictureBox"
         Me.LicensePictureBox.Size = New System.Drawing.Size(44, 15)
         Me.LicensePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.LicensePictureBox.TabIndex = 8
         Me.LicensePictureBox.TabStop = False
         '
+        'PanelColor
+        '
+        Me.PanelColor.BackColor = System.Drawing.Color.Orange
+        Me.PanelColor.BackgroundImage = Global.SmartNet_Square_Note.My.Resources.Resources.wordmark_white_36
+        Me.PanelColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PanelColor.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelColor.Location = New System.Drawing.Point(0, 0)
+        Me.PanelColor.Name = "PanelColor"
+        Me.PanelColor.Size = New System.Drawing.Size(698, 88)
+        Me.PanelColor.TabIndex = 9
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.LinkLabelSource)
+        Me.Panel1.Controls.Add(Me.LinkLabelReleaseNotes)
+        Me.Panel1.Controls.Add(Me.HomepageLinkLabel)
+        Me.Panel1.Controls.Add(Me.LicensePictureBox)
+        Me.Panel1.Controls.Add(Me.LicenseLinkLabel)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 238)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(698, 58)
+        Me.Panel1.TabIndex = 10
+        '
+        'LinkLabelSource
+        '
+        Me.LinkLabelSource.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        Me.LinkLabelSource.AutoSize = True
+        Me.LinkLabelSource.BackColor = System.Drawing.Color.White
+        Me.LinkLabelSource.LinkColor = System.Drawing.SystemColors.HotTrack
+        Me.LinkLabelSource.Location = New System.Drawing.Point(473, 21)
+        Me.LinkLabelSource.Name = "LinkLabelSource"
+        Me.LinkLabelSource.Size = New System.Drawing.Size(73, 15)
+        Me.LinkLabelSource.TabIndex = 9
+        Me.LinkLabelSource.TabStop = True
+        Me.LinkLabelSource.Text = "Code source"
+        Me.LinkLabelSource.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
+        '
+        'LinkLabelReleaseNotes
+        '
+        Me.LinkLabelReleaseNotes.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        Me.LinkLabelReleaseNotes.AutoSize = True
+        Me.LinkLabelReleaseNotes.BackColor = System.Drawing.Color.White
+        Me.LinkLabelReleaseNotes.LinkColor = System.Drawing.SystemColors.HotTrack
+        Me.LinkLabelReleaseNotes.Location = New System.Drawing.Point(245, 21)
+        Me.LinkLabelReleaseNotes.Name = "LinkLabelReleaseNotes"
+        Me.LinkLabelReleaseNotes.Size = New System.Drawing.Size(95, 15)
+        Me.LinkLabelReleaseNotes.TabIndex = 9
+        Me.LinkLabelReleaseNotes.TabStop = True
+        Me.LinkLabelReleaseNotes.Text = "Notes de version"
+        Me.LinkLabelReleaseNotes.VisitedLinkColor = System.Drawing.SystemColors.HotTrack
+        '
         'AboutForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(700, 219)
-        Me.Controls.Add(Me.LicensePictureBox)
-        Me.Controls.Add(Me.LicenseLinkLabel)
-        Me.Controls.Add(Me.HomepageLinkLabel)
+        Me.ClientSize = New System.Drawing.Size(698, 296)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DescriptionRichTextBox)
         Me.Controls.Add(Me.CopyrightLabel)
         Me.Controls.Add(Me.VersionLabel)
-        Me.Controls.Add(Me.DesignationPictureBox)
         Me.Controls.Add(Me.LogoPictureBox)
+        Me.Controls.Add(Me.PanelColor)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -152,19 +197,23 @@ Partial Class AboutForm
         Me.ShowInTaskbar = False
         Me.Text = "À propos de SmartNet Square Note"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DesignationPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LicensePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents LogoPictureBox As PictureBox
-    Friend WithEvents DesignationPictureBox As PictureBox
     Friend WithEvents VersionLabel As Label
     Friend WithEvents CopyrightLabel As Label
     Friend WithEvents DescriptionRichTextBox As RichTextBox
     Friend WithEvents HomepageLinkLabel As LinkLabel
     Friend WithEvents LicenseLinkLabel As LinkLabel
     Friend WithEvents LicensePictureBox As PictureBox
+    Friend WithEvents PanelColor As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents LinkLabelReleaseNotes As LinkLabel
+    Friend WithEvents LinkLabelSource As LinkLabel
 End Class

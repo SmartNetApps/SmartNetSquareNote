@@ -186,6 +186,13 @@
     <Content Include="README.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Buttons\Delete.png" />
+    <Content Include="Resources\Buttons\Help.png" />
+    <Content Include="Resources\Buttons\MenuBlack.png" />
+    <Content Include="Resources\Buttons\Settings.png" />
+    <Content Include="Resources\logo1024.png" />
+    <None Include="Resources\wordmark_white_36.png" />
+    <None Include="Resources\wordmark_black_36.png" />
     <Content Include="SmartNet Square Note.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
