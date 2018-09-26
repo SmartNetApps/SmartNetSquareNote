@@ -26,6 +26,10 @@ Partial Class NoteForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NoteForm))
         Me.NoteRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FormDragger = New System.Windows.Forms.PictureBox()
+        Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.FormResizer = New System.Windows.Forms.PictureBox()
         Me.CloseNoteButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NouvelleNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,12 +45,8 @@ Partial Class NoteForm
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FermerToutesLesNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FormDragger = New System.Windows.Forms.PictureBox()
-        Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.NewNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FormResizer = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.FormDragger, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -63,88 +63,10 @@ Partial Class NoteForm
         '
         'MenuStrip1
         '
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.BackColor = System.Drawing.Color.Gold
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseNoteButton, Me.ToolStripMenu})
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
-        '
-        'CloseNoteButton
-        '
-        resources.ApplyResources(Me.CloseNoteButton, "CloseNoteButton")
-        Me.CloseNoteButton.Name = "CloseNoteButton"
-        '
-        'ToolStripMenu
-        '
-        resources.ApplyResources(Me.ToolStripMenu, "ToolStripMenu")
-        Me.ToolStripMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NouvelleNoteToolStripMenuItem, Me.ToolStripSeparator1, Me.ParamètresToolStripMenuItem, Me.NouvelleVersionDisponibleToolStripMenuItem, Me.SupportToolStripMenuItem, Me.ToolStripSeparator3, Me.FermerToutesLesNotesToolStripMenuItem})
-        Me.ToolStripMenu.Name = "ToolStripMenu"
-        '
-        'NouvelleNoteToolStripMenuItem
-        '
-        resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
-        Me.NouvelleNoteToolStripMenuItem.Name = "NouvelleNoteToolStripMenuItem"
-        '
-        'ToolStripSeparator1
-        '
-        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        '
-        'ParamètresToolStripMenuItem
-        '
-        resources.ApplyResources(Me.ParamètresToolStripMenuItem, "ParamètresToolStripMenuItem")
-        Me.ParamètresToolStripMenuItem.Name = "ParamètresToolStripMenuItem"
-        '
-        'NouvelleVersionDisponibleToolStripMenuItem
-        '
-        resources.ApplyResources(Me.NouvelleVersionDisponibleToolStripMenuItem, "NouvelleVersionDisponibleToolStripMenuItem")
-        Me.NouvelleVersionDisponibleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TéléchargerLaMiseÀJourToolStripMenuItem})
-        Me.NouvelleVersionDisponibleToolStripMenuItem.Name = "NouvelleVersionDisponibleToolStripMenuItem"
-        '
-        'TéléchargerLaMiseÀJourToolStripMenuItem
-        '
-        resources.ApplyResources(Me.TéléchargerLaMiseÀJourToolStripMenuItem, "TéléchargerLaMiseÀJourToolStripMenuItem")
-        Me.TéléchargerLaMiseÀJourToolStripMenuItem.Name = "TéléchargerLaMiseÀJourToolStripMenuItem"
-        '
-        'SupportToolStripMenuItem
-        '
-        resources.ApplyResources(Me.SupportToolStripMenuItem, "SupportToolStripMenuItem")
-        Me.SupportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AideEnLigneToolStripMenuItem, Me.ContacterLeSupportToolStripMenuItem, Me.EnvoyeznousVosCommentairesToolStripMenuItem, Me.ToolStripSeparator2, Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem})
-        Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        '
-        'AideEnLigneToolStripMenuItem
-        '
-        resources.ApplyResources(Me.AideEnLigneToolStripMenuItem, "AideEnLigneToolStripMenuItem")
-        Me.AideEnLigneToolStripMenuItem.Name = "AideEnLigneToolStripMenuItem"
-        '
-        'ContacterLeSupportToolStripMenuItem
-        '
-        resources.ApplyResources(Me.ContacterLeSupportToolStripMenuItem, "ContacterLeSupportToolStripMenuItem")
-        Me.ContacterLeSupportToolStripMenuItem.Name = "ContacterLeSupportToolStripMenuItem"
-        '
-        'EnvoyeznousVosCommentairesToolStripMenuItem
-        '
-        resources.ApplyResources(Me.EnvoyeznousVosCommentairesToolStripMenuItem, "EnvoyeznousVosCommentairesToolStripMenuItem")
-        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Name = "EnvoyeznousVosCommentairesToolStripMenuItem"
-        '
-        'ToolStripSeparator2
-        '
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        '
-        'ÀProposDeSmartNetSquareNoteToolStripMenuItem
-        '
-        resources.ApplyResources(Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem, "ÀProposDeSmartNetSquareNoteToolStripMenuItem")
-        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Name = "ÀProposDeSmartNetSquareNoteToolStripMenuItem"
-        '
-        'ToolStripSeparator3
-        '
-        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        '
-        'FermerToutesLesNotesToolStripMenuItem
-        '
-        resources.ApplyResources(Me.FermerToutesLesNotesToolStripMenuItem, "FermerToutesLesNotesToolStripMenuItem")
-        Me.FermerToutesLesNotesToolStripMenuItem.Name = "FermerToutesLesNotesToolStripMenuItem"
         '
         'FormDragger
         '
@@ -155,14 +77,106 @@ Partial Class NoteForm
         '
         'NotifyIcon
         '
-        resources.ApplyResources(Me.NotifyIcon, "NotifyIcon")
         Me.NotifyIcon.ContextMenuStrip = Me.ContextMenuStrip1
+        resources.ApplyResources(Me.NotifyIcon, "NotifyIcon")
         '
         'ContextMenuStrip1
         '
-        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewNoteToolStripMenuItem, Me.CloseAllNotesToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
+        '
+        'FormResizer
+        '
+        resources.ApplyResources(Me.FormResizer, "FormResizer")
+        Me.FormResizer.Cursor = System.Windows.Forms.Cursors.SizeNWSE
+        Me.FormResizer.Name = "FormResizer"
+        Me.FormResizer.TabStop = False
+        '
+        'CloseNoteButton
+        '
+        Me.CloseNoteButton.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Delete
+        Me.CloseNoteButton.Name = "CloseNoteButton"
+        resources.ApplyResources(Me.CloseNoteButton, "CloseNoteButton")
+        '
+        'ToolStripMenu
+        '
+        Me.ToolStripMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NouvelleNoteToolStripMenuItem, Me.ToolStripSeparator1, Me.ParamètresToolStripMenuItem, Me.NouvelleVersionDisponibleToolStripMenuItem, Me.SupportToolStripMenuItem, Me.ToolStripSeparator3, Me.FermerToutesLesNotesToolStripMenuItem})
+        Me.ToolStripMenu.Image = Global.SmartNet_Square_Note.My.Resources.Resources.MenuBlack
+        Me.ToolStripMenu.Name = "ToolStripMenu"
+        resources.ApplyResources(Me.ToolStripMenu, "ToolStripMenu")
+        '
+        'NouvelleNoteToolStripMenuItem
+        '
+        Me.NouvelleNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.logo1024
+        Me.NouvelleNoteToolStripMenuItem.Name = "NouvelleNoteToolStripMenuItem"
+        resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        '
+        'ParamètresToolStripMenuItem
+        '
+        Me.ParamètresToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Settings
+        Me.ParamètresToolStripMenuItem.Name = "ParamètresToolStripMenuItem"
+        resources.ApplyResources(Me.ParamètresToolStripMenuItem, "ParamètresToolStripMenuItem")
+        '
+        'NouvelleVersionDisponibleToolStripMenuItem
+        '
+        Me.NouvelleVersionDisponibleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TéléchargerLaMiseÀJourToolStripMenuItem})
+        resources.ApplyResources(Me.NouvelleVersionDisponibleToolStripMenuItem, "NouvelleVersionDisponibleToolStripMenuItem")
+        Me.NouvelleVersionDisponibleToolStripMenuItem.Name = "NouvelleVersionDisponibleToolStripMenuItem"
+        '
+        'TéléchargerLaMiseÀJourToolStripMenuItem
+        '
+        resources.ApplyResources(Me.TéléchargerLaMiseÀJourToolStripMenuItem, "TéléchargerLaMiseÀJourToolStripMenuItem")
+        Me.TéléchargerLaMiseÀJourToolStripMenuItem.Name = "TéléchargerLaMiseÀJourToolStripMenuItem"
+        '
+        'SupportToolStripMenuItem
+        '
+        Me.SupportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AideEnLigneToolStripMenuItem, Me.ContacterLeSupportToolStripMenuItem, Me.EnvoyeznousVosCommentairesToolStripMenuItem, Me.ToolStripSeparator2, Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem})
+        Me.SupportToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Help
+        Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
+        resources.ApplyResources(Me.SupportToolStripMenuItem, "SupportToolStripMenuItem")
+        '
+        'AideEnLigneToolStripMenuItem
+        '
+        Me.AideEnLigneToolStripMenuItem.Name = "AideEnLigneToolStripMenuItem"
+        resources.ApplyResources(Me.AideEnLigneToolStripMenuItem, "AideEnLigneToolStripMenuItem")
+        '
+        'ContacterLeSupportToolStripMenuItem
+        '
+        Me.ContacterLeSupportToolStripMenuItem.Name = "ContacterLeSupportToolStripMenuItem"
+        resources.ApplyResources(Me.ContacterLeSupportToolStripMenuItem, "ContacterLeSupportToolStripMenuItem")
+        '
+        'EnvoyeznousVosCommentairesToolStripMenuItem
+        '
+        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.SendFeedback
+        Me.EnvoyeznousVosCommentairesToolStripMenuItem.Name = "EnvoyeznousVosCommentairesToolStripMenuItem"
+        resources.ApplyResources(Me.EnvoyeznousVosCommentairesToolStripMenuItem, "EnvoyeznousVosCommentairesToolStripMenuItem")
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        '
+        'ÀProposDeSmartNetSquareNoteToolStripMenuItem
+        '
+        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Name = "ÀProposDeSmartNetSquareNoteToolStripMenuItem"
+        resources.ApplyResources(Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem, "ÀProposDeSmartNetSquareNoteToolStripMenuItem")
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
+        '
+        'FermerToutesLesNotesToolStripMenuItem
+        '
+        Me.FermerToutesLesNotesToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
+        Me.FermerToutesLesNotesToolStripMenuItem.Name = "FermerToutesLesNotesToolStripMenuItem"
+        resources.ApplyResources(Me.FermerToutesLesNotesToolStripMenuItem, "FermerToutesLesNotesToolStripMenuItem")
         '
         'NewNoteToolStripMenuItem
         '
@@ -173,13 +187,6 @@ Partial Class NoteForm
         '
         resources.ApplyResources(Me.CloseAllNotesToolStripMenuItem, "CloseAllNotesToolStripMenuItem")
         Me.CloseAllNotesToolStripMenuItem.Name = "CloseAllNotesToolStripMenuItem"
-        '
-        'FormResizer
-        '
-        resources.ApplyResources(Me.FormResizer, "FormResizer")
-        Me.FormResizer.Cursor = System.Windows.Forms.Cursors.SizeNWSE
-        Me.FormResizer.Name = "FormResizer"
-        Me.FormResizer.TabStop = False
         '
         'NoteForm
         '

@@ -396,6 +396,9 @@
   <data name="NouvelleNoteToolStripMenuItem.Text" xml:space="preserve">
     <value>New Note</value>
   </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 6</value>
+  </data>
   <data name="ParamètresToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -475,6 +478,9 @@
   <data name="EnvoyeznousVosCommentairesToolStripMenuItem.Text" xml:space="preserve">
     <value>Send your comments!</value>
   </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 6</value>
+  </data>
   <data name="ÀProposDeSmartNetSquareNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 22</value>
   </data>
@@ -495,6 +501,9 @@
   </data>
   <data name="SupportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 22</value>
+  </data>
+  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 6</value>
   </data>
   <data name="FermerToutesLesNotesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
