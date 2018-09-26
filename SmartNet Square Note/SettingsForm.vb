@@ -46,7 +46,7 @@ Public Class SettingsForm
             Dim DerniereVersion As Version = New Version(MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/version.txt"))
             Dim SupportStatus As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/support-status.txt")
             If VersionActuelle > DerniereVersion Then
-                MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique, réservée aux développeurs du logiciel. Cette utilisation n'est pas autorisée, veuillez retélécharger le logiciel sur SmartNet Apps. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Utilisation non autorisée")
+                MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique. Merci de ne pas signaler les problèmes tant que cette version n'est pas publiée. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Version préliminaire")
             End If
             If NTActualVersion < MiniNTVersion Then
                 MsgBox("Votre système d'exploitation n'est plus pris en charge par SmartNet Apps. Visitez le site SmartNet Apps pour en savoir plus à ce sujet. La recherche automatique de mises à jour à été désactivée.", MsgBoxStyle.Exclamation, "Avertissement")
@@ -64,10 +64,12 @@ Public Class SettingsForm
                     NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = True
                     NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = True
                     NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Text = "Télécharger la version " + DerniereVersion.ToString
+                    FormUpdater.Show()
                 Else
                     My.Settings.UpdateAvailable = False
                     NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
                     NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
+                    MsgBox("SmartNet Square Note est déjà à jour sur votre ordinateur.", MsgBoxStyle.Information, "SmartNet Apps Updater")
                     GoTo StopVersionChecking
                 End If
             Else
