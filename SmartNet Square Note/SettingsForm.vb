@@ -17,6 +17,14 @@ Public Class SettingsForm
 
     Private Sub SettingsForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         VersionLabel.Text = "Version installée : " + My.Application.Info.Version.ToString
+        If New UpdateAgent().IsUpdateAvailable(False) Then
+            UpdatesSearchButton.Text = "Nouvelle mise à jour disponible !"
+            UpdatesSearchButton.Enabled = True
+        Else
+            UpdatesSearchButton.Text = "SmartNet Square Note est à jour"
+            UpdatesSearchButton.Enabled = False
+        End If
+
         NoteForm.BackColor = My.Settings.NoteColor
         NoteForm.NoteRichTextBox.BackColor = My.Settings.NoteColor
         NoteForm.FormDragger.BackColor = My.Settings.NoteColor
@@ -37,52 +45,55 @@ Public Class SettingsForm
     End Sub
 
     Private Sub UpdatesSearchButton_Click(sender As Object, e As EventArgs) Handles UpdatesSearchButton.Click
-        Try
-            Dim MiniNTVersionChecker As New WebClient
-            Dim NTActualVersion As Version = Environment.OSVersion.Version
-            Dim MiniNTVersion As Version = New Version(MiniNTVersionChecker.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/MinimumNTVersion.txt"))
-            Dim MAJ As New WebClient
-            Dim VersionActuelle As Version = My.Application.Info.Version
-            Dim DerniereVersion As Version = New Version(MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/version.txt"))
-            Dim SupportStatus As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/support-status.txt")
-            If VersionActuelle > DerniereVersion Then
-                MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique. Merci de ne pas signaler les problèmes tant que cette version n'est pas publiée. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Version préliminaire")
-            End If
-            If NTActualVersion < MiniNTVersion Then
-                MsgBox("Votre système d'exploitation n'est plus pris en charge par SmartNet Apps. Visitez le site SmartNet Apps pour en savoir plus à ce sujet. La recherche automatique de mises à jour à été désactivée.", MsgBoxStyle.Exclamation, "Avertissement")
-                My.Settings.AutoUpdates = False
-                My.Settings.Save()
-                My.Settings.UpdateAvailable = False
-                NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-                NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
-                GoTo StopVersionChecking
-            End If
-            If SupportStatus = "on" Then
-                If VersionActuelle < DerniereVersion Then
-                    FormUpdater.Show()
-                    My.Settings.UpdateAvailable = True
-                    NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = True
-                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = True
-                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Text = "Télécharger la version " + DerniereVersion.ToString
-                    FormUpdater.Show()
-                Else
-                    My.Settings.UpdateAvailable = False
-                    NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
-                    MsgBox("SmartNet Square Note est déjà à jour sur votre ordinateur.", MsgBoxStyle.Information, "SmartNet Apps Updater")
-                    GoTo StopVersionChecking
-                End If
-            Else
-                My.Settings.UpdateAvailable = False
-                NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-                NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
-                MsgBox("Le support et le développement de ce produit ont été interrompus. Visitez le site SmartNet Apps pour en savoir plus.", MsgBoxStyle.Critical, "Service interrompu")
-                GoTo StopVersionChecking
-            End If
-StopVersionChecking:
-        Catch ex As Exception
-            MsgBox("La connexion à SmartNet Apps Updater a échoué : " + ex.Message, MsgBoxStyle.Critical, "SmartNet Apps Updater")
-        End Try
+        '        Try
+        '            Dim MiniNTVersionChecker As New WebClient
+        '            Dim NTActualVersion As Version = Environment.OSVersion.Version
+        '            Dim MiniNTVersion As Version = New Version(MiniNTVersionChecker.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/MinimumNTVersion.txt"))
+        '            Dim MAJ As New WebClient
+        '            Dim VersionActuelle As Version = My.Application.Info.Version
+        '            Dim DerniereVersion As Version = New Version(MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/version.txt"))
+        '            Dim SupportStatus As String = MAJ.DownloadString("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/updater/squarenote/windows/support-status.txt")
+        '            If VersionActuelle > DerniereVersion Then
+        '                MsgBox("Il semblerait que vous utilisez une version de SmartNet Square Note non publique. Merci de ne pas signaler les problèmes tant que cette version n'est pas publiée. Veuillez nous contacter si vous pensez qu'il s'agit d'une erreur.", MsgBoxStyle.Exclamation, "Version préliminaire")
+        '            End If
+        '            If NTActualVersion < MiniNTVersion Then
+        '                MsgBox("Votre système d'exploitation n'est plus pris en charge par SmartNet Apps. Visitez le site SmartNet Apps pour en savoir plus à ce sujet. La recherche automatique de mises à jour à été désactivée.", MsgBoxStyle.Exclamation, "Avertissement")
+        '                My.Settings.AutoUpdates = False
+        '                My.Settings.Save()
+        '                My.Settings.UpdateAvailable = False
+        '                NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
+        '                NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
+        '                GoTo StopVersionChecking
+        '            End If
+        '            If SupportStatus = "on" Then
+        '                If VersionActuelle < DerniereVersion Then
+        '                    FormUpdater.Show()
+        '                    My.Settings.UpdateAvailable = True
+        '                    NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = True
+        '                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = True
+        '                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Text = "Télécharger la version " + DerniereVersion.ToString
+        '                    FormUpdater.Show()
+        '                Else
+        '                    My.Settings.UpdateAvailable = False
+        '                    NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
+        '                    NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
+        '                    MsgBox("SmartNet Square Note est déjà à jour sur votre ordinateur.", MsgBoxStyle.Information, "SmartNet Apps Updater")
+        '                    GoTo StopVersionChecking
+        '                End If
+        '            Else
+        '                My.Settings.UpdateAvailable = False
+        '                NoteForm.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
+        '                NoteForm.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
+        '                MsgBox("Le support et le développement de ce produit ont été interrompus. Visitez le site SmartNet Apps pour en savoir plus.", MsgBoxStyle.Critical, "Service interrompu")
+        '                GoTo StopVersionChecking
+        '            End If
+        'StopVersionChecking:
+        '        Catch ex As Exception
+        '            MsgBox("La connexion à SmartNet Apps Updater a échoué : " + ex.Message, MsgBoxStyle.Critical, "SmartNet Apps Updater")
+        '        End Try
+
+        Dim agent As New UpdateAgent()
+        agent.IsUpdateAvailable(True)
     End Sub
 
     Private Sub ChangeNoteColorButton_Click(sender As Object, e As EventArgs) Handles ChangeNoteColorButton.Click

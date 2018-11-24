@@ -141,6 +141,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+        '''</summary>
+        Friend ReadOnly Property SmartNet_Apps_Updater() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SmartNet_Apps_Updater", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property wordmark_black_36() As System.Drawing.Bitmap

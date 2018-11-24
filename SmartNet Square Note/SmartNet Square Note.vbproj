@@ -126,6 +126,7 @@
     <Compile Include="SettingsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateAgent.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutForm.resx">
@@ -196,6 +197,7 @@
     <Content Include="Resources\logo1024.png" />
     <None Include="Resources\wordmark_white_36.png" />
     <None Include="Resources\wordmark_black_36.png" />
+    <None Include="Resources\SmartNet Apps Updater.ico" />
     <Content Include="SmartNet Square Note.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
