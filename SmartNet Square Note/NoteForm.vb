@@ -90,4 +90,8 @@ Public Class NoteForm
     Private Sub EnvoyeznousVosCommentairesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnvoyeznousVosCommentairesToolStripMenuItem.Click
         Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSfMOL6Pdmu2Cz18m0Rr82cNwOz1M4PpLGmzQGFZgIf2odMwyg/viewform?usp=sf_link")
     End Sub
+
+    Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick
+        'Me.BringToFront()
+    End Sub
 End Class

@@ -108,7 +108,7 @@ Partial Class NoteForm
         '
         'NouvelleNoteToolStripMenuItem
         '
-        Me.NouvelleNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.logo1024
+        Me.NouvelleNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.NewNote
         Me.NouvelleNoteToolStripMenuItem.Name = "NouvelleNoteToolStripMenuItem"
         resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
         '
@@ -180,13 +180,15 @@ Partial Class NoteForm
         '
         'NewNoteToolStripMenuItem
         '
-        resources.ApplyResources(Me.NewNoteToolStripMenuItem, "NewNoteToolStripMenuItem")
+        Me.NewNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.NewNote
         Me.NewNoteToolStripMenuItem.Name = "NewNoteToolStripMenuItem"
+        resources.ApplyResources(Me.NewNoteToolStripMenuItem, "NewNoteToolStripMenuItem")
         '
         'CloseAllNotesToolStripMenuItem
         '
-        resources.ApplyResources(Me.CloseAllNotesToolStripMenuItem, "CloseAllNotesToolStripMenuItem")
+        Me.CloseAllNotesToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.CloseAllNotesToolStripMenuItem.Name = "CloseAllNotesToolStripMenuItem"
+        resources.ApplyResources(Me.CloseAllNotesToolStripMenuItem, "CloseAllNotesToolStripMenuItem")
         '
         'NoteForm
         '

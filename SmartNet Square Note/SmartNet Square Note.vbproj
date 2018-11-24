@@ -11,7 +11,7 @@
     <AssemblyName>smartnetsquarenote</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -190,6 +190,7 @@
     <Content Include="Resources\Buttons\Delete.png" />
     <Content Include="Resources\Buttons\Help.png" />
     <Content Include="Resources\Buttons\MenuBlack.png" />
+    <Content Include="Resources\Buttons\NewNote.png" />
     <Content Include="Resources\Buttons\SendFeedback.png" />
     <Content Include="Resources\Buttons\Settings.png" />
     <Content Include="Resources\logo1024.png" />
