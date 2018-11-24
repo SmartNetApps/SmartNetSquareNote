@@ -153,6 +153,110 @@
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="CloseNoteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 20</value>
+  </data>
+  <data name="NouvelleNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="NouvelleNoteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Nouvelle Note</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 6</value>
+  </data>
+  <data name="ParamètresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="ParamètresToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="TéléchargerLaMiseÀJourToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vgAADr4B6kKxwAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC42/Ixj3wAAAjVJREFUOE99j11I
+        U2EYxx/3IXMXUhdRMaJJizLowsKbMAMXa9OkedGN4dCr9kGFJBQ1OMVgFax0KSPILqQo+2I2hgtEiCBI
+        NoIsoVixnEzBakKtjTZ3/u2c87p5SvvBA+/7/D/OeekfYvvVSn57B/H6APF1z9ncItQdJ+ypZq61ORLe
+        3Lb3rS6xZWkXLOhGLzzitKIHGuwGLe/8Qpl9R5ldjvvShjPddzbxNz9cwNJyGn/zFWk481dRlT5cpIWO
+        Uywm8diqtQTstXz0zQizS7hcLnFWczsziarPJ4s0c9YihkGkijaoP70fPM0sFSSZ2K2CIxUCRa/FCY+U
+        9KuG2hd1NSh8X2RyhfUKFvIZVL+8C5p80ko80QCMRibJWa9AwPg6Bgq96BcKxuB0srWc/xU4YinQ/Y9j
+        QkEQdjtbS5jN5nJ4ZaxWK1Ml7K9+gIbTT4UCH5qb2VoiHo9Do9GUw8I5kUgwVeJQsAgaLPqEAhNUKvDJ
+        JM80EbfbXS7weDxsK5H8CagDpSf6CybBoSyVzPCdnbKCXC4HvV4Pg8EgnldjmyiFh/hp4qAofYCEvziY
+        VygL2Rt+ZpEIBoOIRCLsJuGfykI98DtPQ2gSwytk1FpbqnZrYc7Rh9zcPLNXmP+WxfnRWeg8yYL2esbG
+        YnJmN25riuka3k3UmxDpuohx7z2M9odxmQujzTmOxr6p6R1c/ACzrw1HpAjVm40jjV1eX0vvw3PHrjzo
+        OTHsbbc/ayGOk95chugPqPxeDNvC7/wAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="TéléchargerLaMiseÀJourToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
+  </data>
+  <data name="TéléchargerLaMiseÀJourToolStripMenuItem.Text" xml:space="preserve">
+    <value>Télécharger la mise à jour...</value>
+  </data>
+  <data name="NouvelleVersionDisponibleToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMK0KCsAAAAGPSURBVDhPpZM9
+        S0JRGMddHf0Uzg6JEIVOrQ19gz5AQ1gILUUfoCHw4i60OHiVAge1KYiGJkUt9Ya5pNH15er17d/zHB81
+        tQjqB3+4/+fNc47nOFaZTCYekkYqkgYi/g6TPFK2DiWdpAhpgh/gHME1TmmbwgHSrdT9CtcuDSETkZyi
+        Zr/gaHiOTewpHeAUTzAkO4V7Zs285/my84UbBDM7SPfS6MNWukYWG919xHv3UjXfjocHhCUGu24gFdpC
+        r29KZIE5tuCtXqBif0hEDQnzgKJ42CfHsFK6uHX0poFg6VGcGlBwDAjxQCAAtFpi1umORtjOlMTRDxK8
+        gumAXA5wuwGfD2g0VGiVNlUGkl1xagWDxRaSScDlAvx+Zb8j9gyE7sQQ3MsDNPFAuQwkEmKWaVpjeK/G
+        eO1IgKBedYhLf+OMTqUG691E27SQfahjVzOQqQ4lq5qZ6dWmj6WLxJSjOvTDS2hnMUTjeby1FmfNcI9q
+        Zsj87yozMuRvj+krlOQz4ac7e842qSCxlefscHwC7pw90XnTIacAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="NouvelleVersionDisponibleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="NouvelleVersionDisponibleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Nouvelle version disponible</value>
+  </data>
+  <data name="AideEnLigneToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 22</value>
+  </data>
+  <data name="AideEnLigneToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aide en ligne...</value>
+  </data>
+  <data name="ContacterLeSupportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 22</value>
+  </data>
+  <data name="ContacterLeSupportToolStripMenuItem.Text" xml:space="preserve">
+    <value>Contacter le support...</value>
+  </data>
+  <data name="EnvoyeznousVosCommentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 22</value>
+  </data>
+  <data name="EnvoyeznousVosCommentairesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Envoyez-nous vos commentaires !</value>
+  </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 6</value>
+  </data>
+  <data name="ÀProposDeSmartNetSquareNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 22</value>
+  </data>
+  <data name="ÀProposDeSmartNetSquareNoteToolStripMenuItem.Text" xml:space="preserve">
+    <value>À propos de SmartNet Square Note...</value>
+  </data>
+  <data name="SupportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="SupportToolStripMenuItem.Text" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 6</value>
+  </data>
+  <data name="FermerToutesLesNotesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="FermerToutesLesNotesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fermer toutes les notes</value>
+  </data>
+  <data name="ToolStripMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 20</value>
+  </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -4500,110 +4604,6 @@
   <data name="&gt;&gt;FormResizer.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="CloseNoteButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 20</value>
-  </data>
-  <data name="ToolStripMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 20</value>
-  </data>
-  <data name="NouvelleNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="NouvelleNoteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Nouvelle Note</value>
-  </data>
-  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
-  </data>
-  <data name="ParamètresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="ParamètresToolStripMenuItem.Text" xml:space="preserve">
-    <value>Paramètres</value>
-  </data>
-  <data name="NouvelleVersionDisponibleToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMK0KCsAAAAGPSURBVDhPpZM9
-        S0JRGMddHf0Uzg6JEIVOrQ19gz5AQ1gILUUfoCHw4i60OHiVAge1KYiGJkUt9Ya5pNH15er17d/zHB81
-        tQjqB3+4/+fNc47nOFaZTCYekkYqkgYi/g6TPFK2DiWdpAhpgh/gHME1TmmbwgHSrdT9CtcuDSETkZyi
-        Zr/gaHiOTewpHeAUTzAkO4V7Zs285/my84UbBDM7SPfS6MNWukYWG919xHv3UjXfjocHhCUGu24gFdpC
-        r29KZIE5tuCtXqBif0hEDQnzgKJ42CfHsFK6uHX0poFg6VGcGlBwDAjxQCAAtFpi1umORtjOlMTRDxK8
-        gumAXA5wuwGfD2g0VGiVNlUGkl1xagWDxRaSScDlAvx+Zb8j9gyE7sQQ3MsDNPFAuQwkEmKWaVpjeK/G
-        eO1IgKBedYhLf+OMTqUG691E27SQfahjVzOQqQ4lq5qZ6dWmj6WLxJSjOvTDS2hnMUTjeby1FmfNcI9q
-        Zsj87yozMuRvj+krlOQz4ac7e842qSCxlefscHwC7pw90XnTIacAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="NouvelleVersionDisponibleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="NouvelleVersionDisponibleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Nouvelle version disponible</value>
-  </data>
-  <data name="TéléchargerLaMiseÀJourToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC42/Ixj3wAAAjVJREFUOE99j11I
-        U2EYxx/3IXMXUhdRMaJJizLowsKbMAMXa9OkedGN4dCr9kGFJBQ1OMVgFax0KSPILqQo+2I2hgtEiCBI
-        NoIsoVixnEzBakKtjTZ3/u2c87p5SvvBA+/7/D/OeekfYvvVSn57B/H6APF1z9ncItQdJ+ypZq61ORLe
-        3Lb3rS6xZWkXLOhGLzzitKIHGuwGLe/8Qpl9R5ldjvvShjPddzbxNz9cwNJyGn/zFWk481dRlT5cpIWO
-        Uywm8diqtQTstXz0zQizS7hcLnFWczsziarPJ4s0c9YihkGkijaoP70fPM0sFSSZ2K2CIxUCRa/FCY+U
-        9KuG2hd1NSh8X2RyhfUKFvIZVL+8C5p80ko80QCMRibJWa9AwPg6Bgq96BcKxuB0srWc/xU4YinQ/Y9j
-        QkEQdjtbS5jN5nJ4ZaxWK1Ml7K9+gIbTT4UCH5qb2VoiHo9Do9GUw8I5kUgwVeJQsAgaLPqEAhNUKvDJ
-        JM80EbfbXS7weDxsK5H8CagDpSf6CybBoSyVzPCdnbKCXC4HvV4Pg8EgnldjmyiFh/hp4qAofYCEvziY
-        VygL2Rt+ZpEIBoOIRCLsJuGfykI98DtPQ2gSwytk1FpbqnZrYc7Rh9zcPLNXmP+WxfnRWeg8yYL2esbG
-        YnJmN25riuka3k3UmxDpuohx7z2M9odxmQujzTmOxr6p6R1c/ACzrw1HpAjVm40jjV1eX0vvw3PHrjzo
-        OTHsbbc/ayGOk95chugPqPxeDNvC7/wAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="TéléchargerLaMiseÀJourToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 22</value>
-  </data>
-  <data name="TéléchargerLaMiseÀJourToolStripMenuItem.Text" xml:space="preserve">
-    <value>Télécharger la mise à jour...</value>
-  </data>
-  <data name="SupportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="SupportToolStripMenuItem.Text" xml:space="preserve">
-    <value>Support</value>
-  </data>
-  <data name="AideEnLigneToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
-  </data>
-  <data name="AideEnLigneToolStripMenuItem.Text" xml:space="preserve">
-    <value>Aide en ligne...</value>
-  </data>
-  <data name="ContacterLeSupportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
-  </data>
-  <data name="ContacterLeSupportToolStripMenuItem.Text" xml:space="preserve">
-    <value>Contacter le support...</value>
-  </data>
-  <data name="EnvoyeznousVosCommentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
-  </data>
-  <data name="EnvoyeznousVosCommentairesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Envoyez-nous vos commentaires !</value>
-  </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
-  </data>
-  <data name="ÀProposDeSmartNetSquareNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
-  </data>
-  <data name="ÀProposDeSmartNetSquareNoteToolStripMenuItem.Text" xml:space="preserve">
-    <value>À propos de SmartNet Square Note...</value>
-  </data>
-  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
-  </data>
-  <data name="FermerToutesLesNotesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="FermerToutesLesNotesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fermer toutes les notes</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -8843,17 +8843,8 @@
         AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAADAAwAA4AcAAA==
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Square Note</value>
-  </data>
-  <data name="&gt;&gt;NotifyIcon.Name" xml:space="preserve">
-    <value>NotifyIcon</value>
-  </data>
-  <data name="&gt;&gt;NotifyIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CloseNoteButton.Name" xml:space="preserve">
     <value>CloseNoteButton</value>
@@ -8944,6 +8935,12 @@
   </data>
   <data name="&gt;&gt;FermerToutesLesNotesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NotifyIcon.Name" xml:space="preserve">
+    <value>NotifyIcon</value>
+  </data>
+  <data name="&gt;&gt;NotifyIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;NewNoteToolStripMenuItem.Name" xml:space="preserve">
     <value>NewNoteToolStripMenuItem</value>

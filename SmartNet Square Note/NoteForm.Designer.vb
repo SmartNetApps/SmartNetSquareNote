@@ -26,10 +26,6 @@ Partial Class NoteForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NoteForm))
         Me.NoteRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FormDragger = New System.Windows.Forms.PictureBox()
-        Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.FormResizer = New System.Windows.Forms.PictureBox()
         Me.CloseNoteButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NouvelleNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,8 +41,12 @@ Partial Class NoteForm
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FermerToutesLesNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormDragger = New System.Windows.Forms.PictureBox()
+        Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.NewNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormResizer = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.FormDragger, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -67,31 +67,6 @@ Partial Class NoteForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseNoteButton, Me.ToolStripMenu})
         resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
-        '
-        'FormDragger
-        '
-        resources.ApplyResources(Me.FormDragger, "FormDragger")
-        Me.FormDragger.BackColor = System.Drawing.Color.Gold
-        Me.FormDragger.Name = "FormDragger"
-        Me.FormDragger.TabStop = False
-        '
-        'NotifyIcon
-        '
-        Me.NotifyIcon.ContextMenuStrip = Me.ContextMenuStrip1
-        resources.ApplyResources(Me.NotifyIcon, "NotifyIcon")
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewNoteToolStripMenuItem, Me.CloseAllNotesToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
-        '
-        'FormResizer
-        '
-        resources.ApplyResources(Me.FormResizer, "FormResizer")
-        Me.FormResizer.Cursor = System.Windows.Forms.Cursors.SizeNWSE
-        Me.FormResizer.Name = "FormResizer"
-        Me.FormResizer.TabStop = False
         '
         'CloseNoteButton
         '
@@ -178,6 +153,24 @@ Partial Class NoteForm
         Me.FermerToutesLesNotesToolStripMenuItem.Name = "FermerToutesLesNotesToolStripMenuItem"
         resources.ApplyResources(Me.FermerToutesLesNotesToolStripMenuItem, "FermerToutesLesNotesToolStripMenuItem")
         '
+        'FormDragger
+        '
+        resources.ApplyResources(Me.FormDragger, "FormDragger")
+        Me.FormDragger.BackColor = System.Drawing.Color.Gold
+        Me.FormDragger.Name = "FormDragger"
+        Me.FormDragger.TabStop = False
+        '
+        'NotifyIcon
+        '
+        Me.NotifyIcon.ContextMenuStrip = Me.ContextMenuStrip1
+        resources.ApplyResources(Me.NotifyIcon, "NotifyIcon")
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewNoteToolStripMenuItem, Me.CloseAllNotesToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
+        '
         'NewNoteToolStripMenuItem
         '
         Me.NewNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.NewNote
@@ -189,6 +182,13 @@ Partial Class NoteForm
         Me.CloseAllNotesToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.CloseAllNotesToolStripMenuItem.Name = "CloseAllNotesToolStripMenuItem"
         resources.ApplyResources(Me.CloseAllNotesToolStripMenuItem, "CloseAllNotesToolStripMenuItem")
+        '
+        'FormResizer
+        '
+        resources.ApplyResources(Me.FormResizer, "FormResizer")
+        Me.FormResizer.Cursor = System.Windows.Forms.Cursors.SizeNWSE
+        Me.FormResizer.Name = "FormResizer"
+        Me.FormResizer.TabStop = False
         '
         'NoteForm
         '
