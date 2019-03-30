@@ -41,5 +41,11 @@ Namespace My
         Private Sub MyApplication_Shutdown(sender As Object, e As EventArgs) Handles Me.Shutdown
             ApplicationNotifyIcon.Visible = False
         End Sub
+
+        Private Sub MyApplication_UnhandledException(sender As Object, e As UnhandledExceptionEventArgs) Handles Me.UnhandledException
+            e.ExitApplication = False
+            MessageBox.Show("SmartNet Square Note a planté." + vbCrLf + e.Exception.Message, "Rapporteur de plantage de SmartNet Square Note", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Environment.Exit(2)
+        End Sub
     End Class
 End Namespace

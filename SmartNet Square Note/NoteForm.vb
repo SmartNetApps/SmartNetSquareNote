@@ -52,6 +52,12 @@ Public Class NoteForm
     End Sub
 
     Private Sub NoteForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If UpdateAgent.IsUpdateAvailable() = UpdateAgent.UpdateStatus.UpdateAvailable Then
+            NouvelleVersionDisponibleToolStripMenuItem.Visible = True
+        Else
+            NouvelleVersionDisponibleToolStripMenuItem.Visible = False
+        End If
+
         Me.Text = NoteRichTextBox.Text
         NoteRichTextBox.ForeColor = My.Settings.TextColor
         NoteRichTextBox.Font = My.Settings.TextFont
@@ -70,7 +76,11 @@ Public Class NoteForm
     End Sub
 
     Private Sub TéléchargerLaMiseÀJourToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TéléchargerLaMiseÀJourToolStripMenuItem.Click
-        FormUpdater.Show()
+        If UpdateAgent.IsUpdateAvailable() = UpdateAgent.UpdateStatus.UpdateAvailable Then
+            FormUpdater.Show()
+        Else
+            NouvelleVersionDisponibleToolStripMenuItem.Visible = False
+        End If
     End Sub
 
     Private Sub FormResizer_MouseClick(sender As Object, e As MouseEventArgs) Handles FormResizer.MouseMove

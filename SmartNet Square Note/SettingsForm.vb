@@ -45,6 +45,7 @@ Public Class SettingsForm
                 My.Settings.AutoUpdates = False
             End If
         End If
+        My.Settings.Save()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles RestorePreviousSettingsButton.Click
@@ -63,10 +64,6 @@ Public Class SettingsForm
     Private Sub ChangeNoteColorButton_Click(sender As Object, e As EventArgs) Handles ChangeNoteColorButton.Click
         If NoteColorDialog.ShowDialog() = DialogResult.OK Then
             My.Settings.NoteColor = NoteColorDialog.Color
-            NoteForm.BackColor = My.Settings.NoteColor
-            NoteForm.NoteRichTextBox.BackColor = My.Settings.NoteColor
-            NoteForm.FormDragger.BackColor = My.Settings.NoteColor
-            NoteForm.MenuStrip1.BackColor = My.Settings.NoteColor
             RestartWarningLabel.Visible = True
         End If
     End Sub
@@ -74,7 +71,6 @@ Public Class SettingsForm
     Private Sub ChangeTextColorButton_Click(sender As Object, e As EventArgs) Handles ChangeTextColorButton.Click
         If TextColorDialog.ShowDialog() = DialogResult.OK Then
             My.Settings.TextColor = TextColorDialog.Color
-            NoteForm.NoteRichTextBox.ForeColor = My.Settings.TextColor
             RestartWarningLabel.Visible = True
         End If
     End Sub
@@ -82,30 +78,22 @@ Public Class SettingsForm
     Private Sub ChangeTextFontButton_Click(sender As Object, e As EventArgs) Handles ChangeTextFontButton.Click
         If TextFontDialog.ShowDialog() = DialogResult.OK Then
             My.Settings.TextFont = TextFontDialog.Font
-            NoteForm.NoteRichTextBox.Font = My.Settings.TextFont
             RestartWarningLabel.Visible = True
         End If
     End Sub
 
     Private Sub RestoreDefaultNoteColorLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles RestoreDefaultNoteColorLinkLabel.LinkClicked
         My.Settings.NoteColor = Color.FromArgb(255, 255, 192)
-        NoteForm.BackColor = My.Settings.NoteColor
-        NoteForm.NoteRichTextBox.BackColor = My.Settings.NoteColor
-        NoteForm.FormDragger.BackColor = My.Settings.NoteColor
-        NoteForm.MenuStrip1.BackColor = My.Settings.NoteColor
         RestartWarningLabel.Visible = True
     End Sub
 
     Private Sub RestoreTextStyleLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles RestoreTextStyleLinkLabel.LinkClicked
         My.Settings.TextColor = Color.Black
-        NoteForm.NoteRichTextBox.ForeColor = My.Settings.TextColor
         My.Settings.TextFont = New Font("Comic Sans MS", 11.25)
-        NoteForm.NoteRichTextBox.Font = My.Settings.TextFont
         RestartWarningLabel.Visible = True
     End Sub
 
     Private Sub SettingsForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()
-        Me.Close()
     End Sub
 End Class
