@@ -124,9 +124,6 @@
   <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\buttons\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\logo1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MenuBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\buttons\menublack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,7 +145,16 @@
   <data name="NewNote" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\buttons\newnote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SmartNet_Apps_Updater" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SmartNet Apps Updater.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_2019_SmartNetAppsUpdater_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2019_SmartNetAppsUpdater_Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2019_SmartNetAppsUpdater_NotificationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2019_SmartNetAppsUpdater_NotificationIcon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2019_SmartNetSquareNote_1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2019_SmartNetSquareNote_1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2019_SmartNetSquareNote_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2019_SmartNetSquareNote_Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

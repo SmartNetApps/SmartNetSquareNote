@@ -49,7 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>SmartNet Square Note.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\2019_SmartNetSquareNote_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -129,6 +129,9 @@
     <Compile Include="UpdateAgent.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutForm.fr.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +190,10 @@
     <Content Include="README.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\2019_SmartNetAppsUpdater_Icon.ico" />
+    <None Include="Resources\2019_SmartNetAppsUpdater_NotificationIcon.ico" />
+    <None Include="Resources\2019_SmartNetSquareNote_Icon.ico" />
+    <None Include="Resources\2019_SmartNetSquareNote_1024.png" />
     <Content Include="Resources\Buttons\Close.png" />
     <Content Include="Resources\Buttons\Delete.png" />
     <Content Include="Resources\Buttons\Help.png" />
@@ -198,7 +205,6 @@
     <None Include="Resources\wordmark_white_36.png" />
     <None Include="Resources\wordmark_black_36.png" />
     <None Include="Resources\SmartNet Apps Updater.ico" />
-    <Content Include="SmartNet Square Note.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

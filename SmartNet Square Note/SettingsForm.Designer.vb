@@ -65,27 +65,27 @@ Partial Class SettingsForm
         '
         'SettingsTabControl
         '
-        resources.ApplyResources(Me.SettingsTabControl, "SettingsTabControl")
         Me.SettingsTabControl.Controls.Add(Me.GeneralTabPage)
         Me.SettingsTabControl.Controls.Add(Me.UpdatesTabPage)
         Me.SettingsTabControl.Controls.Add(Me.AdvancedTabPage)
+        resources.ApplyResources(Me.SettingsTabControl, "SettingsTabControl")
         Me.SettingsTabControl.Name = "SettingsTabControl"
         Me.SettingsTabControl.SelectedIndex = 0
         '
         'GeneralTabPage
         '
-        resources.ApplyResources(Me.GeneralTabPage, "GeneralTabPage")
         Me.GeneralTabPage.Controls.Add(Me.TextFontAndColorGroupBox)
         Me.GeneralTabPage.Controls.Add(Me.NoteColorGroupBox)
+        resources.ApplyResources(Me.GeneralTabPage, "GeneralTabPage")
         Me.GeneralTabPage.Name = "GeneralTabPage"
         Me.GeneralTabPage.UseVisualStyleBackColor = True
         '
         'TextFontAndColorGroupBox
         '
-        resources.ApplyResources(Me.TextFontAndColorGroupBox, "TextFontAndColorGroupBox")
         Me.TextFontAndColorGroupBox.Controls.Add(Me.ChangeTextFontButton)
         Me.TextFontAndColorGroupBox.Controls.Add(Me.RestoreTextStyleLinkLabel)
         Me.TextFontAndColorGroupBox.Controls.Add(Me.ChangeTextColorButton)
+        resources.ApplyResources(Me.TextFontAndColorGroupBox, "TextFontAndColorGroupBox")
         Me.TextFontAndColorGroupBox.Name = "TextFontAndColorGroupBox"
         Me.TextFontAndColorGroupBox.TabStop = False
         '
@@ -97,8 +97,8 @@ Partial Class SettingsForm
         '
         'RestoreTextStyleLinkLabel
         '
-        resources.ApplyResources(Me.RestoreTextStyleLinkLabel, "RestoreTextStyleLinkLabel")
         Me.RestoreTextStyleLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.RestoreTextStyleLinkLabel, "RestoreTextStyleLinkLabel")
         Me.RestoreTextStyleLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
         Me.RestoreTextStyleLinkLabel.Name = "RestoreTextStyleLinkLabel"
         Me.RestoreTextStyleLinkLabel.TabStop = True
@@ -112,16 +112,16 @@ Partial Class SettingsForm
         '
         'NoteColorGroupBox
         '
-        resources.ApplyResources(Me.NoteColorGroupBox, "NoteColorGroupBox")
         Me.NoteColorGroupBox.Controls.Add(Me.RestoreDefaultNoteColorLinkLabel)
         Me.NoteColorGroupBox.Controls.Add(Me.ChangeNoteColorButton)
+        resources.ApplyResources(Me.NoteColorGroupBox, "NoteColorGroupBox")
         Me.NoteColorGroupBox.Name = "NoteColorGroupBox"
         Me.NoteColorGroupBox.TabStop = False
         '
         'RestoreDefaultNoteColorLinkLabel
         '
-        resources.ApplyResources(Me.RestoreDefaultNoteColorLinkLabel, "RestoreDefaultNoteColorLinkLabel")
         Me.RestoreDefaultNoteColorLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.RestoreDefaultNoteColorLinkLabel, "RestoreDefaultNoteColorLinkLabel")
         Me.RestoreDefaultNoteColorLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
         Me.RestoreDefaultNoteColorLinkLabel.Name = "RestoreDefaultNoteColorLinkLabel"
         Me.RestoreDefaultNoteColorLinkLabel.TabStop = True
@@ -135,17 +135,17 @@ Partial Class SettingsForm
         '
         'UpdatesTabPage
         '
-        resources.ApplyResources(Me.UpdatesTabPage, "UpdatesTabPage")
         Me.UpdatesTabPage.Controls.Add(Me.VersionNumberGroupBox)
         Me.UpdatesTabPage.Controls.Add(Me.AutoUpdateGroupBox)
+        resources.ApplyResources(Me.UpdatesTabPage, "UpdatesTabPage")
         Me.UpdatesTabPage.Name = "UpdatesTabPage"
         Me.UpdatesTabPage.UseVisualStyleBackColor = True
         '
         'VersionNumberGroupBox
         '
-        resources.ApplyResources(Me.VersionNumberGroupBox, "VersionNumberGroupBox")
         Me.VersionNumberGroupBox.Controls.Add(Me.UpdatesSearchButton)
         Me.VersionNumberGroupBox.Controls.Add(Me.VersionLabel)
+        resources.ApplyResources(Me.VersionNumberGroupBox, "VersionNumberGroupBox")
         Me.VersionNumberGroupBox.Name = "VersionNumberGroupBox"
         Me.VersionNumberGroupBox.TabStop = False
         '
@@ -162,8 +162,8 @@ Partial Class SettingsForm
         '
         'AutoUpdateGroupBox
         '
-        resources.ApplyResources(Me.AutoUpdateGroupBox, "AutoUpdateGroupBox")
         Me.AutoUpdateGroupBox.Controls.Add(Me.AutoUpdateCheckBox)
+        resources.ApplyResources(Me.AutoUpdateGroupBox, "AutoUpdateGroupBox")
         Me.AutoUpdateGroupBox.Name = "AutoUpdateGroupBox"
         Me.AutoUpdateGroupBox.TabStop = False
         '
@@ -175,15 +175,15 @@ Partial Class SettingsForm
         '
         'AdvancedTabPage
         '
-        resources.ApplyResources(Me.AdvancedTabPage, "AdvancedTabPage")
         Me.AdvancedTabPage.Controls.Add(Me.SettingsRestoreGroupBox)
+        resources.ApplyResources(Me.AdvancedTabPage, "AdvancedTabPage")
         Me.AdvancedTabPage.Name = "AdvancedTabPage"
         Me.AdvancedTabPage.UseVisualStyleBackColor = True
         '
         'SettingsRestoreGroupBox
         '
-        resources.ApplyResources(Me.SettingsRestoreGroupBox, "SettingsRestoreGroupBox")
         Me.SettingsRestoreGroupBox.Controls.Add(Me.RestorePreviousSettingsButton)
+        resources.ApplyResources(Me.SettingsRestoreGroupBox, "SettingsRestoreGroupBox")
         Me.SettingsRestoreGroupBox.Name = "SettingsRestoreGroupBox"
         Me.SettingsRestoreGroupBox.TabStop = False
         '
@@ -209,7 +209,6 @@ Partial Class SettingsForm
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SettingsForm"
-        Me.ShowInTaskbar = False
         Me.SettingsTabControl.ResumeLayout(False)
         Me.GeneralTabPage.ResumeLayout(False)
         Me.TextFontAndColorGroupBox.ResumeLayout(False)
