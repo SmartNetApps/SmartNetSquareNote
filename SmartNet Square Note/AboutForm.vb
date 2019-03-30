@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles HomepageLinkLabel.LinkClicked
-        Process.Start("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/squarenote/index.html")
+        Process.Start("https://smartnetapps.quentinpugeat.fr/squarenote/index.html")
     End Sub
 
     Private Sub AboutForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub LinkLabelReleaseNotes_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabelReleaseNotes.LinkClicked
-        Process.Start("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/squarenote/releasenotes.html")
+        Process.Start("https://smartnetapps.quentinpugeat.fr/squarenote/releasenotes.html")
     End Sub
 
     Private Sub LinkLabelSource_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabelSource.LinkClicked

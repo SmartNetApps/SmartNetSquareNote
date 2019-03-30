@@ -90,11 +90,11 @@ Public Class NoteForm
     End Sub
 
     Private Sub AideEnLigneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AideEnLigneToolStripMenuItem.Click
-        Process.Start("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/squarenote/support/index.html")
+        Process.Start("https://smartnetapps.quentinpugeat.fr/squarenote/support/index.html")
     End Sub
 
     Private Sub ContacterLeSupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContacterLeSupportToolStripMenuItem.Click
-        Process.Start("http://quentinpugeat.pagesperso-orange.fr/smartnetapps/contact.html")
+        Process.Start("https://smartnetapps.quentinpugeat.fr/contact.html")
     End Sub
 
     Private Sub EnvoyeznousVosCommentairesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnvoyeznousVosCommentairesToolStripMenuItem.Click

@@ -3,9 +3,9 @@ Créez des notes sur votre bureau et personnalisez-les !
 Accédez aux paramètres via le menu sur une note.
 
 Vous trouverez de l'aide pour SmartNet Square Note sur le site internet SmartNet Apps, à l'adresse
-http://quentinpugeat.pagesperso-orange.fr/smartnetapps/squarenote/support
+https://smartnetapps.quentinpugeat.fr/squarenote/support
 
-Copyright 2015-2018, Quentin Pugeat
+Copyright 2015-2019, Quentin Pugeat
 SmartNet Apps
 
 SmartNet Square Note est un logiciel libre ; vous pouvez le redistribuer ou le modifier suivant les termes de la GNU General Public License telle que publiée par la Free Software Foundation ; soit la version 3 de la licence, soit (à votre gré) toute version ultérieure.
