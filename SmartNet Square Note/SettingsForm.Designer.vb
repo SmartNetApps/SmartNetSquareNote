@@ -23,7 +23,6 @@ Partial Class SettingsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SettingsForm))
-        Me.OKButton = New System.Windows.Forms.Button()
         Me.SettingsTabControl = New System.Windows.Forms.TabControl()
         Me.GeneralTabPage = New System.Windows.Forms.TabPage()
         Me.TextFontAndColorGroupBox = New System.Windows.Forms.GroupBox()
@@ -57,12 +56,6 @@ Partial Class SettingsForm
         Me.SettingsRestoreGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
-        'OKButton
-        '
-        resources.ApplyResources(Me.OKButton, "OKButton")
-        Me.OKButton.Name = "OKButton"
-        Me.OKButton.UseVisualStyleBackColor = True
-        '
         'SettingsTabControl
         '
         Me.SettingsTabControl.Controls.Add(Me.GeneralTabPage)
@@ -74,6 +67,7 @@ Partial Class SettingsForm
         '
         'GeneralTabPage
         '
+        Me.GeneralTabPage.Controls.Add(Me.RestartWarningLabel)
         Me.GeneralTabPage.Controls.Add(Me.TextFontAndColorGroupBox)
         Me.GeneralTabPage.Controls.Add(Me.NoteColorGroupBox)
         resources.ApplyResources(Me.GeneralTabPage, "GeneralTabPage")
@@ -202,15 +196,14 @@ Partial Class SettingsForm
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.RestartWarningLabel)
         Me.Controls.Add(Me.SettingsTabControl)
-        Me.Controls.Add(Me.OKButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SettingsForm"
         Me.SettingsTabControl.ResumeLayout(False)
         Me.GeneralTabPage.ResumeLayout(False)
+        Me.GeneralTabPage.PerformLayout()
         Me.TextFontAndColorGroupBox.ResumeLayout(False)
         Me.TextFontAndColorGroupBox.PerformLayout()
         Me.NoteColorGroupBox.ResumeLayout(False)
@@ -223,11 +216,8 @@ Partial Class SettingsForm
         Me.AdvancedTabPage.ResumeLayout(False)
         Me.SettingsRestoreGroupBox.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents OKButton As Button
     Friend WithEvents SettingsTabControl As TabControl
     Friend WithEvents GeneralTabPage As TabPage
     Friend WithEvents UpdatesTabPage As TabPage
