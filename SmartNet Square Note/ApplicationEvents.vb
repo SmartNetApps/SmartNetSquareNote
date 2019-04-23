@@ -9,13 +9,7 @@ Namespace My
     ' StartupNextInstance : déclenché lors du lancement d'une application à instance unique et si cette application est déjà active. 
     ' NetworkAvailabilityChanged : déclenché lorsque la connexion réseau est connectée ou déconnectée.
     Partial Friend Class MyApplication
-        Dim ApplicationNotifyIcon As New NotifyIcon
         Private Sub MyApplication_Startup(sender As Object, e As StartupEventArgs) Handles Me.Startup
-            ApplicationNotifyIcon.Icon = NoteForm.NotifyIcon.Icon
-            ApplicationNotifyIcon.Text = "SmartNet Square Note"
-            'ApplicationNotifyIcon.ContextMenuStrip = NoteForm.ContextMenuStrip1
-            ApplicationNotifyIcon.Visible = True
-
             If My.Settings.AutoUpdates = True Then
                 Select Case UpdateAgent.IsUpdateAvailable()
                     Case UpdateAgent.UpdateStatus.OSNotSupported
@@ -24,27 +18,17 @@ Namespace My
                     Case UpdateAgent.UpdateStatus.SupportStatusOff
                         MessageBox.Show("Ce logiciel étant abandonné, plus aucune mise à jour de Square Note ne sera proposée pour cette machine. Visitez le site d'assistance de SmartNet Apps pour en savoir plus.", "SmartNet Apps Updater", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                         My.Settings.AutoUpdates = False
-                    Case UpdateAgent.UpdateStatus.UpdateAvailable
-                        Dim UpdateNotifyIcon As New NotifyIcon With {
-                            .Icon = My.Resources._2019_SmartNetAppsUpdater_NotificationIcon,
-                            .Text = "Mise à jour pour SmartNet Square Note",
-                            .BalloonTipTitle = "SmartNet Apps Updater",
-                            .BalloonTipText = "Une mise à jour est disponible pour SmartNet Square Note.",
-                            .BalloonTipIcon = ToolTipIcon.Info,
-                            .Visible = True
-                        }
-                        UpdateNotifyIcon.ShowBalloonTip(10000)
                 End Select
             End If
         End Sub
 
         Private Sub MyApplication_Shutdown(sender As Object, e As EventArgs) Handles Me.Shutdown
-            ApplicationNotifyIcon.Visible = False
+            My.Settings.Save()
         End Sub
 
         Private Sub MyApplication_UnhandledException(sender As Object, e As UnhandledExceptionEventArgs) Handles Me.UnhandledException
             e.ExitApplication = False
-            MessageBox.Show("SmartNet Square Note a planté." + vbCrLf + e.Exception.Message, "Rapporteur de plantage de SmartNet Square Note", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("SmartNet Square Note a planté." + vbCrLf + e.Exception.Message + vbCrLf + e.Exception.StackTrace, "Rapporteur de plantage de SmartNet Square Note", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Environment.Exit(2)
         End Sub
     End Class

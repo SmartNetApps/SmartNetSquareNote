@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.SmartNet_Square_Note.NoteForm
+            Me.MainForm = Global.SmartNet_Square_Note.MainForm
         End Sub
     End Class
 End Namespace

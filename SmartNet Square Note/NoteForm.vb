@@ -1,10 +1,46 @@
 ﻿Imports System.ComponentModel
+Imports System.Drawing
 
 Public Class NoteForm
-    Dim IsDraggingForm As Boolean = False
-    Private MousePos As New System.Drawing.Point(0, 0)
-    Public Sub Noteform()
+    Dim IsDraggingForm As Boolean
+    Dim MousePos As Point
+    Dim theNote As Note
+
+    Public Sub New()
         InitializeComponent()
+        Me.IsDraggingForm = False
+        Me.MousePos = New Point(0, 0)
+
+        Dim theCollection As NoteCollection = NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
+        Me.theNote = New Note(theCollection.GetHigherId() + 1)
+    End Sub
+
+    Public Sub New(_note As Note)
+        InitializeComponent()
+        Me.IsDraggingForm = False
+        Me.MousePos = New Point(0, 0)
+        Me.theNote = _note
+    End Sub
+
+    Private Sub NoteForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        theNote.isVisible = True
+        NoteRichTextBox.Text = theNote.noteText
+        Me.Text = theNote.noteText
+        NoteRichTextBox.ForeColor = My.Settings.TextColor
+        NoteRichTextBox.Font = My.Settings.TextFont
+        Me.BackColor = My.Settings.NoteColor
+        NoteRichTextBox.BackColor = My.Settings.NoteColor
+        FormDragger.BackColor = My.Settings.NoteColor
+        MenuStrip1.BackColor = My.Settings.NoteColor
+    End Sub
+
+    Private Sub SaveNote()
+        theNote.noteText = NoteRichTextBox.Text
+        Dim theCollection As NoteCollection = NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
+        theCollection.AddOrUpdate(theNote)
+        Dim notecol As Specialized.StringCollection = theCollection.ToJsonCollection()
+        My.Settings.NoteCollection = notecol
+        My.Settings.Save()
     End Sub
 
     Private Sub StartDraggingForm(ByVal sender As Object, ByVal e As MouseEventArgs) Handles ToolStripMenu.MouseDown, FormDragger.MouseDown, MyBase.MouseDown
@@ -30,57 +66,8 @@ Public Class NoteForm
         Me.Close()
     End Sub
 
-    Private Sub NouvelleNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouvelleNoteToolStripMenuItem.Click, NewNoteToolStripMenuItem.Click
-        Dim NewNote As New NoteForm
-        NewNote.NotifyIcon.Visible = False
-        If My.Settings.UpdateAvailable = True Then
-            NewNote.NouvelleVersionDisponibleToolStripMenuItem.Visible = True
-            NewNote.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = True
-        Else
-            NewNote.NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-            NewNote.TéléchargerLaMiseÀJourToolStripMenuItem.Visible = False
-        End If
-        NewNote.Show()
-    End Sub
-
-    Private Sub ÀProposDeSmartNetSquareNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÀProposDeSmartNetSquareNoteToolStripMenuItem.Click
-        AboutForm.ShowDialog()
-    End Sub
-
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles NoteRichTextBox.TextChanged
         Me.Text = NoteRichTextBox.Text
-    End Sub
-
-    Private Sub NoteForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If UpdateAgent.IsUpdateAvailable() = UpdateAgent.UpdateStatus.UpdateAvailable Then
-            NouvelleVersionDisponibleToolStripMenuItem.Visible = True
-        Else
-            NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-        End If
-
-        Me.Text = NoteRichTextBox.Text
-        NoteRichTextBox.ForeColor = My.Settings.TextColor
-        NoteRichTextBox.Font = My.Settings.TextFont
-        Me.BackColor = My.Settings.NoteColor
-        NoteRichTextBox.BackColor = My.Settings.NoteColor
-        FormDragger.BackColor = My.Settings.NoteColor
-        MenuStrip1.BackColor = My.Settings.NoteColor
-    End Sub
-
-    Private Sub ParamètresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ParamètresToolStripMenuItem.Click
-        SettingsForm.ShowDialog()
-    End Sub
-
-    Private Sub FermerToutesLesNotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FermerToutesLesNotesToolStripMenuItem.Click, CloseAllNotesToolStripMenuItem.Click
-        Application.Exit()
-    End Sub
-
-    Private Sub TéléchargerLaMiseÀJourToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TéléchargerLaMiseÀJourToolStripMenuItem.Click
-        If UpdateAgent.IsUpdateAvailable() = UpdateAgent.UpdateStatus.UpdateAvailable Then
-            FormUpdater.Show()
-        Else
-            NouvelleVersionDisponibleToolStripMenuItem.Visible = False
-        End If
     End Sub
 
     Private Sub FormResizer_MouseClick(sender As Object, e As MouseEventArgs) Handles FormResizer.MouseMove
@@ -89,19 +76,27 @@ Public Class NoteForm
         End If
     End Sub
 
-    Private Sub AideEnLigneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AideEnLigneToolStripMenuItem.Click
-        Process.Start("https://smartnetapps.quentinpugeat.fr/squarenote/support/index.html")
+    Private Sub NoteSaveTimer_Tick(sender As Object, e As EventArgs) Handles NoteSaveTimer.Tick
+        SaveNote()
     End Sub
 
-    Private Sub ContacterLeSupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContacterLeSupportToolStripMenuItem.Click
-        Process.Start("https://smartnetapps.quentinpugeat.fr/contact.html")
+    Private Sub NoteForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        theNote.isVisible = False
+        SaveNote()
     End Sub
 
-    Private Sub EnvoyeznousVosCommentairesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnvoyeznousVosCommentairesToolStripMenuItem.Click
-        Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSfMOL6Pdmu2Cz18m0Rr82cNwOz1M4PpLGmzQGFZgIf2odMwyg/viewform?usp=sf_link")
+    Private Sub ListeDesNotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListeDesNotesToolStripMenuItem.Click
+        MainForm.Visible = True
+        MainForm.RefreshListBox()
+        MainForm.Activate()
     End Sub
 
-    Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick
-        'Me.BringToFront()
+    Private Sub SupprimerCetteNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupprimerCetteNoteToolStripMenuItem.Click
+        Dim theCollection As NoteCollection = NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
+        theCollection.RemoveNote(theNote)
+        My.Settings.NoteCollection = theCollection.ToJsonCollection()
+        My.Settings.Save()
+        MainForm.RefreshListBox()
+        Me.Dispose()
     End Sub
 End Class

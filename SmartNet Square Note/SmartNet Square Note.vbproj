@@ -55,6 +55,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -98,6 +101,14 @@
     <Compile Include="LicenseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note.vb" />
+    <Compile Include="NoteCollection.vb" />
     <Compile Include="NoteForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +158,9 @@
     <EmbeddedResource Include="LicenseForm.resx">
       <DependentUpon>LicenseForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NoteForm.en.resx">
       <DependentUpon>NoteForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,10 +204,13 @@
     <Content Include="README.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\StopBlack.png" />
+    <None Include="packages.config" />
     <None Include="Resources\2019_SmartNetAppsUpdater_Icon.ico" />
     <None Include="Resources\2019_SmartNetAppsUpdater_NotificationIcon.ico" />
     <None Include="Resources\2019_SmartNetSquareNote_Icon.ico" />
     <None Include="Resources\2019_SmartNetSquareNote_1024.png" />
+    <None Include="Resources\2019_SmartNetAppsUpdater_1024.png" />
     <Content Include="Resources\Buttons\Close.png" />
     <Content Include="Resources\Buttons\Delete.png" />
     <Content Include="Resources\Buttons\Help.png" />
