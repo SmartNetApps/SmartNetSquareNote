@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NoteForm
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class NoteForm
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NoteForm))
         Me.NoteRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -33,7 +32,6 @@ Partial Class NoteForm
         Me.SupprimerCetteNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormDragger = New System.Windows.Forms.PictureBox()
         Me.FormResizer = New System.Windows.Forms.PictureBox()
-        Me.NoteSaveTimer = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.FormDragger, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FormResizer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,11 +95,6 @@ Partial Class NoteForm
         Me.FormResizer.Name = "FormResizer"
         Me.FormResizer.TabStop = False
         '
-        'NoteSaveTimer
-        '
-        Me.NoteSaveTimer.Enabled = True
-        Me.NoteSaveTimer.Interval = 5000
-        '
         'NoteForm
         '
         resources.ApplyResources(Me, "$this")
@@ -138,5 +131,4 @@ Partial Class NoteForm
     Friend WithEvents ListeDesNotesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents SupprimerCetteNoteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NoteSaveTimer As Timer
 End Class

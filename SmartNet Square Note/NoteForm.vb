@@ -4,7 +4,7 @@ Imports System.Drawing
 Public Class NoteForm
     Dim IsDraggingForm As Boolean
     Dim MousePos As Point
-    Dim theNote As Note
+    Public theNote As Note
 
     Public Sub New()
         InitializeComponent()
@@ -34,15 +34,6 @@ Public Class NoteForm
         MenuStrip1.BackColor = My.Settings.NoteColor
     End Sub
 
-    Private Sub SaveNote()
-        theNote.noteText = NoteRichTextBox.Text
-        Dim theCollection As NoteCollection = NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
-        theCollection.AddOrUpdate(theNote)
-        Dim notecol As Specialized.StringCollection = theCollection.ToJsonCollection()
-        My.Settings.NoteCollection = notecol
-        My.Settings.Save()
-    End Sub
-
     Private Sub StartDraggingForm(ByVal sender As Object, ByVal e As MouseEventArgs) Handles ToolStripMenu.MouseDown, FormDragger.MouseDown, MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             IsDraggingForm = True
@@ -68,6 +59,7 @@ Public Class NoteForm
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles NoteRichTextBox.TextChanged
         Me.Text = NoteRichTextBox.Text
+        theNote.noteText = NoteRichTextBox.Text
     End Sub
 
     Private Sub FormResizer_MouseClick(sender As Object, e As MouseEventArgs) Handles FormResizer.MouseMove
@@ -76,13 +68,8 @@ Public Class NoteForm
         End If
     End Sub
 
-    Private Sub NoteSaveTimer_Tick(sender As Object, e As EventArgs) Handles NoteSaveTimer.Tick
-        SaveNote()
-    End Sub
-
     Private Sub NoteForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         theNote.isVisible = False
-        SaveNote()
     End Sub
 
     Private Sub ListeDesNotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListeDesNotesToolStripMenuItem.Click

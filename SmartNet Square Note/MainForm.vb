@@ -1,9 +1,11 @@
 ﻿Imports System.ComponentModel
 
 Public Class MainForm
+    Dim NoteFormCollection As List(Of NoteForm)
 
     Public Sub New()
         InitializeComponent()
+        NoteFormCollection = New List(Of NoteForm)
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -24,6 +26,16 @@ Public Class MainForm
                 newform.Show()
             End If
         Next
+    End Sub
+
+    Private Sub SaveNotes()
+        Dim theCollection As NoteCollection = NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
+        For Each form In NoteFormCollection
+            theCollection.AddOrUpdate(form.theNote)
+        Next
+        Dim notecol As Specialized.StringCollection = theCollection.ToJsonCollection()
+        My.Settings.NoteCollection = notecol
+        My.Settings.Save()
     End Sub
 
     ''' <summary>
@@ -49,11 +61,13 @@ Public Class MainForm
     Private Sub QuitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitterToolStripMenuItem.Click
         MainNotifyIcon.Visible = False
         UpdateNotifyIcon.Visible = False
+        SaveNotes()
         Environment.Exit(0)
     End Sub
 
     Private Sub NouvelleNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouvelleNoteToolStripMenuItem.Click
         Dim newform As New NoteForm()
+        NoteFormCollection.Add(newform)
         newform.Show()
     End Sub
 
@@ -98,11 +112,17 @@ Public Class MainForm
     Private Sub QuitterToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QuitterToolStripMenuItem1.Click
         MainNotifyIcon.Visible = False
         UpdateNotifyIcon.Visible = False
+        SaveNotes()
         Environment.Exit(0)
     End Sub
 
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
         Me.Visible = False
+    End Sub
+
+    Private Sub SaveNotesTimer_Tick(sender As Object, e As EventArgs) Handles SaveNotesTimer.Tick
+        SaveNotes()
+        RefreshListBox()
     End Sub
 End Class

@@ -45,6 +45,7 @@ Partial Class MainForm
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.SaveNotesTimer = New System.Windows.Forms.Timer(Me.components)
         Me.MainNotifyIconContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -110,7 +111,7 @@ Partial Class MainForm
         '
         Me.ParamètresToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Settings
         Me.ParamètresToolStripMenuItem.Name = "ParamètresToolStripMenuItem"
-        Me.ParamètresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ParamètresToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.ParamètresToolStripMenuItem.Text = "Paramètres..."
         Me.ParamètresToolStripMenuItem.ToolTipText = "Ouvrir les paramètres de l'application."
         '
@@ -118,21 +119,21 @@ Partial Class MainForm
         '
         Me.MettreÀJourToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources._2019_SmartNetAppsUpdater_1024
         Me.MettreÀJourToolStripMenuItem.Name = "MettreÀJourToolStripMenuItem"
-        Me.MettreÀJourToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MettreÀJourToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.MettreÀJourToolStripMenuItem.Text = "Mettre à jour..."
         Me.MettreÀJourToolStripMenuItem.ToolTipText = "Mettre à jour l'application."
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(151, 6)
         '
         'QuitterToolStripMenuItem
         '
         Me.QuitterToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.QuitterToolStripMenuItem.Name = "QuitterToolStripMenuItem"
         Me.QuitterToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
-        Me.QuitterToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.QuitterToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.QuitterToolStripMenuItem.Text = "Quitter"
         Me.QuitterToolStripMenuItem.ToolTipText = "Fermer toutes les notes et quitter l'application."
         '
@@ -214,6 +215,11 @@ Partial Class MainForm
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Notes sauvegardées"
         '
+        'SaveNotesTimer
+        '
+        Me.SaveNotesTimer.Enabled = True
+        Me.SaveNotesTimer.Interval = 10000
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -259,4 +265,5 @@ Partial Class MainForm
     Friend WithEvents MainNotifyIconContextMenuStrip As ContextMenuStrip
     Friend WithEvents AfficherSmartNetSquareNoteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuitterToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents SaveNotesTimer As Timer
 End Class
