@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class MainForm
-    Dim NoteFormCollection As List(Of NoteForm)
+    Friend NoteFormCollection As List(Of NoteForm)
 
     Public Sub New()
         InitializeComponent()

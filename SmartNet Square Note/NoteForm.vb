@@ -84,6 +84,7 @@ Public Class NoteForm
         My.Settings.NoteCollection = theCollection.ToJsonCollection()
         My.Settings.Save()
         MainForm.RefreshListBox()
+        MainForm.NoteFormCollection.Remove(Me)
         Me.Dispose()
     End Sub
 End Class
