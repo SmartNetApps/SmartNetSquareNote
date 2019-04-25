@@ -56,157 +56,117 @@ Partial Class MainForm
         'MainNotifyIcon
         '
         Me.MainNotifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.MainNotifyIcon.BalloonTipText = "Double-cliquez sur cette icône pour faire apparaître SmartNet Square Note. Un cli" &
-    "c-droit affichera un menu."
-        Me.MainNotifyIcon.BalloonTipTitle = "SmartNet Square Note est encore ouvert."
+        resources.ApplyResources(Me.MainNotifyIcon, "MainNotifyIcon")
         Me.MainNotifyIcon.ContextMenuStrip = Me.MainNotifyIconContextMenuStrip
-        Me.MainNotifyIcon.Icon = CType(resources.GetObject("MainNotifyIcon.Icon"), System.Drawing.Icon)
-        Me.MainNotifyIcon.Text = "SmartNet Square Note"
-        Me.MainNotifyIcon.Visible = True
         '
         'MainNotifyIconContextMenuStrip
         '
+        resources.ApplyResources(Me.MainNotifyIconContextMenuStrip, "MainNotifyIconContextMenuStrip")
         Me.MainNotifyIconContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AfficherSmartNetSquareNoteToolStripMenuItem, Me.QuitterToolStripMenuItem1})
         Me.MainNotifyIconContextMenuStrip.Name = "MainNotifyIconContextMenuStrip"
-        Me.MainNotifyIconContextMenuStrip.Size = New System.Drawing.Size(252, 48)
         '
         'AfficherSmartNetSquareNoteToolStripMenuItem
         '
-        Me.AfficherSmartNetSquareNoteToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        resources.ApplyResources(Me.AfficherSmartNetSquareNoteToolStripMenuItem, "AfficherSmartNetSquareNoteToolStripMenuItem")
         Me.AfficherSmartNetSquareNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources._2019_SmartNetSquareNote_1024
         Me.AfficherSmartNetSquareNoteToolStripMenuItem.Name = "AfficherSmartNetSquareNoteToolStripMenuItem"
-        Me.AfficherSmartNetSquareNoteToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
-        Me.AfficherSmartNetSquareNoteToolStripMenuItem.Text = "Afficher SmartNet Square Note"
         '
         'QuitterToolStripMenuItem1
         '
+        resources.ApplyResources(Me.QuitterToolStripMenuItem1, "QuitterToolStripMenuItem1")
         Me.QuitterToolStripMenuItem1.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.QuitterToolStripMenuItem1.Name = "QuitterToolStripMenuItem1"
-        Me.QuitterToolStripMenuItem1.Size = New System.Drawing.Size(251, 22)
-        Me.QuitterToolStripMenuItem1.Text = "Quitter"
         '
         'UpdateNotifyIcon
         '
         Me.UpdateNotifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.UpdateNotifyIcon.BalloonTipText = "Une mise à jour est disponible pour SmartNet Square Note."
-        Me.UpdateNotifyIcon.BalloonTipTitle = "SmartNet Apps Updater"
-        Me.UpdateNotifyIcon.Icon = CType(resources.GetObject("UpdateNotifyIcon.Icon"), System.Drawing.Icon)
-        Me.UpdateNotifyIcon.Text = "SmartNet Apps Updater"
+        resources.ApplyResources(Me.UpdateNotifyIcon, "UpdateNotifyIcon")
         '
         'MenuStrip1
         '
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.NotesToolStripMenuItem, Me.AideToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(363, 24)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ApplicationToolStripMenuItem
         '
+        resources.ApplyResources(Me.ApplicationToolStripMenuItem, "ApplicationToolStripMenuItem")
         Me.ApplicationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ParamètresToolStripMenuItem, Me.MettreÀJourToolStripMenuItem, Me.ToolStripSeparator1, Me.QuitterToolStripMenuItem})
         Me.ApplicationToolStripMenuItem.Name = "ApplicationToolStripMenuItem"
-        Me.ApplicationToolStripMenuItem.Size = New System.Drawing.Size(80, 20)
-        Me.ApplicationToolStripMenuItem.Text = "Application"
         '
         'ParamètresToolStripMenuItem
         '
+        resources.ApplyResources(Me.ParamètresToolStripMenuItem, "ParamètresToolStripMenuItem")
         Me.ParamètresToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Settings
         Me.ParamètresToolStripMenuItem.Name = "ParamètresToolStripMenuItem"
-        Me.ParamètresToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.ParamètresToolStripMenuItem.Text = "Paramètres..."
-        Me.ParamètresToolStripMenuItem.ToolTipText = "Ouvrir les paramètres de l'application."
         '
         'MettreÀJourToolStripMenuItem
         '
+        resources.ApplyResources(Me.MettreÀJourToolStripMenuItem, "MettreÀJourToolStripMenuItem")
         Me.MettreÀJourToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources._2019_SmartNetAppsUpdater_1024
         Me.MettreÀJourToolStripMenuItem.Name = "MettreÀJourToolStripMenuItem"
-        Me.MettreÀJourToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.MettreÀJourToolStripMenuItem.Text = "Mettre à jour..."
-        Me.MettreÀJourToolStripMenuItem.ToolTipText = "Mettre à jour l'application."
         '
         'ToolStripSeparator1
         '
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(151, 6)
         '
         'QuitterToolStripMenuItem
         '
+        resources.ApplyResources(Me.QuitterToolStripMenuItem, "QuitterToolStripMenuItem")
         Me.QuitterToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.QuitterToolStripMenuItem.Name = "QuitterToolStripMenuItem"
-        Me.QuitterToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
-        Me.QuitterToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.QuitterToolStripMenuItem.Text = "Quitter"
-        Me.QuitterToolStripMenuItem.ToolTipText = "Fermer toutes les notes et quitter l'application."
         '
         'NotesToolStripMenuItem
         '
+        resources.ApplyResources(Me.NotesToolStripMenuItem, "NotesToolStripMenuItem")
         Me.NotesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NouvelleNoteToolStripMenuItem})
         Me.NotesToolStripMenuItem.Name = "NotesToolStripMenuItem"
-        Me.NotesToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.NotesToolStripMenuItem.Text = "Notes"
         '
         'NouvelleNoteToolStripMenuItem
         '
+        resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
         Me.NouvelleNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.NewNote
         Me.NouvelleNoteToolStripMenuItem.Name = "NouvelleNoteToolStripMenuItem"
-        Me.NouvelleNoteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NouvelleNoteToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.NouvelleNoteToolStripMenuItem.Text = "Nouvelle note"
-        Me.NouvelleNoteToolStripMenuItem.ToolTipText = "Ouvrir une nouvelle note"
         '
         'AideToolStripMenuItem
         '
+        resources.ApplyResources(Me.AideToolStripMenuItem, "AideToolStripMenuItem")
         Me.AideToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupportEnLigneToolStripMenuItem, Me.ContacterLassistanceTechniqueToolStripMenuItem, Me.EnvoyerUnCommentaireToolStripMenuItem, Me.ToolStripSeparator2, Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem})
         Me.AideToolStripMenuItem.Name = "AideToolStripMenuItem"
-        Me.AideToolStripMenuItem.Size = New System.Drawing.Size(24, 20)
-        Me.AideToolStripMenuItem.Text = "?"
         '
         'SupportEnLigneToolStripMenuItem
         '
+        resources.ApplyResources(Me.SupportEnLigneToolStripMenuItem, "SupportEnLigneToolStripMenuItem")
         Me.SupportEnLigneToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Help
         Me.SupportEnLigneToolStripMenuItem.Name = "SupportEnLigneToolStripMenuItem"
-        Me.SupportEnLigneToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.SupportEnLigneToolStripMenuItem.Text = "Support en ligne..."
-        Me.SupportEnLigneToolStripMenuItem.ToolTipText = "Ouvrir les pages de support sur le site de SmartNet Apps."
         '
         'ContacterLassistanceTechniqueToolStripMenuItem
         '
+        resources.ApplyResources(Me.ContacterLassistanceTechniqueToolStripMenuItem, "ContacterLassistanceTechniqueToolStripMenuItem")
         Me.ContacterLassistanceTechniqueToolStripMenuItem.Name = "ContacterLassistanceTechniqueToolStripMenuItem"
-        Me.ContacterLassistanceTechniqueToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.ContacterLassistanceTechniqueToolStripMenuItem.Text = "Contacter l'assistance technique..."
-        Me.ContacterLassistanceTechniqueToolStripMenuItem.ToolTipText = "Ouvrir la page de contact sur le site de SmartNet Apps."
         '
         'EnvoyerUnCommentaireToolStripMenuItem
         '
+        resources.ApplyResources(Me.EnvoyerUnCommentaireToolStripMenuItem, "EnvoyerUnCommentaireToolStripMenuItem")
         Me.EnvoyerUnCommentaireToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.SendFeedback
         Me.EnvoyerUnCommentaireToolStripMenuItem.Name = "EnvoyerUnCommentaireToolStripMenuItem"
-        Me.EnvoyerUnCommentaireToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.EnvoyerUnCommentaireToolStripMenuItem.Text = "Envoyer un commentaire..."
-        Me.EnvoyerUnCommentaireToolStripMenuItem.ToolTipText = "Accéder au formulaire d'appréciation de SmartNet Square Note."
         '
         'ToolStripSeparator2
         '
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(265, 6)
         '
         'ÀProposDeSmartNetSquareNoteToolStripMenuItem
         '
+        resources.ApplyResources(Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem, "ÀProposDeSmartNetSquareNoteToolStripMenuItem")
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Name = "ÀProposDeSmartNetSquareNoteToolStripMenuItem"
-        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Text = "À propos de SmartNet Square Note..."
-        Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.ToolTipText = "Consulter les détails à propos de l'application."
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(6, 31)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 28)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Notes sauvegardées"
         '
         'SaveNotesTimer
         '
@@ -215,45 +175,37 @@ Partial Class MainForm
         '
         'NotesListView
         '
+        resources.ApplyResources(Me.NotesListView, "NotesListView")
         Me.NotesListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader_NoteID, Me.ColumnHeader_NoteText, Me.ColumnHeader_isVisible})
-        Me.NotesListView.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NotesListView.FullRowSelect = True
-        Me.NotesListView.Location = New System.Drawing.Point(11, 62)
         Me.NotesListView.Name = "NotesListView"
-        Me.NotesListView.Size = New System.Drawing.Size(340, 432)
-        Me.NotesListView.TabIndex = 3
         Me.NotesListView.UseCompatibleStateImageBehavior = False
         Me.NotesListView.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader_NoteID
         '
-        Me.ColumnHeader_NoteID.Text = "ID"
+        resources.ApplyResources(Me.ColumnHeader_NoteID, "ColumnHeader_NoteID")
         '
         'ColumnHeader_NoteText
         '
-        Me.ColumnHeader_NoteText.Text = "Texte"
-        Me.ColumnHeader_NoteText.Width = 215
+        resources.ApplyResources(Me.ColumnHeader_NoteText, "ColumnHeader_NoteText")
         '
         'ColumnHeader_isVisible
         '
-        Me.ColumnHeader_isVisible.Text = "Ouvert"
+        resources.ApplyResources(Me.ColumnHeader_isVisible, "ColumnHeader_isVisible")
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(363, 506)
         Me.Controls.Add(Me.NotesListView)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "MainForm"
-        Me.Text = "SmartNet Square Note"
         Me.MainNotifyIconContextMenuStrip.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

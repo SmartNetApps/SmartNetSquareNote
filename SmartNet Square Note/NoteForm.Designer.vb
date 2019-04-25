@@ -47,39 +47,39 @@ Partial Class NoteForm
         '
         'MenuStrip1
         '
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.BackColor = System.Drawing.Color.Gold
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseNoteButton, Me.ToolStripMenu})
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
         '
         'CloseNoteButton
         '
+        resources.ApplyResources(Me.CloseNoteButton, "CloseNoteButton")
         Me.CloseNoteButton.Image = Global.SmartNet_Square_Note.My.Resources.Resources.BlackCross
         Me.CloseNoteButton.Name = "CloseNoteButton"
-        resources.ApplyResources(Me.CloseNoteButton, "CloseNoteButton")
         '
         'ToolStripMenu
         '
+        resources.ApplyResources(Me.ToolStripMenu, "ToolStripMenu")
         Me.ToolStripMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListeDesNotesToolStripMenuItem, Me.ToolStripSeparator1, Me.SupprimerCetteNoteToolStripMenuItem})
         Me.ToolStripMenu.Image = Global.SmartNet_Square_Note.My.Resources.Resources.MenuBlack
         Me.ToolStripMenu.Name = "ToolStripMenu"
-        resources.ApplyResources(Me.ToolStripMenu, "ToolStripMenu")
         '
         'ListeDesNotesToolStripMenuItem
         '
-        Me.ListeDesNotesToolStripMenuItem.Name = "ListeDesNotesToolStripMenuItem"
         resources.ApplyResources(Me.ListeDesNotesToolStripMenuItem, "ListeDesNotesToolStripMenuItem")
+        Me.ListeDesNotesToolStripMenuItem.Name = "ListeDesNotesToolStripMenuItem"
         '
         'ToolStripSeparator1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         '
         'SupprimerCetteNoteToolStripMenuItem
         '
+        resources.ApplyResources(Me.SupprimerCetteNoteToolStripMenuItem, "SupprimerCetteNoteToolStripMenuItem")
         Me.SupprimerCetteNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Delete
         Me.SupprimerCetteNoteToolStripMenuItem.Name = "SupprimerCetteNoteToolStripMenuItem"
-        resources.ApplyResources(Me.SupprimerCetteNoteToolStripMenuItem, "SupprimerCetteNoteToolStripMenuItem")
         '
         'FormDragger
         '

@@ -146,5 +146,6 @@ Public Class MainForm
             Me.NoteFormCollection.Add(newform)
             newform.Show()
         Next
+        RefreshListBox()
     End Sub
 End Class
