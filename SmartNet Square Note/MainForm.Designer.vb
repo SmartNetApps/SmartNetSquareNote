@@ -43,9 +43,12 @@ Partial Class MainForm
         Me.EnvoyerUnCommentaireToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SaveNotesTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.NotesListView = New System.Windows.Forms.ListView()
+        Me.ColumnHeader_NoteID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader_NoteText = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader_isVisible = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MainNotifyIconContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -195,16 +198,6 @@ Partial Class MainForm
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Text = "À propos de SmartNet Square Note..."
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.ToolTipText = "Consulter les détails à propos de l'application."
         '
-        'ListBox1
-        '
-        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 21
-        Me.ListBox1.Location = New System.Drawing.Point(11, 69)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(339, 424)
-        Me.ListBox1.TabIndex = 1
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -220,14 +213,39 @@ Partial Class MainForm
         Me.SaveNotesTimer.Enabled = True
         Me.SaveNotesTimer.Interval = 10000
         '
+        'NotesListView
+        '
+        Me.NotesListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader_NoteID, Me.ColumnHeader_NoteText, Me.ColumnHeader_isVisible})
+        Me.NotesListView.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NotesListView.FullRowSelect = True
+        Me.NotesListView.Location = New System.Drawing.Point(11, 62)
+        Me.NotesListView.Name = "NotesListView"
+        Me.NotesListView.Size = New System.Drawing.Size(340, 432)
+        Me.NotesListView.TabIndex = 3
+        Me.NotesListView.UseCompatibleStateImageBehavior = False
+        Me.NotesListView.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader_NoteID
+        '
+        Me.ColumnHeader_NoteID.Text = "ID"
+        '
+        'ColumnHeader_NoteText
+        '
+        Me.ColumnHeader_NoteText.Text = "Texte"
+        Me.ColumnHeader_NoteText.Width = 215
+        '
+        'ColumnHeader_isVisible
+        '
+        Me.ColumnHeader_isVisible.Text = "Ouvert"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(363, 506)
+        Me.Controls.Add(Me.NotesListView)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -260,10 +278,13 @@ Partial Class MainForm
     Friend WithEvents EnvoyerUnCommentaireToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NotesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NouvelleNoteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents MainNotifyIconContextMenuStrip As ContextMenuStrip
     Friend WithEvents AfficherSmartNetSquareNoteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuitterToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents SaveNotesTimer As Timer
+    Friend WithEvents NotesListView As ListView
+    Friend WithEvents ColumnHeader_NoteID As ColumnHeader
+    Friend WithEvents ColumnHeader_NoteText As ColumnHeader
+    Friend WithEvents ColumnHeader_isVisible As ColumnHeader
 End Class

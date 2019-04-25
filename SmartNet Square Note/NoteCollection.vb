@@ -74,4 +74,13 @@ Public Class NoteCollection
             End If
         Next
     End Sub
+
+    Public Function GetNote(id As Integer) As Note
+        For Each note In Me
+            If note.noteID = id Then
+                Return note
+            End If
+        Next
+        Return New Note(GetHigherId() + 1)
+    End Function
 End Class

@@ -19,11 +19,17 @@ Public Class MainForm
         End If
 
         For Each note In NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
-            ListBox1.Items.Add(note.noteText)
+            Dim element As New ListViewItem
+            element = CType(NotesListView.Items.Add(note.noteID), ListViewItem)
+            element.SubItems.Add(note.noteText)
 
-            If note.isVisible = True Then
+            If note.isVisible Then
+                element.SubItems.Add("Oui")
                 Dim newform As New NoteForm(note)
+                Me.NoteFormCollection.Add(newform)
                 newform.Show()
+            Else
+                element.SubItems.Add("Non")
             End If
         Next
     End Sub
@@ -42,9 +48,17 @@ Public Class MainForm
     ''' Rafraichit la ListBox avec les notes dans My.Settings.NoteCollection.
     ''' </summary>
     Public Sub RefreshListBox()
-        ListBox1.Items.Clear()
+        NotesListView.Items.Clear()
         For Each note In NoteCollection.FromJsonCollection(My.Settings.NoteCollection)
-            ListBox1.Items.Add(note.noteText)
+            Dim element As New ListViewItem
+            element = CType(NotesListView.Items.Add(note.noteID), ListViewItem)
+            element.SubItems.Add(note.noteText)
+
+            If note.isVisible Then
+                element.SubItems.Add("Oui")
+            Else
+                element.SubItems.Add("Non")
+            End If
         Next
     End Sub
 
@@ -124,5 +138,13 @@ Public Class MainForm
     Private Sub SaveNotesTimer_Tick(sender As Object, e As EventArgs) Handles SaveNotesTimer.Tick
         SaveNotes()
         RefreshListBox()
+    End Sub
+
+    Private Sub NotesListView_DoubleClick(sender As Object, e As EventArgs) Handles NotesListView.DoubleClick
+        For Each Item As ListViewItem In NotesListView.SelectedItems
+            Dim newform As New NoteForm(NoteCollection.FromJsonCollection(My.Settings.NoteCollection).GetNote(Item.SubItems(0).Text))
+            Me.NoteFormCollection.Add(newform)
+            newform.Show()
+        Next
     End Sub
 End Class
