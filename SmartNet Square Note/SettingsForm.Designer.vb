@@ -25,6 +25,7 @@ Partial Class SettingsForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SettingsForm))
         Me.SettingsTabControl = New System.Windows.Forms.TabControl()
         Me.GeneralTabPage = New System.Windows.Forms.TabPage()
+        Me.RestartWarningLabel = New System.Windows.Forms.Label()
         Me.TextFontAndColorGroupBox = New System.Windows.Forms.GroupBox()
         Me.ChangeTextFontButton = New System.Windows.Forms.Button()
         Me.RestoreTextStyleLinkLabel = New System.Windows.Forms.LinkLabel()
@@ -41,10 +42,11 @@ Partial Class SettingsForm
         Me.AdvancedTabPage = New System.Windows.Forms.TabPage()
         Me.SettingsRestoreGroupBox = New System.Windows.Forms.GroupBox()
         Me.RestorePreviousSettingsButton = New System.Windows.Forms.Button()
-        Me.RestartWarningLabel = New System.Windows.Forms.Label()
         Me.NoteColorDialog = New System.Windows.Forms.ColorDialog()
         Me.TextColorDialog = New System.Windows.Forms.ColorDialog()
         Me.TextFontDialog = New System.Windows.Forms.FontDialog()
+        Me.IntegrationGroupBox = New System.Windows.Forms.GroupBox()
+        Me.AutoStartupCheckBox = New System.Windows.Forms.CheckBox()
         Me.SettingsTabControl.SuspendLayout()
         Me.GeneralTabPage.SuspendLayout()
         Me.TextFontAndColorGroupBox.SuspendLayout()
@@ -54,25 +56,32 @@ Partial Class SettingsForm
         Me.AutoUpdateGroupBox.SuspendLayout()
         Me.AdvancedTabPage.SuspendLayout()
         Me.SettingsRestoreGroupBox.SuspendLayout()
+        Me.IntegrationGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'SettingsTabControl
         '
+        resources.ApplyResources(Me.SettingsTabControl, "SettingsTabControl")
         Me.SettingsTabControl.Controls.Add(Me.GeneralTabPage)
         Me.SettingsTabControl.Controls.Add(Me.UpdatesTabPage)
         Me.SettingsTabControl.Controls.Add(Me.AdvancedTabPage)
-        resources.ApplyResources(Me.SettingsTabControl, "SettingsTabControl")
         Me.SettingsTabControl.Name = "SettingsTabControl"
         Me.SettingsTabControl.SelectedIndex = 0
         '
         'GeneralTabPage
         '
+        Me.GeneralTabPage.Controls.Add(Me.IntegrationGroupBox)
         Me.GeneralTabPage.Controls.Add(Me.RestartWarningLabel)
         Me.GeneralTabPage.Controls.Add(Me.TextFontAndColorGroupBox)
         Me.GeneralTabPage.Controls.Add(Me.NoteColorGroupBox)
         resources.ApplyResources(Me.GeneralTabPage, "GeneralTabPage")
         Me.GeneralTabPage.Name = "GeneralTabPage"
         Me.GeneralTabPage.UseVisualStyleBackColor = True
+        '
+        'RestartWarningLabel
+        '
+        resources.ApplyResources(Me.RestartWarningLabel, "RestartWarningLabel")
+        Me.RestartWarningLabel.Name = "RestartWarningLabel"
         '
         'TextFontAndColorGroupBox
         '
@@ -187,10 +196,18 @@ Partial Class SettingsForm
         Me.RestorePreviousSettingsButton.Name = "RestorePreviousSettingsButton"
         Me.RestorePreviousSettingsButton.UseVisualStyleBackColor = True
         '
-        'RestartWarningLabel
+        'IntegrationGroupBox
         '
-        resources.ApplyResources(Me.RestartWarningLabel, "RestartWarningLabel")
-        Me.RestartWarningLabel.Name = "RestartWarningLabel"
+        Me.IntegrationGroupBox.Controls.Add(Me.AutoStartupCheckBox)
+        resources.ApplyResources(Me.IntegrationGroupBox, "IntegrationGroupBox")
+        Me.IntegrationGroupBox.Name = "IntegrationGroupBox"
+        Me.IntegrationGroupBox.TabStop = False
+        '
+        'AutoStartupCheckBox
+        '
+        resources.ApplyResources(Me.AutoStartupCheckBox, "AutoStartupCheckBox")
+        Me.AutoStartupCheckBox.Name = "AutoStartupCheckBox"
+        Me.AutoStartupCheckBox.UseVisualStyleBackColor = True
         '
         'SettingsForm
         '
@@ -215,6 +232,8 @@ Partial Class SettingsForm
         Me.AutoUpdateGroupBox.PerformLayout()
         Me.AdvancedTabPage.ResumeLayout(False)
         Me.SettingsRestoreGroupBox.ResumeLayout(False)
+        Me.IntegrationGroupBox.ResumeLayout(False)
+        Me.IntegrationGroupBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -240,4 +259,6 @@ Partial Class SettingsForm
     Friend WithEvents ChangeTextFontButton As Button
     Friend WithEvents RestoreTextStyleLinkLabel As LinkLabel
     Friend WithEvents ChangeTextColorButton As Button
+    Friend WithEvents IntegrationGroupBox As GroupBox
+    Friend WithEvents AutoStartupCheckBox As CheckBox
 End Class

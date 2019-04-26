@@ -9,6 +9,10 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Environment.GetCommandLineArgs().Contains("-hide") Then
+            Me.Visible = False
+        End If
+
         If UpdateAgent.IsUpdateAvailable() = UpdateAgent.UpdateStatus.UpdateAvailable Then
             UpdateNotifyIcon.Visible = True
             UpdateNotifyIcon.ShowBalloonTip(10000)
