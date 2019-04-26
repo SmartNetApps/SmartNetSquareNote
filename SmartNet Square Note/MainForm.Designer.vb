@@ -61,9 +61,9 @@ Partial Class MainForm
         '
         'MainNotifyIconContextMenuStrip
         '
-        resources.ApplyResources(Me.MainNotifyIconContextMenuStrip, "MainNotifyIconContextMenuStrip")
         Me.MainNotifyIconContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AfficherSmartNetSquareNoteToolStripMenuItem, Me.QuitterToolStripMenuItem1})
         Me.MainNotifyIconContextMenuStrip.Name = "MainNotifyIconContextMenuStrip"
+        resources.ApplyResources(Me.MainNotifyIconContextMenuStrip, "MainNotifyIconContextMenuStrip")
         '
         'AfficherSmartNetSquareNoteToolStripMenuItem
         '
@@ -73,9 +73,9 @@ Partial Class MainForm
         '
         'QuitterToolStripMenuItem1
         '
-        resources.ApplyResources(Me.QuitterToolStripMenuItem1, "QuitterToolStripMenuItem1")
         Me.QuitterToolStripMenuItem1.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.QuitterToolStripMenuItem1.Name = "QuitterToolStripMenuItem1"
+        resources.ApplyResources(Me.QuitterToolStripMenuItem1, "QuitterToolStripMenuItem1")
         '
         'UpdateNotifyIcon
         '
@@ -84,84 +84,84 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.NotesToolStripMenuItem, Me.AideToolStripMenuItem})
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
         '
         'ApplicationToolStripMenuItem
         '
-        resources.ApplyResources(Me.ApplicationToolStripMenuItem, "ApplicationToolStripMenuItem")
         Me.ApplicationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ParamètresToolStripMenuItem, Me.MettreÀJourToolStripMenuItem, Me.ToolStripSeparator1, Me.QuitterToolStripMenuItem})
         Me.ApplicationToolStripMenuItem.Name = "ApplicationToolStripMenuItem"
+        resources.ApplyResources(Me.ApplicationToolStripMenuItem, "ApplicationToolStripMenuItem")
         '
         'ParamètresToolStripMenuItem
         '
-        resources.ApplyResources(Me.ParamètresToolStripMenuItem, "ParamètresToolStripMenuItem")
         Me.ParamètresToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Settings
         Me.ParamètresToolStripMenuItem.Name = "ParamètresToolStripMenuItem"
+        resources.ApplyResources(Me.ParamètresToolStripMenuItem, "ParamètresToolStripMenuItem")
         '
         'MettreÀJourToolStripMenuItem
         '
-        resources.ApplyResources(Me.MettreÀJourToolStripMenuItem, "MettreÀJourToolStripMenuItem")
         Me.MettreÀJourToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources._2019_SmartNetAppsUpdater_1024
         Me.MettreÀJourToolStripMenuItem.Name = "MettreÀJourToolStripMenuItem"
+        resources.ApplyResources(Me.MettreÀJourToolStripMenuItem, "MettreÀJourToolStripMenuItem")
         '
         'ToolStripSeparator1
         '
-        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         '
         'QuitterToolStripMenuItem
         '
-        resources.ApplyResources(Me.QuitterToolStripMenuItem, "QuitterToolStripMenuItem")
         Me.QuitterToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Close
         Me.QuitterToolStripMenuItem.Name = "QuitterToolStripMenuItem"
+        resources.ApplyResources(Me.QuitterToolStripMenuItem, "QuitterToolStripMenuItem")
         '
         'NotesToolStripMenuItem
         '
-        resources.ApplyResources(Me.NotesToolStripMenuItem, "NotesToolStripMenuItem")
         Me.NotesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NouvelleNoteToolStripMenuItem})
         Me.NotesToolStripMenuItem.Name = "NotesToolStripMenuItem"
+        resources.ApplyResources(Me.NotesToolStripMenuItem, "NotesToolStripMenuItem")
         '
         'NouvelleNoteToolStripMenuItem
         '
-        resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
         Me.NouvelleNoteToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.NewNote
         Me.NouvelleNoteToolStripMenuItem.Name = "NouvelleNoteToolStripMenuItem"
+        resources.ApplyResources(Me.NouvelleNoteToolStripMenuItem, "NouvelleNoteToolStripMenuItem")
         '
         'AideToolStripMenuItem
         '
-        resources.ApplyResources(Me.AideToolStripMenuItem, "AideToolStripMenuItem")
         Me.AideToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupportEnLigneToolStripMenuItem, Me.ContacterLassistanceTechniqueToolStripMenuItem, Me.EnvoyerUnCommentaireToolStripMenuItem, Me.ToolStripSeparator2, Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem})
         Me.AideToolStripMenuItem.Name = "AideToolStripMenuItem"
+        resources.ApplyResources(Me.AideToolStripMenuItem, "AideToolStripMenuItem")
         '
         'SupportEnLigneToolStripMenuItem
         '
-        resources.ApplyResources(Me.SupportEnLigneToolStripMenuItem, "SupportEnLigneToolStripMenuItem")
         Me.SupportEnLigneToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.Help
         Me.SupportEnLigneToolStripMenuItem.Name = "SupportEnLigneToolStripMenuItem"
+        resources.ApplyResources(Me.SupportEnLigneToolStripMenuItem, "SupportEnLigneToolStripMenuItem")
         '
         'ContacterLassistanceTechniqueToolStripMenuItem
         '
-        resources.ApplyResources(Me.ContacterLassistanceTechniqueToolStripMenuItem, "ContacterLassistanceTechniqueToolStripMenuItem")
         Me.ContacterLassistanceTechniqueToolStripMenuItem.Name = "ContacterLassistanceTechniqueToolStripMenuItem"
+        resources.ApplyResources(Me.ContacterLassistanceTechniqueToolStripMenuItem, "ContacterLassistanceTechniqueToolStripMenuItem")
         '
         'EnvoyerUnCommentaireToolStripMenuItem
         '
-        resources.ApplyResources(Me.EnvoyerUnCommentaireToolStripMenuItem, "EnvoyerUnCommentaireToolStripMenuItem")
         Me.EnvoyerUnCommentaireToolStripMenuItem.Image = Global.SmartNet_Square_Note.My.Resources.Resources.SendFeedback
         Me.EnvoyerUnCommentaireToolStripMenuItem.Name = "EnvoyerUnCommentaireToolStripMenuItem"
+        resources.ApplyResources(Me.EnvoyerUnCommentaireToolStripMenuItem, "EnvoyerUnCommentaireToolStripMenuItem")
         '
         'ToolStripSeparator2
         '
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         '
         'ÀProposDeSmartNetSquareNoteToolStripMenuItem
         '
-        resources.ApplyResources(Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem, "ÀProposDeSmartNetSquareNoteToolStripMenuItem")
         Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem.Name = "ÀProposDeSmartNetSquareNoteToolStripMenuItem"
+        resources.ApplyResources(Me.ÀProposDeSmartNetSquareNoteToolStripMenuItem, "ÀProposDeSmartNetSquareNoteToolStripMenuItem")
         '
         'Label1
         '
@@ -171,12 +171,12 @@ Partial Class MainForm
         'SaveNotesTimer
         '
         Me.SaveNotesTimer.Enabled = True
-        Me.SaveNotesTimer.Interval = 10000
+        Me.SaveNotesTimer.Interval = 2000
         '
         'NotesListView
         '
-        resources.ApplyResources(Me.NotesListView, "NotesListView")
         Me.NotesListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader_NoteID, Me.ColumnHeader_NoteText, Me.ColumnHeader_isVisible})
+        resources.ApplyResources(Me.NotesListView, "NotesListView")
         Me.NotesListView.FullRowSelect = True
         Me.NotesListView.Name = "NotesListView"
         Me.NotesListView.UseCompatibleStateImageBehavior = False
