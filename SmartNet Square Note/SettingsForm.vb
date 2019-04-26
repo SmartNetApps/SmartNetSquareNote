@@ -38,8 +38,9 @@ Public Class SettingsForm
         'Dim Shell = New WshShell
         Dim StartupDir As String = Environment.GetFolderPath(Environment.SpecialFolder.Startup)
         Dim objShell = New WshShell
-        Dim objShortcut = objShell.CreateShortcut(StartupDir + "\SmartNet Square Note.lnk")
-        objShortcut.TargetPath = """" + Application.ExecutablePath + """ -hide"
+        Dim objShortcut As IWshShortcut = objShell.CreateShortcut(StartupDir + "\SmartNet Square Note.lnk")
+        objShortcut.TargetPath = Application.ExecutablePath
+        objShortcut.Arguments = "-hide"
         objShortcut.Save()
     End Sub
 
