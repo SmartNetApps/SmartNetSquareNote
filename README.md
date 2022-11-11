@@ -5,8 +5,8 @@ SmartNet Square Note est un logiciel de prise de notes sous la forme de petites 
 ## Besoin d'aide ?
 
 Vous trouverez de l'aide pour SmartNet Square Note :
-- dans [les pages de support en ligne](https://smartnetapps.quentinpugeat.fr/support/squarenote/)
-- dans [le centre d'assistance SmartNet Apps](https://smartnetapps.quentinpugeat.fr/support/)
+- dans [la base de connaissances](https://www.lesmajesticiels.org/support/kb/product/squarenote)
+- dans [le centre d'assistance Les Majesticiels](https://www.lesmajesticiels.org/support)
 
 ## Construire le logiciel
 
@@ -15,7 +15,7 @@ La configuration "Any CPU" fonctionne pour construire ce logiciel.
 
 ## Droits d'auteur et licence
 
-**Copyright 2015-2020 Quentin Pugeat**
+**Imaginé et maintenu depuis 2015 par [Quentin Pugeat](https://www.quentinpugeat.fr/)**
 
 SmartNet Square Note est un logiciel libre ; vous pouvez le redistribuer ou le modifier suivant les termes de la **GNU General Public License** telle que publiée par la Free Software Foundation ; soit la version 3 de la licence, soit (à votre gré) toute version ultérieure.
 
