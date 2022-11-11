@@ -58,17 +58,17 @@ Partial Class AboutForm
         '
         'DescriptionRichTextBox
         '
-        resources.ApplyResources(Me.DescriptionRichTextBox, "DescriptionRichTextBox")
         Me.DescriptionRichTextBox.BackColor = System.Drawing.SystemColors.Control
         Me.DescriptionRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DescriptionRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow
+        resources.ApplyResources(Me.DescriptionRichTextBox, "DescriptionRichTextBox")
         Me.DescriptionRichTextBox.Name = "DescriptionRichTextBox"
         Me.DescriptionRichTextBox.ReadOnly = True
         '
         'HomepageLinkLabel
         '
-        resources.ApplyResources(Me.HomepageLinkLabel, "HomepageLinkLabel")
         Me.HomepageLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.HomepageLinkLabel, "HomepageLinkLabel")
         Me.HomepageLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
         Me.HomepageLinkLabel.Name = "HomepageLinkLabel"
         Me.HomepageLinkLabel.TabStop = True
@@ -76,8 +76,8 @@ Partial Class AboutForm
         '
         'LicenseLinkLabel
         '
-        resources.ApplyResources(Me.LicenseLinkLabel, "LicenseLinkLabel")
         Me.LicenseLinkLabel.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.LicenseLinkLabel, "LicenseLinkLabel")
         Me.LicenseLinkLabel.LinkColor = System.Drawing.SystemColors.HotTrack
         Me.LicenseLinkLabel.Name = "LicenseLinkLabel"
         Me.LicenseLinkLabel.TabStop = True
@@ -85,33 +85,33 @@ Partial Class AboutForm
         '
         'LicensePictureBox
         '
-        resources.ApplyResources(Me.LicensePictureBox, "LicensePictureBox")
         Me.LicensePictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        resources.ApplyResources(Me.LicensePictureBox, "LicensePictureBox")
         Me.LicensePictureBox.Name = "LicensePictureBox"
         Me.LicensePictureBox.TabStop = False
         '
         'PanelColor
         '
-        resources.ApplyResources(Me.PanelColor, "PanelColor")
         Me.PanelColor.BackColor = System.Drawing.Color.Goldenrod
         Me.PanelColor.BackgroundImage = Global.SmartNet_Square_Note.My.Resources.Resources.wordmark_white_36
+        resources.ApplyResources(Me.PanelColor, "PanelColor")
         Me.PanelColor.Name = "PanelColor"
         '
         'Panel1
         '
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.LinkLabelSource)
         Me.Panel1.Controls.Add(Me.LinkLabelReleaseNotes)
         Me.Panel1.Controls.Add(Me.HomepageLinkLabel)
         Me.Panel1.Controls.Add(Me.LicensePictureBox)
         Me.Panel1.Controls.Add(Me.LicenseLinkLabel)
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'LinkLabelSource
         '
-        resources.ApplyResources(Me.LinkLabelSource, "LinkLabelSource")
         Me.LinkLabelSource.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.LinkLabelSource, "LinkLabelSource")
         Me.LinkLabelSource.BackColor = System.Drawing.Color.White
         Me.LinkLabelSource.LinkColor = System.Drawing.SystemColors.HotTrack
         Me.LinkLabelSource.Name = "LinkLabelSource"
@@ -120,8 +120,8 @@ Partial Class AboutForm
         '
         'LinkLabelReleaseNotes
         '
-        resources.ApplyResources(Me.LinkLabelReleaseNotes, "LinkLabelReleaseNotes")
         Me.LinkLabelReleaseNotes.ActiveLinkColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.LinkLabelReleaseNotes, "LinkLabelReleaseNotes")
         Me.LinkLabelReleaseNotes.BackColor = System.Drawing.Color.White
         Me.LinkLabelReleaseNotes.LinkColor = System.Drawing.SystemColors.HotTrack
         Me.LinkLabelReleaseNotes.Name = "LinkLabelReleaseNotes"

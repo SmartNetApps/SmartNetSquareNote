@@ -86,11 +86,11 @@ Public Class MainForm
     End Sub
 
     Private Sub SupportEnLigneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupportEnLigneToolStripMenuItem.Click
-        Process.Start("https://smartnetapps.quentinpugeat.fr/squarenote/support")
+        Process.Start("https://www.lesmajesticiels.org/support/kb/product/squarenote")
     End Sub
 
     Private Sub ContacterLassistanceTechniqueToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContacterLassistanceTechniqueToolStripMenuItem.Click
-        Process.Start("https://smartnetapps.quentinpugeat.fr/contact")
+        Process.Start("https://www.lesmajesticiels.org/contact")
     End Sub
 
     Private Sub EnvoyerUnCommentaireToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnvoyerUnCommentaireToolStripMenuItem.Click
